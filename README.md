@@ -1,2 +1,2 @@
 # STUBIA
- Sistema de gestión de puestos de estudio
+ Sistema inteligente de gestión de puestos de estudio
