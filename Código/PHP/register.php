@@ -99,11 +99,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
  
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro STUBIA</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>STUBIA - Registro</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <style>
         @font-face {
             font-family: din_regular;
@@ -117,10 +119,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         .wrapper{ 
             width: 360px; padding: 20px; 
         }
+
     </style>
 </head>
-<body>
-    <div class="wrapper">
+<body class="m-0 vh-100 row justify-content-center align-items-center">
+
+    <div class="wrapper col-auto p-5 opacity-50">
+        <img src="img/uah-logo.png" height=150px>
+    </div>
+    <div class="wrapper col-auto p-5">
         <h2>Regístrate en STUBIA</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
@@ -140,7 +147,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div> 
             <div class="form-group">
                 <label>Correo electrónico</label>
-                <input type="text" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
+                <input type="email" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
                 <span class="invalid-feedback"><?php echo $email_err; ?></span>
             </div> 
             <div class="form-group">
@@ -153,10 +160,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
+            <br>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Regístrame">
                 <input type="reset" class="btn btn-secondary ml-2" value="Borrar">
             </div>
+            <br>
             <p>¿Ya estás registrado? <a href="login.php">Inicia sesión</a>.</p>
         </form>
     </div>    

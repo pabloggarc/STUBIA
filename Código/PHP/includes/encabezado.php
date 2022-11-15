@@ -1,22 +1,8 @@
 <?php
 
 include('session_app.php');
-$perfil = intval($_SESSION["user"]["perfil_id"]);
-$link_manual = "";
-switch ($perfil) {
-    case 5:
-        $link_manual = _APP_URL."docs/manuales/Manual de usuario (Ejecutivo).pdf";
-        break;
-    case 10:
-        $link_manual = _APP_URL."docs/manuales/Manual de usuario (Responsable del dato).pdf";
-        break;
-    case 15:
-        $link_manual = _APP_URL."docs/manuales/Manual de usuario (Supervisor).pdf";
-        break;
-    case 25:
-        $link_manual = _APP_URL."docs/manuales/Manual de usuario (Administrador).pdf";
-        break;
-}
+$idperfil = intval($_SESSION["stubia_useridperfil"]);
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -24,11 +10,10 @@ switch ($perfil) {
 	<title><?=_APP_NAME?></title>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 	<meta charset="utf-8" />
-    <meta name="author" content="SENASA" />
-        <!-- Guillermo 4/julio/22: Elimino estas 2 líneas y meto una nueva con el icono corporativo de ADIF:
-	<link rel="shortcut icon" type="image/x-icon" href="http://www.senasa.es//images/favicon.ico" />
-        <link rel="icon" type="image/gif" href="http://www.senasa.es//images/animated_favicon1.gif" />
-        -->
-        <link rel="shortcut icon" type="image/x-icon" href="<?= $dir_raiz ?>img/adif_icono.ico" />
+    <meta name="author" content="UAH" />        
+    <link rel="shortcut icon" type="image/x-icon" href="<?= $dir_raiz ?>https://www.uah.es/favicon.ico" />    
 	<link rel="stylesheet" type="text/css" href="<?= $dir_raiz ?>css/estilos.css?v=<?= time(); ?>" />
 	<script src="<?= $dir_raiz ?>js/comunes.js?v=<?= time(); ?>"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

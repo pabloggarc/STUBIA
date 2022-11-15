@@ -1,0 +1,4 @@
+2022-11-13 23:10:45(0.97466700 1668377445) - select * from venta
+---
+2022-11-13 23:10:45(0.99385000 1668377445) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---

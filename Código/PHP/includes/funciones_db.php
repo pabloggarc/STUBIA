@@ -9,24 +9,9 @@ function conectar_bd(){
 	}catch (Exception $ex){
 		
 	}
-	
-
 	return $sql_connect;
 }
 
-function conectar_bd_manten(){
-	$sql_connect=false;
-	
-	try{
-		$sql_connect = mysqli_connect("iblsd006.dcsi.adif", "DATA_USR", "4701443589", "DW", 1533);
-		$sql_connect->set_charset("utf8");
-	}catch (Exception $ex){
-		
-	}
-	
-
-	return $sql_connect;
-}
 
 function desconectar_bd($sql_connect) {
 

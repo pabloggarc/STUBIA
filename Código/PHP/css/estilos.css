@@ -1,9 +1,15 @@
 html, body{
 	margin:				auto;
 	background-color:	#fff;
-	color:				#366c00;
-	font-family:		Arial, Helvetica, sans-serif;
-	font-size:			.9em;
+	color:				#003da7;
+	@font-face {
+		font-family: din_regular;
+		src: url(fuentes/DINPro-Medium.otf);
+	}
+	/*font-family:		Arial, Helvetica, sans-serif;	
+	font-size:			14px;*/
+	font: 				14px din_regular; 
+	
 }
 a, a:visited {
 	text-decoration:	none;
@@ -12,104 +18,85 @@ a, a:visited {
 p {
 	margin: 0;
 }
-div#contenedorappcmadif {
+div#contenedor_stubia {
 	margin:				auto;
 	position:			relative;
-	max-width:			90vw;
+	max-width:			60vw;
+	
+	/*max-width: 50%;*/
+	
 }
-div#contenedorappcmadif div#capa_cabecera {
+div#contenedor_stubia div#capa_cabecera {
 	position:               relative;
-        margin:                 0.5em 0em 0.5em 0em;
+        margin:             0.5em 0em 0.5em 0em;
 }
-div#contenedorappcmadif div#capa_cabecera img {
+div#contenedor_stubia div#capa_cabecera img {
 	vertical-align:         middle;
 }
-div#contenedorappcmadif div#capa_cabecera div.login {
+div#contenedor_stubia div#capa_cabecera div.login {
 	display: 		inline-block;
 	position:		absolute;
 	bottom:			0em;
-	right:                  1em;
-	font-family:            verdana;
+	right:          1em;
+	/*font-family:  verdana;*/
 	font-size:		1em;
-        padding-top:            0em;
+    padding-top:    0em;
         
 }
-div#contenedorappcmadif div#capa_cabecera div.login img {
+div#contenedor_stubia div#capa_cabecera div.login img {
 	vertical-align:         bottom;
         padding-top:            0em;
 }
-div#contenedorappcmadif div#capa_borde_superior {
+div#contenedor_stubia div#capa_borde_superior {
 	position:		relative;
 	border-radius:		10px 10px 0 0;
-	background-color:	#366c00;
+	background-color:	#003da7;
 	color:			#fff;
 	padding:		.5em 1em;
 	font-weight:		bold;
 }
-div#contenedorappcmadif div#capa_borde_superior a#info_notif {
+div#contenedor_stubia div#capa_borde_superior a#info_notif {
         float: right;
 	background-color:	#fff;
 	font-size:			.9em;
-	color:				#366c00;
+	color:				#003da7;
 	padding:			.1em .5em;
 	border-radius:		10px;
 }
-div#contenedorappcmadif div#capa_borde_superior a#enlace_admin, a#enlace_manual, a#enlace_catalogo_prime {
+div#contenedor_stubia div#capa_borde_superior a#enlace_admin, a#enlace_manual {
         float: right;
 	background-color:	#fff;
 	font-size:			.9em;
-	color:				#366c00;
+	color:				#003da7;
 	padding:			.1em .5em;
 	border-radius:		10px;
         margin-right: 10px;
 }
-div#contenedorappcmadif div#capa_cuerpo {
+
+
+div#contenedor_stubia div#capa_cuerpo {
 	position:			relative;
 	background-color:	#f4f4f4;
 	min-height:			40vh;
 	padding:			1em 2em;
+	
+
 }
-div#contenedorappcmadif div#capa_cuerpo div#capa_errores_producidos {
-	max-width:			800px;
-	margin:				5em auto 0 auto;
-	background-color:	#aa0000;
-	color:				#fff;
-	padding:			1px 2em 2em 2em;
-	border-radius:		10px;
-	box-shadow:			4px 4px 6px #909090;
-}
-div#contenedorappcmadif div#capa_cuerpo div#capa_errores_producidos a {
+
+div#contenedor_stubia div#capa_cuerpo div#capa_avisos_producidos a {
 	font-size:		.6em;
 	cursor:			pointer;
 	font-weight:	normal;
 }
-div#contenedorappcmadif div#capa_cuerpo div#capa_errores_producidos a:hover {
+div#contenedor_stubia div#capa_cuerpo div#capa_avisos_producidos a:hover {
 	font-weight:	bold;
 	letter-spacing:	2px;
 }
-div#contenedorappcmadif div#capa_cuerpo div#capa_avisos_producidos {
-	max-width:			800px;
-	margin:				5em auto 0 auto;
-	background-color:	#e5be01;
-	color:				#fff;
-	padding:			1px 2em 2em 2em;
-	border-radius:		10px;
-	box-shadow:			4px 4px 6px #909090;
-}
-div#contenedorappcmadif div#capa_cuerpo div#capa_avisos_producidos a {
-	font-size:		.6em;
-	cursor:			pointer;
-	font-weight:	normal;
-}
-div#contenedorappcmadif div#capa_cuerpo div#capa_avisos_producidos a:hover {
-	font-weight:	bold;
-	letter-spacing:	2px;
-}
-div#contenedorappcmadif div#capa_cuerpo div#contenido_variable {
+div#contenedor_stubia div#capa_cuerpo div#contenido_variable {
 	position:	relative;
 	display:	none;
 }
-div#contenedorappcmadif div#capa_cuerpo div#capa_notif {
+div#contenedor_stubia div#capa_cuerpo div#capa_notif {
 	position:			absolute;
 	width:				25%;
 	top:				0;
@@ -120,31 +107,31 @@ div#contenedorappcmadif div#capa_cuerpo div#capa_notif {
 	border-radius:		0 0 0 10px;
 	
 }
-div#contenedorappcmadif div#capa_cuerpo div#capa_notif div {
+div#contenedor_stubia div#capa_cuerpo div#capa_notif div {
 	position:	relative;
 	padding:	1.5em 0;
 }
-div#contenedorappcmadif div#capa_cuerpo div#capa_notif div:not(:last-child) {
+div#contenedor_stubia div#capa_cuerpo div#capa_notif div:not(:last-child) {
 	border-bottom:	solid 1px #f9f9f9;
 }
-div#contenedorappcmadif div#capa_cuerpo div#capa_notif div p {
+div#contenedor_stubia div#capa_cuerpo div#capa_notif div p {
 	padding: 0 1em;
 }
-div#contenedorappcmadif div#capa_cuerpo div#capa_notif div img {
+div#contenedor_stubia div#capa_cuerpo div#capa_notif div img {
 	width:		20px;
 	position:	absolute;
 	right:		1em;
 	top:		.5em;
 	cursor:		pointer;
 }
-div#contenedorappcmadif div#capa_borde_inferior {
+div#contenedor_stubia div#capa_borde_inferior {
 	border-radius:		0 0 10px 10px;
-	background-color:	#366c00;
+	background-color:	#003da7;
 	color:				#fff;
 	padding:			.5em 1em;
 	font-weight:		bold;
 }
-div#contenedorappcmadif div#capa_copyright {
+div#contenedor_stubia div#capa_copyright {
 	color:		#aaa;
 	padding:	.2em;
 	text-align:	center;
@@ -152,7 +139,7 @@ div#contenedorappcmadif div#capa_copyright {
 }
 
 .boton {
-	background-color:	#274f00;
+	background-color:	#180168;
 	color:				#fff;
 	font-weight:		bold;
 	font-size:			.85em;
@@ -262,7 +249,6 @@ div#contenedorappcmadif div#capa_copyright {
 [data-tip]:hover:after {
     display:block;
 }
-
 /* -------------------------------------------------------------------------------------------------*/
 .oculto {display: none;}
 .invisible {visibility: hidden;}
@@ -271,14 +257,13 @@ div#contenedorappcmadif div#capa_copyright {
 .in-line{display: inline-block}
 .right{float:right}
 
-/* Guillermo 9/sep/22: añado los estilos de la tabla log: */
 
 table#log{
     border-collapse: collapse;
     text-align: center;
 }
 table#log thead tr th{
-    background: #366c00;
+    background: #003da7;
     color: white;
     padding: 5px;
 }
@@ -286,7 +271,7 @@ table#log thead tr th:first-child { border-top-left-radius: 10px; }
 table#log thead tr th:last-child { border-top-right-radius: 10px; }
 
 table#log tbody tr td{
-    border-bottom: 1px solid #366c00;
+    border-bottom: 1px solid #003da7;
     padding: 10px;
 }
 table#log tfoot tr th{

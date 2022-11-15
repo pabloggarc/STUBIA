@@ -1,0 +1,44 @@
+2022-11-13 19:00:04(0.10578200 1668362404) - Entorno de LOCAL
+---
+2022-11-13 19:00:05(0.14426900 1668362405) - Entorno de LOCAL
+---
+2022-11-13 19:00:11(0.47355700 1668362411) - Entorno de LOCAL
+---
+2022-11-13 19:02:36(0.10695200 1668362556) - INSERT INTO access_log(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (7, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-13 19:02:43(0.47846600 1668362563) - Entorno de LOCAL
+---
+2022-11-13 19:21:27(0.27891900 1668363687) - select * from venta
+---
+2022-11-13 19:21:45(0.17612400 1668363705) - select * from venta
+---
+2022-11-13 19:22:54(0.29940300 1668363774) - select * from venta
+---
+2022-11-13 19:23:57(0.71584400 1668363837) - select * from venta
+---
+2022-11-13 19:28:54(0.60154000 1668364134) - select * from venta
+---
+2022-11-13 19:29:53(0.33383600 1668364193) - select * from venta
+---
+2022-11-13 19:32:18(0.04742300 1668364338) - select * from venta
+---
+2022-11-13 19:34:39(0.66848100 1668364479) - select * from venta
+---
+2022-11-13 19:34:47(0.15765800 1668364487) - select * from venta
+---
+2022-11-13 19:44:23(0.20872700 1668365063) - select * from venta
+---
+2022-11-13 19:44:26(0.28903700 1668365066) - Login correcto de usuario 7
+---
+2022-11-13 19:44:26(0.33846000 1668365066) - select * from venta
+---
+2022-11-13 19:44:34(0.80687700 1668365074) - Login correcto de usuario 7
+---
+2022-11-13 19:44:34(0.83721200 1668365074) - select * from venta
+---
+2022-11-13 19:55:57(0.13322200 1668365757) - SELECT mu.id, mu.id_perfil, mp.perfil, mu.nombre, mu.apellidos, mu.username, mu.password FROM master_usuarios mu INNER JOIN master_perfil mp ON mu.id_perfil=mp.id AND mp.activo=1 WHERE mu.username = ? and mu.activo=1
+---
+2022-11-13 19:55:57(0.28070300 1668365757) - Login correcto de usuario 7
+---
+2022-11-13 19:55:57(0.31511000 1668365757) - select * from venta
+---
