@@ -125,7 +125,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body class="m-0 vh-100 row justify-content-center align-items-center">
 
     <div class="wrapper col-auto p-5 opacity-50">
-        <img src="img/uah-logo.png" height=150px>
+        <img src="img/stubia-logo.png" height=270px>
     </div>
     <div class="wrapper col-auto p-5">
         <h2>Regístrate en STUBIA</h2>
