@@ -1,0 +1,150 @@
+2022-11-17 12:24:07(0.95263300 1668684247) - SELECT mu.id, mu.id_perfil, mp.perfil, mu.nombre, mu.apellidos, mu.username, mu.password FROM master_usuarios mu INNER JOIN master_perfil mp ON mu.id_perfil=mp.id AND mp.activo=1 WHERE mu.username = ? and mu.activo=1
+---
+2022-11-17 12:24:08(0.24104800 1668684248) - Usuario 'pablo.ggarcia'
+---
+2022-11-17 12:24:08(0.24190200 1668684248) - Login correcto de usuario 6
+---
+2022-11-17 12:24:08(0.25698400 1668684248) - Entorno LOCAL
+---
+2022-11-17 12:24:08(0.27687400 1668684248) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'login.php');
+---
+2022-11-17 12:24:08(0.38708900 1668684248) - Entorno LOCAL
+---
+2022-11-17 12:24:08(0.40121300 1668684248) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:24:08(0.40922700 1668684248) - select * from venta
+---
+2022-11-17 12:24:08(0.44920400 1668684248) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:24:08(0.45693800 1668684248) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---
+2022-11-17 12:42:06(0.02655000 1668685326) - Entorno LOCAL
+---
+2022-11-17 12:42:06(0.05480700 1668685326) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:42:06(0.07240700 1668685326) - select * from venta
+---
+2022-11-17 12:42:06(0.08295000 1668685326) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:42:06(0.09238500 1668685326) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---
+2022-11-17 12:42:16(0.97484500 1668685336) - SELECT mu.id, mu.id_perfil, mp.perfil, mu.nombre, mu.apellidos, mu.username, mu.password FROM master_usuarios mu INNER JOIN master_perfil mp ON mu.id_perfil=mp.id AND mp.activo=1 WHERE mu.username = ? and mu.activo=1
+---
+2022-11-17 12:42:17(0.20981200 1668685337) - Usuario 'pablo.ggarcia'
+---
+2022-11-17 12:42:17(0.21039400 1668685337) - Login correcto de usuario 6
+---
+2022-11-17 12:42:17(0.21233700 1668685337) - Entorno LOCAL
+---
+2022-11-17 12:42:17(0.23669600 1668685337) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'login.php');
+---
+2022-11-17 12:42:17(0.26852300 1668685337) - Entorno LOCAL
+---
+2022-11-17 12:42:17(0.27095800 1668685337) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:42:17(0.27699200 1668685337) - select * from venta
+---
+2022-11-17 12:42:17(0.27994500 1668685337) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:42:17(0.28428700 1668685337) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---
+2022-11-17 12:43:17(0.45378100 1668685397) - Entorno LOCAL
+---
+2022-11-17 12:43:17(0.48173000 1668685397) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:43:17(0.49351200 1668685397) - select * from venta
+---
+2022-11-17 12:43:17(0.50455900 1668685397) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:43:17(0.51349300 1668685397) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---
+2022-11-17 12:44:02(0.25397100 1668685442) - Entorno LOCAL
+---
+2022-11-17 12:44:02(0.27550900 1668685442) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:44:02(0.29132400 1668685442) - select * from venta
+---
+2022-11-17 12:44:02(0.30120900 1668685442) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:44:02(0.31138600 1668685442) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---
+2022-11-17 12:46:44(0.57951600 1668685604) - Entorno LOCAL
+---
+2022-11-17 12:46:44(0.58781700 1668685604) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:46:44(0.60739700 1668685604) - select * from venta
+---
+2022-11-17 12:46:44(0.61780500 1668685604) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:46:44(0.62802500 1668685604) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---
+2022-11-17 12:46:51(0.95946400 1668685611) - Entorno LOCAL
+---
+2022-11-17 12:46:51(0.99090600 1668685611) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:46:52(0.00750400 1668685612) - select * from venta
+---
+2022-11-17 12:46:52(0.01665700 1668685612) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:46:52(0.03910300 1668685612) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---
+2022-11-17 12:46:54(0.68457300 1668685614) - Entorno LOCAL
+---
+2022-11-17 12:46:54(0.68624900 1668685614) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:46:54(0.69097700 1668685614) - select * from venta
+---
+2022-11-17 12:46:54(0.69299100 1668685614) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:46:54(0.69490800 1668685614) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---
+2022-11-17 12:46:55(0.53173600 1668685615) - Entorno LOCAL
+---
+2022-11-17 12:46:55(0.53441000 1668685615) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:46:55(0.53991200 1668685615) - select * from venta
+---
+2022-11-17 12:46:55(0.54207100 1668685615) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:46:55(0.56477700 1668685615) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---
+2022-11-17 12:46:56(0.56419700 1668685616) - Entorno LOCAL
+---
+2022-11-17 12:46:56(0.56581600 1668685616) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:46:56(0.57227000 1668685616) - select * from venta
+---
+2022-11-17 12:46:56(0.57423300 1668685616) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:46:56(0.57612400 1668685616) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---
+2022-11-17 12:47:12(0.99654700 1668685632) - SELECT mu.id, mu.id_perfil, mp.perfil, mu.nombre, mu.apellidos, mu.username, mu.password FROM master_usuarios mu INNER JOIN master_perfil mp ON mu.id_perfil=mp.id AND mp.activo=1 WHERE mu.username = ? and mu.activo=1
+---
+2022-11-17 12:47:13(0.25553300 1668685633) - Usuario 'pablo.ggarcia'
+---
+2022-11-17 12:47:13(0.25612000 1668685633) - Login correcto de usuario 6
+---
+2022-11-17 12:47:13(0.25847400 1668685633) - Entorno LOCAL
+---
+2022-11-17 12:47:13(0.27377800 1668685633) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'login.php');
+---
+2022-11-17 12:47:13(0.30386800 1668685633) - Entorno LOCAL
+---
+2022-11-17 12:47:13(0.32022800 1668685633) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:47:13(0.32948800 1668685633) - select * from venta
+---
+2022-11-17 12:47:13(0.33253900 1668685633) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:47:13(0.35107200 1668685633) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---
+2022-11-17 12:47:19(0.30130700 1668685639) - Entorno LOCAL
+---
+2022-11-17 12:47:19(0.30970500 1668685639) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (6, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 12:47:19(0.32589500 1668685639) - select * from venta
+---
+2022-11-17 12:47:19(0.33556800 1668685639) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 12:47:19(0.36330700 1668685639) - SELECT * FROM estados WHERE aula=1 AND puesto=1 ORDER BY au_fec_alta DESC
+---

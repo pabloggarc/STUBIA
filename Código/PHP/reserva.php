@@ -1,5 +1,6 @@
 <?php
 require_once "config.php";
+session_start();  
  
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -7,24 +8,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $place_res = $_POST["place"]; 
     $zone_res = $_POST["zones"]; 
  
-    $previous_res = mysqli_query($link, "SELECT reservas.id FROM reservas 
-                        INNER JOIN master_puestos ON reservas.id_puesto = master_puestos.id
-                        where id_franja_horaria = ".$time_res." AND master_puestos.id_aula = ".$zone_res." 
-                        AND master_puestos.id = ".$place_res); 
-    
+    $previous_res = mysqli_query($link, "SELECT id FROM reservas where id_franja_horaria = ".$time_res." AND id_puesto = ".$place_res." AND fecha = curdate()"); 
     $n_res = 0; 
 
     while(mysqli_fetch_array($previous_res)){
         $n_res++; 
     }
 
-    //Insertar registro en la tabla reservas
-
     if($n_res){
-        echo "Ocupado"; 
+        echo "<script>alert('Error en la reserva. Puesto ocupado en esta franja horaria.');</script>";
     }
     else{
-        echo "Reserva realizada"; 
+        $user_res = $_SESSION["stubia_useridperfil"]; 
+
+        mysqli_query($link, "INSERT INTO reservas (id_usuario, id_franja_horaria, fecha, id_puesto, au_fec_alta, au_usu_alta, au_proc_alta, au_lock, activo)
+        VALUES (".$user_res.", ".$time_res.", curdate(),".$place_res.", now(), ".$user_res.", 'Web', 0, 1)"); 
+
+        echo "<script>alert('Reserva realizada con éxito.');</script>"; 
     }
 
 }
@@ -57,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body class="m-0 vh-100 row justify-content-center align-items-center">
     <?php
         $zones = mysqli_query($link, "SELECT id, aula FROM master_aulas WHERE tipo != 1 AND tipo != 2"); 
-        $times = mysqli_query($link, "SELECT id, franja FROM master_franjas_horarias"); 
+        $times = mysqli_query($link, "SELECT id, time_format(hora, '%H:%i') FROM (SELECT id, TIME(substring_index(franja, '-', 1)) AS hora FROM (SELECT id, franja FROM stubia.master_franjas_horarias) AS t) AS t2 where hora>=now()"); 
     ?>
     <div class="wrapper col-auto p-5 opacity-50">
         <img src="img/stubia-logo.png" height=270px>
