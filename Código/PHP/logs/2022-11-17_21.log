@@ -1,0 +1,20 @@
+2022-11-17 21:39:44(0.93789200 1668717584) - Entorno LOCAL
+---
+2022-11-17 21:39:44(0.94208500 1668717584) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (7, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 21:39:44(0.95167800 1668717584) - select * from venta
+---
+2022-11-17 21:39:44(0.95568400 1668717584) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 21:39:44(0.96061900 1668717584) - SELECT * FROM estados WHERE aula=1 AND puesto=1 AND YEAR(au_fec_alta)=YEAR('2022-11-11') AND MONTH(au_fec_alta)=MONTH('2022-11-11') AND DAY(au_fec_alta)=DAY('2022-11-11') AND HOUR(au_fec_alta)=12)
+---
+2022-11-17 21:41:14(0.74053800 1668717674) - Entorno LOCAL
+---
+2022-11-17 21:41:14(0.74350500 1668717674) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (7, 1, SYSDATE(), SYSDATE(), 100000, 'index.php');
+---
+2022-11-17 21:41:14(0.75807600 1668717674) - select * from venta
+---
+2022-11-17 21:41:14(0.76154000 1668717674) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-17 21:41:14(0.76517800 1668717674) - SELECT * FROM estados WHERE aula=1 AND puesto=1 AND YEAR(au_fec_alta)=YEAR('2022-11-11') AND MONTH(au_fec_alta)=MONTH('2022-11-11') AND DAY(au_fec_alta)=DAY('2022-11-11') AND HOUR(au_fec_alta)=12
+---

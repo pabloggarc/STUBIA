@@ -63,7 +63,7 @@ require_once($dir_raiz."includes/cabecera.php");
     <?php
     echo getAforoTipoAula(1);
     echo "<br>";
-    $valor= getEstadoPuesto(1,1);
+    $valor= getEstadoPuesto(1,1,'2022-11-11',12);
     echo $valor[1];
     echo "<br>";
     echo $valor[2];

@@ -277,10 +277,16 @@ function getAforoTipoAula($tipoAula) {
     return ($total);
 }
 
-function getEstadoPuesto($idAula, $idPuesto, $fecha='', $hora='') {
+function getEstadoPuesto($idAula, $idPuesto, $fecha=NULL, $hora=NULL) {
     $estado="";
     $sql_connect = conectar_bd();
-    $sql = "SELECT * FROM estados WHERE aula=".$idAula." AND puesto=".$idPuesto." ORDER BY au_fec_alta DESC";
+    $sql = "SELECT * FROM estados WHERE aula=".$idAula." AND puesto=".$idPuesto;
+    if (!is_null($fecha)){
+        $sql.= " AND YEAR(au_fec_alta)=YEAR('".$fecha."') AND MONTH(au_fec_alta)=MONTH('".$fecha."') AND DAY(au_fec_alta)=DAY('".$fecha."')";
+    }
+    if (!is_null($hora)){
+        $sql.= " AND HOUR(au_fec_alta)=".$hora;
+    }
     writeLog($sql);
     $consulta = db_query($sql, $sql_connect);
     if (!$consulta) {
@@ -300,6 +306,8 @@ function getEstadoPuesto($idAula, $idPuesto, $fecha='', $hora='') {
     $devolver[2]=$fecha;
     return ($devolver);
 }
+
+
 
 
 
