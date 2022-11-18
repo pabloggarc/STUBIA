@@ -40,7 +40,7 @@ CREATE TABLE `accesos_usuarios` (
   `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
   `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='Tabla para guardar los accesos de los usuarios a la app';
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COMMENT='Tabla para guardar los accesos de los usuarios a la app';
 
 --
 -- Dumping data for table `accesos_usuarios`
@@ -60,7 +60,11 @@ INSERT INTO `accesos_usuarios` (`id`,`user_id`,`perfil_id`,`login_date`,`au_fec_
  (10,7,1,'2022-11-15 20:39:37','2022-11-15 20:39:37','100000','login.php',NULL,NULL,NULL,0,1),
  (11,7,1,'2022-11-15 20:39:37','2022-11-15 20:39:37','100000','index.php',NULL,NULL,NULL,0,1),
  (12,7,1,'2022-11-15 20:41:58','2022-11-15 20:41:58','100000','login.php',NULL,NULL,NULL,0,1),
- (13,7,1,'2022-11-15 20:41:58','2022-11-15 20:41:58','100000','index.php',NULL,NULL,NULL,0,1);
+ (13,7,1,'2022-11-15 20:41:58','2022-11-15 20:41:58','100000','index.php',NULL,NULL,NULL,0,1),
+ (14,7,1,'2022-11-17 18:35:12','2022-11-17 18:35:12','100000','login.php',NULL,NULL,NULL,0,1),
+ (15,7,1,'2022-11-17 18:35:12','2022-11-17 18:35:12','100000','index.php',NULL,NULL,NULL,0,1),
+ (16,7,1,'2022-11-17 21:39:44','2022-11-17 21:39:44','100000','index.php',NULL,NULL,NULL,0,1),
+ (17,7,1,'2022-11-17 21:41:14','2022-11-17 21:41:14','100000','index.php',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `accesos_usuarios` ENABLE KEYS */;
 
 
@@ -207,7 +211,8 @@ INSERT INTO `master_estados` (`id`,`estado`,`au_fec_alta`,`au_usu_alta`,`au_proc
 DROP TABLE IF EXISTS `master_franjas_horarias`;
 CREATE TABLE `master_franjas_horarias` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `franja` varchar(50) NOT NULL,
+  `inicio` tinyint(3) unsigned NOT NULL,
+  `fin` tinyint(3) unsigned NOT NULL,
   `au_fec_alta` datetime NOT NULL DEFAULT '2022-11-06 00:00:00',
   `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
   `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
@@ -217,18 +222,27 @@ CREATE TABLE `master_franjas_horarias` (
   `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
   `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `master_franjas_horarias`
 --
 
 /*!40000 ALTER TABLE `master_franjas_horarias` DISABLE KEYS */;
-INSERT INTO `master_franjas_horarias` (`id`,`franja`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
- (1,'8:00-9:00','2022-11-06 00:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (2,'9:00-10:00','2022-11-06 00:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (3,'10:00-11:00','2022-11-06 00:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (4,'11:00-12:00','2022-11-15 21:00:00','2','A mano',NULL,NULL,NULL,0,1);
+INSERT INTO `master_franjas_horarias` (`id`,`inicio`,`fin`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,8,9,'2022-11-06 00:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (2,9,10,'2022-11-06 00:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (3,10,11,'2022-11-06 00:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (4,11,12,'2022-11-15 21:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (5,12,13,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (6,13,14,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (7,14,15,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (8,15,16,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (9,16,17,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (10,17,18,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (11,18,19,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (12,19,20,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (13,20,21,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `master_franjas_horarias` ENABLE KEYS */;
 
 
@@ -463,7 +477,7 @@ CREATE TABLE `reservas` (
 
 /*!40000 ALTER TABLE `reservas` DISABLE KEYS */;
 INSERT INTO `reservas` (`id`,`id_usuario`,`id_franja_horaria`,`fecha`,`id_puesto`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
- (1,7,2,'2022-10-12 00:00:00',1,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1);
+ (1,7,2,'2022-11-17 00:00:00',1,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `reservas` ENABLE KEYS */;
 
 
