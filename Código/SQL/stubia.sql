@@ -80,7 +80,7 @@ CREATE TABLE `estados` (
   `estado` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `au_fec_alta` datetime NOT NULL DEFAULT '2022-10-08 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='Tabla para guardar los estados de los puestos';
+) ENGINE=InnoDB AUTO_INCREMENT=3805 DEFAULT CHARSET=utf8 COMMENT='Tabla para guardar los estados de los puestos';
 
 --
 -- Dumping data for table `estados`
@@ -88,17 +88,7 @@ CREATE TABLE `estados` (
 
 /*!40000 ALTER TABLE `estados` DISABLE KEYS */;
 INSERT INTO `estados` (`id`,`aula`,`puesto`,`estado`,`au_fec_alta`) VALUES 
- (1,1,1,1,'2022-10-08 00:00:00'),
- (2,1,1,1,'2022-10-08 00:00:00'),
- (3,1,1,1,'2022-11-10 17:41:01'),
- (4,1,1,1,'2022-11-10 17:42:01'),
- (5,1,1,1,'2022-11-10 17:42:18'),
- (6,1,1,1,'2022-11-10 17:42:19'),
- (7,1,1,1,'2022-11-10 17:43:18'),
- (8,1,2,2,'2022-11-10 17:43:25'),
- (9,1,1,2,'2022-11-10 17:44:04'),
- (10,3,1,2,'2022-11-10 23:19:27'),
- (11,1,1,1,'2022-11-11 12:54:20');
+ (1,1,1,1,'2022-10-08 00:00:00');
 /*!40000 ALTER TABLE `estados` ENABLE KEYS */;
 
 
@@ -109,6 +99,7 @@ INSERT INTO `estados` (`id`,`aula`,`puesto`,`estado`,`au_fec_alta`) VALUES
 DROP TABLE IF EXISTS `master_aulas`;
 CREATE TABLE `master_aulas` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `puesto` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `aula` varchar(50) NOT NULL,
   `tipo` tinyint(1) unsigned NOT NULL,
   `aforo` int(4) unsigned NOT NULL DEFAULT 0,
@@ -133,12 +124,12 @@ CREATE TABLE `master_aulas` (
 --
 
 /*!40000 ALTER TABLE `master_aulas` DISABLE KEYS */;
-INSERT INTO `master_aulas` (`id`,`aula`,`tipo`,`aforo`,`id_tipo_puestos`,`lado_puerta`,`id_bloque`,`planta`,`divisiones_aula`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
- (1,'SA6',1,60,1,'Derecha',4,1,2,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (2,'NL11',2,30,2,'Derecha',2,2,1,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (3,'Biblioteca',3,80,2,'Derecha',4,2,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (4,'Mesa estudio 1',4,6,2,'Izquierda',2,2,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (5,'Mesa estudio 2',5,6,2,'Izquierda',0,0,1,'2022-10-08 00:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
+INSERT INTO `master_aulas` (`id`,`puesto`,`aula`,`tipo`,`aforo`,`id_tipo_puestos`,`lado_puerta`,`id_bloque`,`planta`,`divisiones_aula`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,0,'SA6',1,60,1,'Derecha',4,1,2,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (2,0,'NL11',2,30,2,'Derecha',2,2,1,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (3,0,'Biblioteca',3,80,2,'Derecha',4,2,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (4,0,'Mesa estudio 1',4,6,2,'Izquierda',2,2,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (5,0,'Mesa estudio 2',5,6,2,'Izquierda',0,0,1,'2022-10-08 00:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `master_aulas` ENABLE KEYS */;
 
 
@@ -191,7 +182,7 @@ CREATE TABLE `master_estados` (
   `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
   `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `master_estados`
@@ -200,7 +191,8 @@ CREATE TABLE `master_estados` (
 /*!40000 ALTER TABLE `master_estados` DISABLE KEYS */;
 INSERT INTO `master_estados` (`id`,`estado`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
  (1,'Ocupado','2022-10-14 16:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (2,'Libre','2022-10-14 16:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
+ (2,'Libre','2022-10-14 16:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (3,'Reservado','2022-11-18 17:00:00','2','A mano',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `master_estados` ENABLE KEYS */;
 
 
@@ -285,6 +277,7 @@ INSERT INTO `master_perfil` (`id`,`perfil`,`au_fec_alta`,`au_usu_alta`,`au_proc_
 DROP TABLE IF EXISTS `master_puestos`;
 CREATE TABLE `master_puestos` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `puesto` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `id_aula` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `ìd_tipo` tinyint(3) unsigned NOT NULL DEFAULT 1,
   `fila` tinyint(3) unsigned NOT NULL DEFAULT 1,
@@ -298,20 +291,21 @@ CREATE TABLE `master_puestos` (
   `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
   `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `master_puestos`
 --
 
 /*!40000 ALTER TABLE `master_puestos` DISABLE KEYS */;
-INSERT INTO `master_puestos` (`id`,`id_aula`,`ìd_tipo`,`fila`,`columna`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
- (1,2,2,1,1,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (2,2,2,1,2,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (3,2,2,1,3,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (4,2,2,1,4,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (5,3,2,1,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (6,1,1,1,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
+INSERT INTO `master_puestos` (`id`,`puesto`,`id_aula`,`ìd_tipo`,`fila`,`columna`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,1,2,2,1,1,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (2,2,2,2,1,2,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (3,3,2,2,1,3,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (4,4,2,2,1,4,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (5,1,3,2,1,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (6,2,3,1,1,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (7,3,3,1,1,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `master_puestos` ENABLE KEYS */;
 
 
@@ -469,7 +463,7 @@ CREATE TABLE `reservas` (
   KEY `id_franja_horaria` (`id_franja_horaria`),
   CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `master_usuarios` (`id`),
   CONSTRAINT `reservas_ibfk_2` FOREIGN KEY (`id_franja_horaria`) REFERENCES `master_franjas_horarias` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `reservas`
@@ -477,7 +471,9 @@ CREATE TABLE `reservas` (
 
 /*!40000 ALTER TABLE `reservas` DISABLE KEYS */;
 INSERT INTO `reservas` (`id`,`id_usuario`,`id_franja_horaria`,`fecha`,`id_puesto`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
- (1,7,2,'2022-11-17 00:00:00',1,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1);
+ (1,7,11,'2022-11-12 00:00:00',5,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (2,7,11,'2022-11-12 00:00:00',6,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (3,7,11,'2022-11-12 00:00:00',7,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `reservas` ENABLE KEYS */;
 
 
