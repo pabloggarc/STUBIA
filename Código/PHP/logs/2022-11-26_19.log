@@ -1,0 +1,94 @@
+2022-11-26 19:11:08(0.92192700 1669486268) - Entro
+---
+2022-11-26 19:11:08(0.92632500 1669486268) - INSERT INTO estados (aula, puesto, estado, au_fec_alta) VALUES (1,1,1,SYSDATE())
+---
+2022-11-26 19:11:08(0.94415700 1669486268) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id WHERE p.id_aula=3 AND p.puesto=1 AND r.activo=1 AND YEAR(fecha)=YEAR(SYSDATE()) AND MONTH(fecha)=MONTH(SYSDATE()) AND DAY(fecha)=DAY(SYSDATE()) AND f.inicio=HOUR(SYSDATE())
+---
+2022-11-26 19:11:10(0.91761700 1669486270) - Entro
+---
+2022-11-26 19:11:10(0.94539600 1669486270) - INSERT INTO estados (aula, puesto, estado, au_fec_alta) VALUES (1,1,1,SYSDATE())
+---
+2022-11-26 19:11:10(0.95967100 1669486270) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id WHERE p.id_aula=3 AND p.puesto=1 AND r.activo=1 AND YEAR(fecha)=YEAR(SYSDATE()) AND MONTH(fecha)=MONTH(SYSDATE()) AND DAY(fecha)=DAY(SYSDATE()) AND f.inicio=HOUR(SYSDATE())
+---
+2022-11-26 19:11:12(0.12763000 1669486272) - Entro
+---
+2022-11-26 19:11:12(0.15145300 1669486272) - INSERT INTO estados (aula, puesto, estado, au_fec_alta) VALUES (1,1,1,SYSDATE())
+---
+2022-11-26 19:11:12(0.16651100 1669486272) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id WHERE p.id_aula=3 AND p.puesto=1 AND r.activo=1 AND YEAR(fecha)=YEAR(SYSDATE()) AND MONTH(fecha)=MONTH(SYSDATE()) AND DAY(fecha)=DAY(SYSDATE()) AND f.inicio=HOUR(SYSDATE())
+---
+2022-11-26 19:14:45(0.96540400 1669486485) - SELECT mu.id, mu.id_perfil, mp.perfil, mu.nombre, mu.apellidos, mu.username, mu.password FROM master_usuarios mu INNER JOIN master_perfil mp ON mu.id_perfil=mp.id AND mp.activo=1 WHERE mu.username = ? and mu.activo=1
+---
+2022-11-26 19:14:46(0.12606200 1669486486) - Login correcto de usuario guille (id 7)
+---
+2022-11-26 19:14:46(0.14683700 1669486486) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (7, 1, SYSDATE(), SYSDATE(), 100000, 'login.php');
+---
+2022-11-26 19:14:46(0.19573700 1669486486) - select * from venta
+---
+2022-11-26 19:14:46(0.22579900 1669486486) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-26 19:14:46(0.25625500 1669486486) - gesEstadoPuesto: 1, 1, 2022-11-11, 12
+---
+2022-11-26 19:14:46(0.26077600 1669486486) - SELECT * FROM estados WHERE aula=1 AND puesto=1 AND YEAR(au_fec_alta)=YEAR('2022-11-11') AND MONTH(au_fec_alta)=MONTH('2022-11-11') AND DAY(au_fec_alta)=DAY('2022-11-11') AND HOUR(au_fec_alta)=12
+---
+2022-11-26 19:14:46(0.26624800 1669486486) - SELECT * FROM reservas WHERE id_puesto=1 AND YEAR(au_fec_alta)=YEAR('2022-11-11 12:00:00') AND MONTH(au_fec_alta)=MONTH('2022-11-11 12:00:00') AND DAY(au_fec_alta)=DAY('2022-11-11 12:00:00') AND HOUR(au_fec_alta)=12 AND id_usuario=7
+---
+2022-11-26 19:14:56(0.35079600 1669486496) - Entro
+---
+2022-11-26 19:14:56(0.35627700 1669486496) - INSERT INTO estados (aula, puesto, estado, au_fec_alta) VALUES (1,1,1,SYSDATE())
+---
+2022-11-26 19:14:56(0.37042800 1669486496) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id WHERE p.id_aula=3 AND p.puesto=1 AND r.activo=1 AND YEAR(fecha)=YEAR(SYSDATE()) AND MONTH(fecha)=MONTH(SYSDATE()) AND DAY(fecha)=DAY(SYSDATE()) AND f.inicio=HOUR(SYSDATE())
+---
+2022-11-26 19:15:02(0.41622000 1669486502) - Entro
+---
+2022-11-26 19:15:02(0.43683100 1669486502) - INSERT INTO estados (aula, puesto, estado, au_fec_alta) VALUES (1,1,1,SYSDATE())
+---
+2022-11-26 19:15:02(0.45153000 1669486502) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id WHERE p.id_aula=3 AND p.puesto=1 AND r.activo=1 AND YEAR(fecha)=YEAR(SYSDATE()) AND MONTH(fecha)=MONTH(SYSDATE()) AND DAY(fecha)=DAY(SYSDATE()) AND f.inicio=HOUR(SYSDATE())
+---
+2022-11-26 19:15:04(0.59818300 1669486504) - Entro
+---
+2022-11-26 19:15:04(0.62650900 1669486504) - INSERT INTO estados (aula, puesto, estado, au_fec_alta) VALUES (1,1,1,SYSDATE())
+---
+2022-11-26 19:15:04(0.64016500 1669486504) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id WHERE p.id_aula=3 AND p.puesto=1 AND r.activo=1 AND YEAR(fecha)=YEAR(SYSDATE()) AND MONTH(fecha)=MONTH(SYSDATE()) AND DAY(fecha)=DAY(SYSDATE()) AND f.inicio=HOUR(SYSDATE())
+---
+2022-11-26 19:25:26(0.78701000 1669487126) - SELECT mu.id, mu.id_perfil, mp.perfil, mu.nombre, mu.apellidos, mu.username, mu.password FROM master_usuarios mu INNER JOIN master_perfil mp ON mu.id_perfil=mp.id AND mp.activo=1 WHERE mu.username = ? and mu.activo=1
+---
+2022-11-26 19:25:26(0.86540800 1669487126) - Login correcto de usuario nico (id 9)
+---
+2022-11-26 19:25:26(0.87151800 1669487126) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (9, 1, SYSDATE(), SYSDATE(), 100000, 'login.php');
+---
+2022-11-26 19:25:26(0.93244300 1669487126) - select * from venta
+---
+2022-11-26 19:25:26(0.93910800 1669487126) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-26 19:25:26(0.94630100 1669487126) - gesEstadoPuesto: 1, 1, 2022-11-11, 12
+---
+2022-11-26 19:25:26(0.94997300 1669487126) - SELECT * FROM estados WHERE aula=1 AND puesto=1 AND YEAR(au_fec_alta)=YEAR('2022-11-11') AND MONTH(au_fec_alta)=MONTH('2022-11-11') AND DAY(au_fec_alta)=DAY('2022-11-11') AND HOUR(au_fec_alta)=12
+---
+2022-11-26 19:25:26(0.95416700 1669487126) - SELECT * FROM reservas WHERE id_puesto=1 AND YEAR(au_fec_alta)=YEAR('2022-11-11 12:00:00') AND MONTH(au_fec_alta)=MONTH('2022-11-11 12:00:00') AND DAY(au_fec_alta)=DAY('2022-11-11 12:00:00') AND HOUR(au_fec_alta)=12 AND id_usuario=9
+---
+2022-11-26 19:26:34(0.49557400 1669487194) - SELECT mu.id, mu.id_perfil, mp.perfil, mu.nombre, mu.apellidos, mu.username, mu.password FROM master_usuarios mu INNER JOIN master_perfil mp ON mu.id_perfil=mp.id AND mp.activo=1 WHERE mu.username = ? and mu.activo=1
+---
+2022-11-26 19:26:34(0.61546700 1669487194) - Login correcto de usuario chus (id 10)
+---
+2022-11-26 19:26:34(0.63422600 1669487194) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (10, 1, SYSDATE(), SYSDATE(), 100000, 'login.php');
+---
+2022-11-26 19:26:34(0.68865900 1669487194) - select * from venta
+---
+2022-11-26 19:26:34(0.69443600 1669487194) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-26 19:26:34(0.71095100 1669487194) - gesEstadoPuesto: 1, 1, 2022-11-11, 12
+---
+2022-11-26 19:26:34(0.71466200 1669487194) - SELECT * FROM estados WHERE aula=1 AND puesto=1 AND YEAR(au_fec_alta)=YEAR('2022-11-11') AND MONTH(au_fec_alta)=MONTH('2022-11-11') AND DAY(au_fec_alta)=DAY('2022-11-11') AND HOUR(au_fec_alta)=12
+---
+2022-11-26 19:26:34(0.71879000 1669487194) - SELECT * FROM reservas WHERE id_puesto=1 AND YEAR(au_fec_alta)=YEAR('2022-11-11 12:00:00') AND MONTH(au_fec_alta)=MONTH('2022-11-11 12:00:00') AND DAY(au_fec_alta)=DAY('2022-11-11 12:00:00') AND HOUR(au_fec_alta)=12 AND id_usuario=10
+---
+2022-11-26 19:59:45(0.59693900 1669489185) - select * from venta
+---
+2022-11-26 19:59:45(0.60328900 1669489185) - SELECT sum(aforo) as suma FROM master_aulas WHERE tipo=1
+---
+2022-11-26 19:59:45(0.60955400 1669489185) - gesEstadoPuesto: 1, 1, 2022-11-11, 12
+---
+2022-11-26 19:59:45(0.61333600 1669489185) - SELECT * FROM estados WHERE aula=1 AND puesto=1 AND YEAR(au_fec_alta)=YEAR('2022-11-11') AND MONTH(au_fec_alta)=MONTH('2022-11-11') AND DAY(au_fec_alta)=DAY('2022-11-11') AND HOUR(au_fec_alta)=12
+---
+2022-11-26 19:59:45(0.61871100 1669489185) - SELECT * FROM reservas WHERE id_puesto=1 AND YEAR(au_fec_alta)=YEAR('2022-11-11 12:00:00') AND MONTH(au_fec_alta)=MONTH('2022-11-11 12:00:00') AND DAY(au_fec_alta)=DAY('2022-11-11 12:00:00') AND HOUR(au_fec_alta)=12 AND id_usuario=10
+---

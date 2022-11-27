@@ -1,0 +1,1304 @@
+2022-11-27 23:50:53(0.72983100 1669589453) - select * from master_aulas
+---
+2022-11-27 23:50:56(0.35264000 1669589456) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:50:56(0.35507300 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.35730500 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.35946900 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.36118100 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.36292500 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.36469300 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.36651000 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.36879100 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.37123600 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.37334500 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.37533300 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.37733300 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.37944500 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.38147700 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.38359400 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.38591000 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.38829900 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.39051500 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.39242300 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.39434700 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.39624200 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.39812900 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.40004000 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.40210400 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.40411600 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.40621500 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.40826800 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.41033100 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.41239800 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:50:56(0.41449800 1669589456) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.82706700 1669589463) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:51:03(0.82933400 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.83181800 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.83392400 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.83612800 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.83846900 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.84075800 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.84379200 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.84676900 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.84919800 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.85151500 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.85364300 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.85592100 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.85817500 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.86082800 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.86352400 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.86561400 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.86782700 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.87035400 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.87262400 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.87494700 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.87756000 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.87984100 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.88239200 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.88467800 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.88721100 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.88984000 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.89258900 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.89492100 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.89743200 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:03(0.89980100 1669589463) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.86984800 1669589473) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:51:13(0.87301100 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.87634700 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.87964900 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.88299400 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.88933000 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.89245000 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.89567700 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.89905500 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.90286400 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.90747800 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.91202400 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.91655300 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.92121700 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.92502200 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.92811600 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.93116800 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.93442100 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.93759600 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.94072000 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.94398000 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.94752800 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.95207600 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.95583800 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.96014700 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.96471200 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.96924500 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.97356100 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.97822200 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.98377600 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:13(0.98810700 1669589473) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.85891400 1669589483) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:51:23(0.86204000 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.86510600 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.86828600 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.87150900 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.87480600 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.87832100 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.88208400 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.88555700 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.88903800 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.89266100 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.89650900 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.90006900 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.90353800 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.90768500 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.91078700 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.91365100 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.91635500 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.91913000 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.92211300 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.92561600 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.92790800 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.93033800 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.93268600 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.93485200 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.93717800 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.93937000 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.94171200 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.94401700 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.94647200 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:23(0.94870700 1669589483) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.88945500 1669589493) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:51:33(0.89383500 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.89802300 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.90218700 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.90651100 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.91082500 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.91546400 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.91966800 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.92470700 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.93004200 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.93579700 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.94085600 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.94577200 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.95077800 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.95631300 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.96133500 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.96640300 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.97155700 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.97667800 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.98175900 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.98761000 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.99316500 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:33(0.99861800 1669589493) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:34(0.00564500 1669589494) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:34(0.01238400 1669589494) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:34(0.01891200 1669589494) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:34(0.02533600 1669589494) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:34(0.03145000 1669589494) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:34(0.03553600 1669589494) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:34(0.03961400 1669589494) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:34(0.04369100 1669589494) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.89117100 1669589503) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:51:43(0.89481800 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.89838700 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.90222100 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.90621400 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.91044200 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.91516500 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.92030500 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.92621700 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.93312000 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.94047100 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.94832900 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.95673800 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.96455500 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.97251400 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.98028300 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.98877100 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:43(0.99661000 1669589503) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.00499000 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.01274700 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.02131900 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.02917700 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.03868800 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.04777200 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.05830000 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.06664700 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.07569200 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.08293800 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.09027200 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.09590300 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:44(0.10147600 1669589504) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.89283100 1669589513) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:51:53(0.89834700 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.90392600 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.90962600 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.91515000 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.91954400 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.92321500 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.92693200 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.93046900 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.93398500 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.93751500 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.94139700 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.94554400 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.94963200 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.95390300 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.95802300 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.96230100 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.96637700 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.97056300 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.97465400 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.97884700 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.98293800 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.98705300 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.99081600 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.99470300 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:53(0.99841700 1669589513) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:54(0.00222900 1669589514) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:54(0.00594200 1669589514) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:54(0.00989000 1669589514) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:54(0.01365600 1669589514) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:51:54(0.01762300 1669589514) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.89751000 1669589523) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:52:03(0.90014300 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.90283300 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.90505400 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.90716800 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.90975800 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.91183500 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.91450900 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.91708700 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.91999100 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.92231300 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.92457700 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.92683800 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.92899700 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.93129200 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.93387800 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.93631400 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.93858400 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.94139200 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.94368400 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.94614000 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.94840900 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.95064300 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.95296300 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.95545700 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.95774200 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.96041900 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.96264500 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.96523100 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.96753000 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:03(0.96978800 1669589523) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.88852900 1669589533) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:52:13(0.89278100 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.89680600 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.90078700 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.90448400 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.90777800 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.91101000 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.91452200 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.91847600 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.92133000 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.92381400 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.92629800 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.92867500 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.93118000 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.93345600 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.93581600 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.93815900 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.94055500 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.94294900 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.94561200 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.94821100 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.95071300 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.95330600 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.95585700 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.95853700 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.96105800 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.96403600 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.96659300 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.96912700 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.97167000 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:13(0.97428200 1669589533) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.90211100 1669589543) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:52:23(0.90616500 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.90973600 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.91318800 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.91621200 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.91992400 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.92798400 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.93142200 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.93481900 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.93857900 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.94217300 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.94713300 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.95073400 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.95395500 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.95709900 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.96053900 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.96365300 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.96669900 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.96968600 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.97277900 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.97614200 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.97925000 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.98197900 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.98458300 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.98719300 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.98999500 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.99248400 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.99489500 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.99731600 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:23(0.99977500 1669589543) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:24(0.00214900 1669589544) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.90604300 1669589553) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:52:33(0.91010900 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.91356900 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.91713300 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.92016500 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.92306700 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.92599200 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.92878500 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.93154400 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.93441000 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.93706500 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.93976600 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.94238000 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.94497700 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.94764000 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.95039100 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.95304500 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.95565000 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.95832400 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.96090900 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.96359700 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.96620400 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.96864000 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.97104000 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.97345600 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.97591900 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.97836300 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.98103000 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.98366000 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.98624600 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:33(0.98872400 1669589553) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.91170000 1669589563) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:52:43(0.91562200 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.91972300 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.92265700 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.92574100 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.92874500 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.93183500 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.93478700 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.93766000 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.94057000 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.94355000 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.94699800 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.94967000 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.95194200 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.95407700 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.95621900 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.95848300 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.96066300 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.96285800 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.96499100 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.96704000 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.96910300 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.97114900 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.97321200 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.97534900 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.97771500 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.98002600 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.98222900 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.98438300 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.98652400 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:43(0.98860800 1669589563) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.93504000 1669589573) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:52:53(0.93753900 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.93975700 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.94194300 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.94413200 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.94631600 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.94853900 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.95089100 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.95329900 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.95554400 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.95786300 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.96021200 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.96255700 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.96520100 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.96798500 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.97067300 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.97329700 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.97609200 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.97890700 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.98209000 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.98482300 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.98742600 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.98995800 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.99248600 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.99471400 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.99716200 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:53(0.99942100 1669589573) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:54(0.00176500 1669589574) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:54(0.00403900 1669589574) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:54(0.00628800 1669589574) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:52:54(0.00855100 1669589574) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.93673000 1669589583) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:53:03(0.93957800 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.94212400 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.94468600 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.94726500 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.94973500 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.95229200 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.95481400 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.95726900 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.95972500 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.96232200 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.96487400 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.96761800 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.97036000 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.97262200 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.97485900 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.97709400 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.97945500 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.98175000 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.98416600 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.98641900 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.98867500 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.99093600 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.99322600 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.99561500 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:03(0.99835300 1669589583) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:04(0.00076500 1669589584) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:04(0.00296400 1669589584) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:04(0.00514400 1669589584) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:04(0.00733800 1669589584) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:04(0.00952700 1669589584) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.90532100 1669589593) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:53:13(0.90761800 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.91017800 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.91254000 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.91498200 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.91725600 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.91959500 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.92178200 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.92426800 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.92660500 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.92893600 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.93118000 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.93332200 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.93563400 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.93791700 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.94023800 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.94284300 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.94519400 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.94760100 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.94971800 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.95201700 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.95417500 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.95657000 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.95891000 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.96106200 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.96325800 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.96539300 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.96766000 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.96976300 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.97213200 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:13(0.97439700 1669589593) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.93548600 1669589603) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:53:23(0.93864500 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.94185700 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.94496100 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.94816700 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.95155700 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.95454300 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.95722600 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.95983100 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.96248400 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.96532900 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.96782500 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.97020100 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.97254100 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.97493600 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.97728600 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.97965200 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.98296800 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.98629600 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.98884500 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.99122600 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.99357400 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.99591300 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:23(0.99849300 1669589603) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:24(0.00078500 1669589604) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:24(0.00295700 1669589604) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:24(0.00509300 1669589604) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:24(0.00725000 1669589604) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:24(0.00944500 1669589604) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:24(0.01180400 1669589604) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:24(0.01411400 1669589604) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.94601700 1669589613) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:53:33(0.94877700 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.95160300 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.95451700 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.95744100 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.96044600 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.96377300 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.96676300 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.96976200 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.97342700 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.97676700 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.98138700 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.98483100 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.98810600 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.99136000 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.99495700 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:33(0.99850300 1669589613) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.00229600 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.00602100 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.01021700 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.01402700 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.01784600 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.02155400 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.02568200 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.02958700 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.03334600 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.03707100 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.04093800 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.04480700 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.04856400 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:34(0.05222700 1669589614) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:43(0.93604100 1669589623) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:53:43(0.93958100 1669589623) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:43(0.94335200 1669589623) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:43(0.94710600 1669589623) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:43(0.95196600 1669589623) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:43(0.95647900 1669589623) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:43(0.96162500 1669589623) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:43(0.96719400 1669589623) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:43(0.97316600 1669589623) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:43(0.97868100 1669589623) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:43(0.98571400 1669589623) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:43(0.99325100 1669589623) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.00279000 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.01040400 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.01909600 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.02560800 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.03098700 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.03750300 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.04278100 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.04822600 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.05332500 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.05841400 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.06365900 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.06861500 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.07260500 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.07655500 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.08075500 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.08493800 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.08927200 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.09330900 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:44(0.09733900 1669589624) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:53(0.97358800 1669589633) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:53:53(0.97751400 1669589633) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:53(0.98148600 1669589633) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:53(0.98544600 1669589633) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:53(0.98931800 1669589633) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:53(0.99318500 1669589633) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:53(0.99707800 1669589633) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.00084400 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.00462900 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.00843400 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.01232100 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.01619400 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.01987300 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.02476100 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.02965400 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.03348800 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.03781700 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.04164600 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.04547800 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.05020300 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.05529000 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.05885800 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.06374100 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.06829600 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.07233700 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.07629100 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.08100100 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.08458500 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.08850200 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.09263200 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:53:54(0.09708700 1669589634) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.01897700 1669589644) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:54:04(0.02779100 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.03143900 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.03496900 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.03841100 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.04206600 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.04501700 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.04810000 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.05125100 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.05396700 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.05762900 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.06091900 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.06427800 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.06718900 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.06965600 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.07259500 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.07584500 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.08019800 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.08321100 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.08623500 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.08907000 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.09247600 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.09559000 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.09912100 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.10201800 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.10572300 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.10960400 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.11227000 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.11503500 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.11812900 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:04(0.12077900 1669589644) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.00240500 1669589654) - SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=2
+---
+2022-11-27 23:54:14(0.00589500 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.00923700 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.01167200 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.01411000 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.01673100 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.01950600 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.02247300 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.02523700 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.02820600 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.03110300 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.03411200 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.03681000 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.03947000 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.04185400 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.04423400 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.04674800 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.04986000 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.05217700 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.05438400 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.05651600 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.05870500 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.06082700 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.06326600 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.06604900 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.06850400 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.07067900 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.07333200 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.07561000 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.07802600 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-11-27 23:54:14(0.08029400 1669589654) - SELECT * FROM estados WHERE aula=2 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---

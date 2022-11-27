@@ -1,5 +1,6 @@
 <?php
-require_once "config.php";
+require_once "includes/config.php";
+require_once "includes/funciones_db.php";
  
 $name = $surnames = $username = $email = $password = $confirm_password = "";
 $name_err = $surnames_err = $username_err = $email_err = $password_err = $confirm_password_err = "";
@@ -26,11 +27,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $email_err = "Tu dirección de correo electrónico no es válida.";
     } 
     else{
+
+        //abrimos la BD
+        $sql_connect = conectar_bd();
         //Comprobamos que nadie haya elegido ese nombre de usuario
         $query = "SELECT username FROM master_usuarios WHERE username = ?";
         $param_username = trim($_POST["username"]);
-        
-        if($stmt = mysqli_prepare($link, $query)){
+    
+        if($stmt = mysqli_prepare($sql_connect, $query)){
             mysqli_stmt_bind_param($stmt, "s", $param_username);
 
             if(mysqli_stmt_execute($stmt)){
@@ -75,7 +79,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //Verificamos que no haya errores antes de pasar a la BD
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($name_err) && empty($surnames_err) && empty($email_err)){
         $query = "INSERT INTO master_usuarios (nombre, apellidos, username, password, email, au_fec_alta, au_proc_alta) VALUES (?, ?, ?, ?, ?, now(), 'Web')";
-        if($stmt = mysqli_prepare($link, $query)){
+        if($stmt = mysqli_prepare($sql_connect, $query)){
 
             mysqli_stmt_bind_param($stmt, "sssss", $param_name, $param_surnames, $param_username, $param_password, $param_email);
             $param_name = $_POST["name"]; 
@@ -94,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_close($stmt);
         }
     }
-    mysqli_close($link);
+    mysqli_close($sql_connect);
 }
 ?>
  

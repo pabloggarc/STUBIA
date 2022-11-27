@@ -6,9 +6,9 @@ require('funciones_fecha.php');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
-require 'includes/PHPMailer/src/Exception.php';
-require 'includes/PHPMailer/src/PHPMailer.php';
-require 'includes/PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
  
 //Instancia de PHPMailer
@@ -244,12 +244,11 @@ function is_decimal( $val )
  * @return void
  */
 
-function registrar_acceso_db($user_id, $perfil_id) {
+function registrar_acceso_app($user_id, $perfil_id) {
 
     $sql_connect = conectar_bd();
 
     $sql = "INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (" . $user_id . ", " . $perfil_id . ", SYSDATE(), SYSDATE(), 100000, '" . php_actual() . "');";
-
     writeLog($sql);
     $insert = db_query($sql, $sql_connect);
     if (!$insert) {
@@ -281,6 +280,7 @@ function getEstadoPuesto($idAula, $idPuesto, $fecha=NULL, $hora=NULL) {
     $estado="";
     $sql_connect = conectar_bd();
     $sql = "SELECT * FROM estados WHERE aula=".$idAula." AND puesto=".$idPuesto;
+    writeLog("gesEstadoPuesto: ". $idAula.", ".$idPuesto.", ".$fecha.", ".$hora);
     if (!is_null($fecha)){
         $sql.= " AND YEAR(au_fec_alta)=YEAR('".$fecha."') AND MONTH(au_fec_alta)=MONTH('".$fecha."') AND DAY(au_fec_alta)=DAY('".$fecha."')";
     }
@@ -290,12 +290,32 @@ function getEstadoPuesto($idAula, $idPuesto, $fecha=NULL, $hora=NULL) {
     writeLog($sql);
     $consulta = db_query($sql, $sql_connect);
     if (!$consulta) {
-        exit("No se ha podido acceder a la base de datos (getEStadoPuesto).");
+        exit("No se ha podido acceder a la base de datos (getEstadoPuesto).");
     } elseif($consulta->num_rows>0){
         $fila = $consulta->fetch_array();
-        //if $fila->num
         $estado=$fila["estado"];
         $fecha=$fila["au_fec_alta"];
+    } 
+    
+    $consulta->free_result();
+
+    $sql = "SELECT * FROM reservas WHERE id_puesto=".$idPuesto;
+    if (!is_null($fecha)){
+        $sql.= " AND YEAR(au_fec_alta)=YEAR('".$fecha."') AND MONTH(au_fec_alta)=MONTH('".$fecha."') AND DAY(au_fec_alta)=DAY('".$fecha."')";
+    }
+    if (!is_null($hora)){
+        $sql.= " AND HOUR(au_fec_alta)=".$hora;
+    }
+    if (!is_null($_SESSION["stubia_userid"])){
+        $sql.= " AND id_usuario=".$_SESSION["stubia_userid"];
+    }
+    writeLog($sql);
+    $consulta = db_query($sql, $sql_connect);
+    if (!$consulta) {
+        exit("No se ha podido acceder a la base de datos (getEstadoPuesto).");
+    } elseif($consulta->num_rows>0){
+        $fila = $consulta->fetch_array();
+        $estado+=2;
     } 
     
     $consulta->free_result();

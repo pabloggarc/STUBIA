@@ -1,8 +1,10 @@
 <?php 
 session_start();
 
-writeLog("Entorno "._ENTORNO_);
-                
-registrar_acceso_db($_SESSION["stubia_userid"], $_SESSION["stubia_useridperfil"]);
+//Verificar que el usuario se ha logueado y lo llevamos a la pagina principal
+if(!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]){
+    header("location: login.php");
+    exit;
+}
 
 ?>

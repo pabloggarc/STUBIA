@@ -1,43 +1,42 @@
-<html>
-    <body>
-        OK
-</body>
 <?php
 
-// Include config file
-require_once "config.php";
+require_once "../includes/config.php";
+require_once "../includes/funciones.php";
+require_once "../includes/funciones_db.php";
 $aula = $puesto = $estado =0;
-
-
-$stmt = mysqli_prepare($link, "INSERT INTO estados (aula, puesto, estado, au_fec_alta) VALUES (?, ?, ?, NOW())");
-mysqli_stmt_bind_param($stmt, 'sss', $aula, $puesto, $estado);
 
 if(isset($_GET["aula"]) && isset($_GET["puesto"]) && isset($_GET["estado"])){
     $aula=$_GET["aula"];
     $puesto=$_GET["puesto"];
-    $estado=$_GET["estado"];    
-    
-    //$sql = "INSERT INTO estados (aula, puesto, estado) VALUES (".$aula.",".$puesto.",".$estado.")";
-    
-    /* ejecuta la sentencia preparada*/
-    if(mysqli_stmt_execute($stmt)){
-        /* store result */
-        mysqli_stmt_store_result($stmt);
-        //printf("%d Fila insertada.\n", $stmt->affected_rows);
-        //if(mysqli_stmt_num_rows($stmt) == 1){
-        if($stmt->affected_rows == 1){        
-            echo "OK";
-        } else{
-            echo "Error1";
-        }
-    } else{
-        echo "Error2";
+    $estado=$_GET["estado"];
+    writeLog("Entro");
+
+    //Primero guardamos el estado que nos llega del sensor:
+    $sql_connect = conectar_bd();
+    $sql = "INSERT INTO estados (aula, puesto, estado, au_fec_alta) VALUES (".$aula.",".$puesto.",".$estado.",SYSDATE())";
+    writeLog($sql);
+    $insercion = db_query($sql, $sql_connect);
+    if (!$insercion) {
+        exit("No se ha podido acceder a la base de datos (getEStadoPuesto).");
     }
-    // Close statement
-    mysqli_stmt_close($stmt);
-    
-} else {
-    echo "Error3";
+
+    //En segundo lugar pintamos en la página si el puesto está reservado durante la hora actual: 
+    $sql = "SELECT r.id FROM reservas r "
+    . "INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 "
+    . "INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id "
+    . "WHERE p.id_aula=3 AND p.puesto=".$puesto." AND r.activo=1 "
+    . "AND YEAR(fecha)=YEAR(SYSDATE()) AND MONTH(fecha)=MONTH(SYSDATE()) AND DAY(fecha)=DAY(SYSDATE()) "
+    . "AND f.inicio=HOUR(SYSDATE())";
+
+    writeLog($sql);
+    $consultar = db_query($sql, $sql_connect);
+    if (!$consultar) {
+        exit("No se ha podido acceder a la base de datos (getEStadoPuesto).");
+    } elseif($consultar->num_rows>0){
+        echo "SI"; 
+    }
+    else{
+        echo "NO"; 
+    }
 }
 ?>
-</body>
