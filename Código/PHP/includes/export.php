@@ -10,15 +10,13 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 
 $columnas = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 if(isset($_POST["table-content"])){
-	$logo_adif = $dir_raiz.'img/logo_adif.gif';
-	$logoHeight = getimagesize($logo_adif)[1];
-        //jlgr jgramiro X 06/07/2022: Integración de código GUILLERMO: Añade el $_POST["origen"]
-	//$filename = isset($_POST["filename"]) ? $_POST["filename"]."_".date('Ymdhis') : "Export_".date('Ymdhis') ;
+	$logo_stubia.'img/logo-stubia.png';
+	$logoHeight = getimagesize($logo_stubia)[1];        
+	
         $filename = isset($_POST["filename"]) ? $_POST["origen"]."_".$_POST["filename"]."_".date('Ymdhis') : "Export_".date('Ymdhis') ;
 	$nrows = isset($_POST["nrows"]) ? $_POST["nrows"] : 1;
-	$ncolums = isset($_POST["ncolums"]) ? $_POST["ncolums"] - 1 : 1;
-	//var_dump($_POST["table-content"]);
-	//die();
+	$ncolums = isset($_POST["ncolums"]) ? $_POST["ncolums"] - 1 : 1;	
+	
 	$styleArray = [
 		'font' => [
 			'bold' => true,
@@ -70,7 +68,7 @@ if(isset($_POST["table-content"])){
 	$drawing = new \PhpOffice\PhpSpreadsheet\Worksheet\Drawing();
 	$drawing->setName('Logo');
 	$drawing->setDescription('Logo');
-	$drawing->setPath($logo_adif); // put your path and image here
+	$drawing->setPath($logo your path and image here
 	$drawing->setCoordinates('A1');
 	$drawing->setWorksheet($spreadsheet->getActiveSheet());
 	
@@ -99,12 +97,7 @@ if(isset($_POST["table-content"])){
         if($_POST["origen"] == "CMO" || $_POST["origen"] == "MITMA" ) $spreadsheet->getActiveSheet()->removeRow(3,1);
 	$spreadsheet->getActiveSheet()->setAutoFilter("A2:".$columnas[$ncolums].$nrows);
         
-         
-        //writeLog("A2:".$columnas[$ncolums].$nrows);
-	
-	//Guillermo 21/junio: con estas dos líneas se iguala el formato de los valores a los valores mostrados previamente en pantalla:
-	$spreadsheet->getActiveSheet()->getStyle('I3:J'.$nrows)->getNumberFormat()->setFormatCode(\PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_TEXT);
-	//$spreadsheet->getActiveSheet()->getStyle('I3:J'.$nrows)->getNumberFormat()->setFormatCode('###.###.###,####');
+	$spreadsheet->getActiveSheet()->getStyle('I3:J'.$nrows)->getNumberFormat()->setFormatCode(\PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_TEXT);	
 	$spreadsheet->getActiveSheet()->getStyle('I3:J'.$nrows)->getAlignment()->setHorizontal('right');
         
         //$spreadsheet = new Spreadsheet();
@@ -125,7 +118,7 @@ if(isset($_POST["table-content"])){
 	header("Location: ".php_actual());
 }else{
 	require_once($dir_raiz."includes/encabezado.php");
-    lanzar_aviso("No se ha podido completar la exportación.");
+    lanzar_aviso("No se ha podido completar la exportaci�n.");
 	require_once($dir_raiz."includes/cabecera.php");
 }
 

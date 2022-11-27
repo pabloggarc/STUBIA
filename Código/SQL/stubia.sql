@@ -40,7 +40,7 @@ CREATE TABLE `accesos_usuarios` (
   `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
   `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COMMENT='Tabla para guardar los accesos de los usuarios a la app';
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='Tabla para guardar los accesos de los usuarios a la app';
 
 --
 -- Dumping data for table `accesos_usuarios`
@@ -64,7 +64,15 @@ INSERT INTO `accesos_usuarios` (`id`,`user_id`,`perfil_id`,`login_date`,`au_fec_
  (14,7,1,'2022-11-17 18:35:12','2022-11-17 18:35:12','100000','login.php',NULL,NULL,NULL,0,1),
  (15,7,1,'2022-11-17 18:35:12','2022-11-17 18:35:12','100000','index.php',NULL,NULL,NULL,0,1),
  (16,7,1,'2022-11-17 21:39:44','2022-11-17 21:39:44','100000','index.php',NULL,NULL,NULL,0,1),
- (17,7,1,'2022-11-17 21:41:14','2022-11-17 21:41:14','100000','index.php',NULL,NULL,NULL,0,1);
+ (17,7,1,'2022-11-17 21:41:14','2022-11-17 21:41:14','100000','index.php',NULL,NULL,NULL,0,1),
+ (18,7,1,'2022-11-25 22:48:13','2022-11-25 22:48:13','100000','login.php',NULL,NULL,NULL,0,1),
+ (19,7,1,'2022-11-25 22:48:13','2022-11-25 22:48:13','100000','index.php',NULL,NULL,NULL,0,1),
+ (20,7,1,'2022-11-26 10:00:43','2022-11-26 10:00:43','100000','login.php',NULL,NULL,NULL,0,1),
+ (21,7,1,'2022-11-26 19:14:46','2022-11-26 19:14:46','100000','login.php',NULL,NULL,NULL,0,1),
+ (22,9,1,'2022-11-26 19:25:26','2022-11-26 19:25:26','100000','login.php',NULL,NULL,NULL,0,1),
+ (23,10,1,'2022-11-26 19:26:34','2022-11-26 19:26:34','100000','login.php',NULL,NULL,NULL,0,1),
+ (24,7,1,'2022-11-27 02:22:41','2022-11-27 02:22:41','100000','login.php',NULL,NULL,NULL,0,1),
+ (25,7,1,'2022-11-27 16:17:48','2022-11-27 16:17:48','100000','login.php',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `accesos_usuarios` ENABLE KEYS */;
 
 
@@ -80,7 +88,7 @@ CREATE TABLE `estados` (
   `estado` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `au_fec_alta` datetime NOT NULL DEFAULT '2022-10-08 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3805 DEFAULT CHARSET=utf8 COMMENT='Tabla para guardar los estados de los puestos';
+) ENGINE=InnoDB AUTO_INCREMENT=3814 DEFAULT CHARSET=utf8 COMMENT='Tabla para guardar los estados de los puestos';
 
 --
 -- Dumping data for table `estados`
@@ -88,7 +96,16 @@ CREATE TABLE `estados` (
 
 /*!40000 ALTER TABLE `estados` DISABLE KEYS */;
 INSERT INTO `estados` (`id`,`aula`,`puesto`,`estado`,`au_fec_alta`) VALUES 
- (1,1,1,1,'2022-10-08 00:00:00');
+ (1,1,1,1,'2022-11-11 12:00:00'),
+ (3805,1,1,1,'2022-11-26 19:11:08'),
+ (3806,2,1,1,'2022-11-26 19:11:10'),
+ (3807,1,1,1,'2022-11-26 19:11:12'),
+ (3808,2,2,2,'2022-11-26 19:14:56'),
+ (3809,1,2,1,'2022-11-26 19:15:02'),
+ (3810,1,1,1,'2022-11-26 19:15:04'),
+ (3811,1,48,2,'2022-11-26 02:00:00'),
+ (3812,3,55,2,'2022-11-26 02:00:00'),
+ (3813,3,1,1,'2022-11-27 16:04:00');
 /*!40000 ALTER TABLE `estados` ENABLE KEYS */;
 
 
@@ -99,7 +116,7 @@ INSERT INTO `estados` (`id`,`aula`,`puesto`,`estado`,`au_fec_alta`) VALUES
 DROP TABLE IF EXISTS `master_aulas`;
 CREATE TABLE `master_aulas` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `puesto` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `filas` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `aula` varchar(50) NOT NULL,
   `tipo` tinyint(1) unsigned NOT NULL,
   `aforo` int(4) unsigned NOT NULL DEFAULT 0,
@@ -117,19 +134,20 @@ CREATE TABLE `master_aulas` (
   `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
   `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `master_aulas`
 --
 
 /*!40000 ALTER TABLE `master_aulas` DISABLE KEYS */;
-INSERT INTO `master_aulas` (`id`,`puesto`,`aula`,`tipo`,`aforo`,`id_tipo_puestos`,`lado_puerta`,`id_bloque`,`planta`,`divisiones_aula`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
- (1,0,'SA6',1,60,1,'Derecha',4,1,2,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (2,0,'NL11',2,30,2,'Derecha',2,2,1,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (3,0,'Biblioteca',3,80,2,'Derecha',4,2,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (4,0,'Mesa estudio 1',4,6,2,'Izquierda',2,2,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (5,0,'Mesa estudio 2',5,6,2,'Izquierda',0,0,1,'2022-10-08 00:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
+INSERT INTO `master_aulas` (`id`,`filas`,`aula`,`tipo`,`aforo`,`id_tipo_puestos`,`lado_puerta`,`id_bloque`,`planta`,`divisiones_aula`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,8,'SA6',1,80,1,'Derecha',4,1,2,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (2,3,'NL11',2,30,2,'Derecha',2,2,1,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (3,10,'Biblioteca',3,100,2,'Derecha',4,2,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (4,2,'Mesa estudio 1',4,6,2,'Izquierda',2,2,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (5,2,'Mesa estudio 2',4,6,2,'Izquierda',2,1,1,'2022-10-08 00:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (6,10,'NA4',1,100,1,'Izquierda',2,1,2,'2022-11-27 13:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `master_aulas` ENABLE KEYS */;
 
 
@@ -291,7 +309,7 @@ CREATE TABLE `master_puestos` (
   `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
   `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `master_puestos`
@@ -305,7 +323,9 @@ INSERT INTO `master_puestos` (`id`,`puesto`,`id_aula`,`ìd_tipo`,`fila`,`columna
  (4,4,2,2,1,4,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
  (5,1,3,2,1,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
  (6,2,3,1,1,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
- (7,3,3,1,1,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
+ (7,3,3,1,1,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (8,1,1,1,1,1,'2022-11-27 09:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (9,48,1,1,0,0,'2022-11-27 09:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `master_puestos` ENABLE KEYS */;
 
 
@@ -316,7 +336,7 @@ INSERT INTO `master_puestos` (`id`,`puesto`,`id_aula`,`ìd_tipo`,`fila`,`columna
 DROP TABLE IF EXISTS `master_tipo_aula`;
 CREATE TABLE `master_tipo_aula` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `aula` varchar(50) NOT NULL,
+  `tipo` varchar(50) NOT NULL,
   `au_fec_alta` datetime NOT NULL DEFAULT '2022-11-13 00:00:00',
   `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
   `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
@@ -333,7 +353,7 @@ CREATE TABLE `master_tipo_aula` (
 --
 
 /*!40000 ALTER TABLE `master_tipo_aula` DISABLE KEYS */;
-INSERT INTO `master_tipo_aula` (`id`,`aula`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+INSERT INTO `master_tipo_aula` (`id`,`tipo`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
  (1,'Teoría','2022-11-13 18:00:00','7','A mano',NULL,NULL,NULL,0,1),
  (2,'Laboratorio','2022-11-13 18:00:00','7','A mano',NULL,NULL,NULL,0,1),
  (3,'Biblioteca','2022-11-13 18:00:00','7','A mano',NULL,NULL,NULL,0,1),
@@ -378,7 +398,7 @@ INSERT INTO `master_tipo_puesto` (`id`,`nombre`,`au_fec_alta`,`au_usu_alta`,`au_
 DROP TABLE IF EXISTS `master_usuarios`;
 CREATE TABLE `master_usuarios` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id_perfil` tinyint(1) NOT NULL DEFAULT 1,
+  `id_perfil` tinyint(1) NOT NULL DEFAULT 2,
   `nombre` varchar(50) NOT NULL,
   `apellidos` varchar(50) NOT NULL,
   `dni` varchar(9) DEFAULT NULL,
@@ -396,7 +416,7 @@ CREATE TABLE `master_usuarios` (
   `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
   `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `master_usuarios`
@@ -404,10 +424,12 @@ CREATE TABLE `master_usuarios` (
 
 /*!40000 ALTER TABLE `master_usuarios` DISABLE KEYS */;
 INSERT INTO `master_usuarios` (`id`,`id_perfil`,`nombre`,`apellidos`,`dni`,`username`,`password`,`username_ldap`,`email`,`direccion`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
- (1,1,'Guillermo','González Martínez','03114191Z','guillermo.gonzalezm','guille75','guillermo.gonzalezm','guillermo.gonzalezm@edu.uah.es',0,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,0),
+ (1,1,'Guillermo','González Martínez','03114191Z','guillermo.gonzalezm','guillerrrrrrr','guillermo.gonzalezm','guillermo.gonzalezm@edu.uah.es',0,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,0),
  (6,1,'Pablo','García García',NULL,'pablo.ggarcia','$2y$10$qu2g1WqEN45PMw/iX6BGPuh5UZa4/Q0NScGCqGraXsDgZdD0hSNke',NULL,'pablo.ggarcia@edu.uah.es',0,'2022-11-11 20:16:47','BBDD','Web',NULL,NULL,NULL,0,1),
  (7,1,'Guillermo','González Martínez',NULL,'guille','$2y$10$CTWpSbVvLa.P9c8/RAWVg.mqAczwwvT1oIKfmzwZ57CuVJz5HimEW',NULL,'guillermo.gonzalezm@edu.uah.es',0,'2022-11-12 12:42:29','BBDD','Web',NULL,NULL,NULL,0,1),
- (8,1,'Periko','de los palotes',NULL,'Periko','$2y$10$QFz/BvcK7dKUTSHDydcIuOs0jadi025NDOPAPm2AfuzXJtskVgFxC',NULL,'guille.willy.1975@gmail.com',0,'2022-11-12 13:12:51','BBDD','Web',NULL,NULL,NULL,0,1);
+ (8,3,'Periko','de los palotes',NULL,'Periko','$2y$10$QFz/BvcK7dKUTSHDydcIuOs0jadi025NDOPAPm2AfuzXJtskVgFxC',NULL,'guille.willy.1975@gmail.com',0,'2022-11-12 13:12:51','BBDD','Web',NULL,NULL,NULL,0,1),
+ (9,2,'Nicolás','González Cámara',NULL,'nico','$2y$10$VG5Q34b4L81suoM7opLIfep9n8H6gy2ZMvFUL13c6L4M5c5gCORy6',NULL,'guillermo.gonzalezm@edu.uah.es',0,'2022-11-26 19:25:12','BBDD','Web',NULL,NULL,NULL,0,1),
+ (10,2,'Chus','Cámara',NULL,'chus','$2y$10$0tBtkOrTQpamCRdtsWdnSO3/v6OW4ArWL3VOCp0ftd5WVqv/DX7cy',NULL,'guillermo.gonzalezm@edu.uah.es',0,'2022-11-26 19:26:19','BBDD','Web',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `master_usuarios` ENABLE KEYS */;
 
 
@@ -471,9 +493,9 @@ CREATE TABLE `reservas` (
 
 /*!40000 ALTER TABLE `reservas` DISABLE KEYS */;
 INSERT INTO `reservas` (`id`,`id_usuario`,`id_franja_horaria`,`fecha`,`id_puesto`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
- (1,7,11,'2022-11-12 00:00:00',5,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1),
- (2,7,11,'2022-11-12 00:00:00',6,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1),
- (3,7,11,'2022-11-12 00:00:00',7,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1);
+ (1,7,6,'2022-11-27 10:00:00',5,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (2,7,8,'2022-11-27 10:00:00',6,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (3,7,3,'2022-11-27 10:00:00',7,'2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `reservas` ENABLE KEYS */;
 
 

@@ -2,14 +2,13 @@
 //Iniciamos la sesion
 session_start();
  
-//Verificar que el usuario se ha logueado y lo llevamos a la pagina principal
+//Verificar que el usuario se ha logueado. Si es así, lo llevamos a la pagina principal:
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]){
     header("location: index.php");
     exit;
 }
  
 //Configuracion
-//require_once "config.php";
 require_once "includes/config.php";
 require_once "includes/funciones.php";
 
@@ -86,11 +85,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $_SESSION["stubia_userperfil"] = $perfil;
             $_SESSION["stubia_username"] = $username;
             $_SESSION["stubia_nombre"] =$nombre;
-            $_SESSION["stubia_apellidos"] =$apellidos;
-            writeLog("Usuario '". $username."'");
-            writeLog("Login correcto de usuario ". $id);
-            include "includes/session_app.php";
-
+            $_SESSION["stubia_apellidos"] =$apellidos;            
+            writeLog("Login correcto de usuario ". $username." (id ".$id.")");
+            registrar_acceso_app($id, $id_perfil);
             header("location: index.php");
         } 
         else{

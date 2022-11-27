@@ -13,9 +13,6 @@ require 'PHPMailer/SMTP.php';
 //Create a new PHPMailer instance
 $mail = new PHPMailer(true);
 
-try {
-    
-}
 $mail->SMTPDebug=SMTP::DEBUG_SERVER;
 $mail->IsSMTP();
  

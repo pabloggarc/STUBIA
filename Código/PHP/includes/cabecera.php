@@ -2,13 +2,13 @@
 <body>
 	<div id="contenedor_stubia">
 		<div id="capa_cabecera">
-            <img src="<?= $dir_raiz ?>img/UAH-logo.png" alt="Logo de la UAH" height="75"/>
+            <img src="<?= $dir_raiz ?>img/stubia-logo2.png" alt="Logo del proyecto" height="100vh"/>
             <span class="my-5" style="font-weight:bold; font-size:40px; color:#003da7">STUBIA</span>
             <span class="my-5" style="font-weight:bold; font-size:16px; color:#003da7">Prototipo de Computación Ubícua 2022</span>
         
             <?php
                                     
-                /* Nuestras variables de sesión:
+                /* Nuestras variables de sesión son las siguientes:
                 $_SESSION["loggedin"];
                 $_SESSION["stubia_userid"];
                 $_SESSION["stubia_useridperfil"];
@@ -27,19 +27,20 @@
                 <a href="<?= $dir_raiz ?>includes/session_end.php"><img src="<?= $dir_raiz ?>img/desconectar.svg" alt="Desconectar" type="image/svg+xml" height="25"/></a>
                 <?= $_SESSION["stubia_nombre"]." ".$_SESSION["stubia_apellidos"]." (<span style='font-weight: bold'>".$_SESSION["stubia_userperfil"]."</span>)" ?>
                 
-                <img src="<?= $dir_raiz ?>img/CU.png" alt="Cpmputación ubícua" height="75" />
+                <img src="<?= $dir_raiz ?>img/UAH-logo.png" alt="UAH" height="75" />
                 <?php } else {}
                 ?>
             </div>
 		</div>
             
-		<div id="capa_borde_superior">
-            <a href="javascript:goPage('<?= _APP_URL ?>')">
-                    <?php	                            
-                    echo ("<span style='color:#ffffff'>STUBIA HOME</span>");
+		<div id="capa_borde_superior">            
+            <a href="javascript:goPage('<?=_APP_URL?>')">
+                    <?php
+                    $migas="<span style='color:#ffffff'>STUBIA HOME";
+                    echo ($migas);
                     $miPagina=$_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-                    if (strpos($miPagina,"index.php")!=false)
-                        {//echo "&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Opciones disponibles en STUBIA";
+                    if (strpos($miPagina,"aula.php")!=false)
+                        {echo $migas."&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Consulta del estado de un aula";
                     }
                     else {
                             if (    strpos($miPagina,"reservas.php")!=false ) {
@@ -51,6 +52,7 @@
                                     }
                             }
                     }
+                    $migas.="</span>";
                     ?>
             </a>
                     

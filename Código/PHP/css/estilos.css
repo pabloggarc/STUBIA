@@ -4,7 +4,7 @@ html, body{
 	color:				#003da7;
 	@font-face {
 		font-family: din_regular;
-		src: url(fuentes/DINPro-Medium.otf);
+		src: url(../fuentes/DINPro-Medium.otf);
 	}
 	/*font-family:		Arial, Helvetica, sans-serif;	
 	font-size:			14px;*/
@@ -129,7 +129,7 @@ div#contenedor_stubia div#capa_borde_inferior {
 	background-color:	#003da7;
 	color:				#fff;
 	padding:			.5em 1em;
-	font-weight:		bold;
+	/*font-weight:		bold;*/
 }
 div#contenedor_stubia div#capa_copyright {
 	color:		#aaa;
