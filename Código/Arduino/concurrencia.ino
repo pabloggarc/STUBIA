@@ -3,17 +3,19 @@
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <freertos/semphr.h>
-#include <avr/wdt.h>
+//#include <avr/wdt.h>
+
+#define portMAX_delay ( TickType_t ) 0xffffffffUL
   
-const char* ssid = "Redmi 9";
-const char* password = "patatafeliz"; //192.168.1.1 DHCP ip de 100 en adelante
+const char* ssid = "MOVISTAR_0B2D";
+const char* password = "748619B68AA322496EE3"; //192.168.1.1 DHCP ip de 100 en adelante
 
 char aula[] = "NA1";
 
-String sensoresUlibre[2] = { "http://192.168.57.222/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=1&estado=2", "http://192.168.57.222/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=2&estado=2"};
-String sensoresUocupado[2] = { "http://192.168.57.222/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=1&estado=1", "http://192.168.57.222/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=2&estado=1"};
-String sensoresIlibre[1] = { "http://192.168.57.222/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=3&estado=2"};
-String sensoresIocupado[1] = { "http://192.168.57.222/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=3&estado=1"};
+String sensoresUlibre[2] = { "http://192.168.1.48/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=1&estado=2", "http://192.168.1.48/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=2&estado=2"};
+String sensoresUocupado[2] = { "http://192.168.1.48/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=1&estado=1", "http://192.168.1.48/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=2&estado=1"};
+String sensoresIlibre = "http://192.168.1.48/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=3&estado=2";
+String sensoresIocupado = "http://192.168.1.48/stubia/ws/ws_setestadopuesto.php?aula=1&puesto=3&estado=1";
 
 long cm = 0;
 bool lectura = NULL;
@@ -44,12 +46,67 @@ long leeSensorUltrasonicoDistancia (int triggerPin, int echoPin){
   return (pulseIn(echoPin, HIGH) * 0.01723);
 }
 
+void loop2(void* param){
+  while(true){
+    for (int i=0; i<2; i++){
+      HTTPClient http;
+
+      xSemaphoreTake(mutex, portMAX_delay);
+      if(estado_puestosU[3] && !estado_puestosU[5]){
+        http.begin(sensoresUlibre[i]);
+      }
+      else if(!estado_puestosU[3] && estado_puestosU[5]){
+        http.begin(sensoresUocupado[i]);
+      }
+      xSemaphoreGive(mutex);
+
+      int httpCode = http.GET();
+      String respuesta = http.getString();
+
+      if (respuesta.indexOf("SI") > 0){
+        digitalWrite(puestosU[4][i], HIGH); 
+      }
+      else{
+        digitalWrite(puestosU[4][i], LOW); 
+      }
+
+      http.end();
+    }
+   
+    for (int i=0; i<1; i++){
+      HTTPClient http;
+      
+      xSemaphoreTake(mutex, portMAX_delay);
+      if(estado_puestosI[i]){
+        http.begin(sensoresIlibre);
+      }
+      else{
+        http.begin(sensoresIocupado);
+      }
+      xSemaphoreGive(mutex);
+
+      int httpCode = http.GET();
+      String respuesta = http.getString();
+
+      if (respuesta.indexOf("SI") > 0){
+        digitalWrite(puestosI[3][i], HIGH); 
+      }
+      else{
+        digitalWrite(puestosI[3][i], LOW); 
+      }
+      
+      http.end();
+    }
+    vTaskDelay(1000);
+  }
+}
+
 void setup() {
+  Serial.begin(115200);
   mutex = xSemaphoreCreateMutex(); 
   if(mutex!=NULL){
-    xTaskCreate(loop2, "loop2", 1000, NULL, 1, &comunicar_servidor); 
+    xTaskCreate(loop2, "loop2", configMINIMAL_STACK_SIZE * 20, NULL, 1, NULL); 
 
-    Serial.begin(9600);
     WiFi.begin(ssid, password);
     
     while (WiFi.status() != WL_CONNECTED) {
@@ -69,8 +126,8 @@ void setup() {
     pinMode(puestosI[1][0], INPUT);
   }
   else{
-    wdt_enable(WDTO_1S);
-    wdt_reset();
+    /*wdt_enable(WDTO_1S);
+    wdt_reset();*/
   }
 }
   
@@ -109,61 +166,6 @@ void loop() {
     }
     digitalWrite(puestosI[2][i], estado_puestosI[2]);
     digitalWrite(puestosI[4][i], estado_puestosI[4]);
-    delay(10000);
-  }
-}
-
-void loop2(void* param){
-  while(true){
-    for (int i=0; i<2; i++){
-      HTTPClient http;
-
-      xSemaphoreTake(mutex, portMAX_delay);
-      if(estado_puestosU[3] && !estado_puestosU[5]){
-        http.begin(sensoresUlibre[i]);
-      }
-      else if(!estado_puestosU[3] && estado_puestosU[5]){
-        http.begin(sensoresUocupado[i]);
-      }
-      xSemaphoreGive(mutex);
-
-      int httpCode = http.GET();
-      String respuesta = http.getString();
-
-      if (respuesta.indexOf("SI") > 0){
-        digitalWrite(puestosU[4][i], HIGH); 
-      }
-      else{
-        digitalWrite(puestosU[4][i], LOW); 
-      }
-
-      http.end();
-    }
-   
-    for (int i=0; i<1; i++){
-      HTTPClient http;
-      
-      xSemaphoreTake(mutex, portMAX_delay);
-      if(estado_puestosI[i]){
-        http.begin(sensoresIlibre[i]);
-      }
-      else{
-        http.begin(sensoresIocupado[i]);
-      }
-      xSemaphoreGive(mutex);
-
-      int httpCode = http.GET();
-      String respuesta = http.getString();
-
-      if (respuesta.indexOf("SI") > 0){
-        digitalWrite(puestosI[3][i], HIGH); 
-      }
-      else{
-        digitalWrite(puestosI[3][i], LOW); 
-      }
-      
-      http.end();
-    }
-    vTaskDelay(10000);
+    delay(1000);
   }
 }
