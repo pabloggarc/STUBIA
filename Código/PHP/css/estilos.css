@@ -1,7 +1,7 @@
 html, body{
 	margin:				auto;
 	background-color:	#fff;
-	color:				#003da7;
+	color:				#154991;
 	@font-face {
 		font-family: din_regular;
 		src: url(../fuentes/DINPro-Medium.otf);
@@ -50,7 +50,7 @@ div#contenedor_stubia div#capa_cabecera div.login img {
 div#contenedor_stubia div#capa_borde_superior {
 	position:		relative;
 	border-radius:		10px 10px 0 0;
-	background-color:	#003da7;
+	background-color:	#154991;
 	color:			#fff;
 	padding:		.5em 1em;
 	font-weight:		bold;
@@ -59,7 +59,7 @@ div#contenedor_stubia div#capa_borde_superior a#info_notif {
         float: right;
 	background-color:	#fff;
 	font-size:			.9em;
-	color:				#003da7;
+	color:				#154991;
 	padding:			.1em .5em;
 	border-radius:		10px;
 }
@@ -67,7 +67,7 @@ div#contenedor_stubia div#capa_borde_superior a#enlace_admin, a#enlace_manual {
         float: right;
 	background-color:	#fff;
 	font-size:			.9em;
-	color:				#003da7;
+	color:				#154991;
 	padding:			.1em .5em;
 	border-radius:		10px;
         margin-right: 10px;
@@ -126,10 +126,11 @@ div#contenedor_stubia div#capa_cuerpo div#capa_notif div img {
 }
 div#contenedor_stubia div#capa_borde_inferior {
 	border-radius:		0 0 10px 10px;
-	background-color:	#003da7;
+	background-color:	#154991;
 	color:				#fff;
 	padding:			.5em 1em;
 	/*font-weight:		bold;*/
+    text-align:         center;
 }
 div#contenedor_stubia div#capa_copyright {
 	color:		#aaa;
@@ -263,7 +264,7 @@ table#log{
     text-align: center;
 }
 table#log thead tr th{
-    background: #003da7;
+    background: #154991;
     color: white;
     padding: 5px;
 }
@@ -271,7 +272,7 @@ table#log thead tr th:first-child { border-top-left-radius: 10px; }
 table#log thead tr th:last-child { border-top-right-radius: 10px; }
 
 table#log tbody tr td{
-    border-bottom: 1px solid #003da7;
+    border-bottom: 1px solid #154991;
     padding: 10px;
 }
 table#log tfoot tr th{

@@ -32,9 +32,9 @@
                 ?>
             </div>
 		</div>
-            
+        
 		<div id="capa_borde_superior">            
-            <a href="javascript:goPage('<?=_APP_URL?>')">
+            <a href="javascript: goPage('<?=_APP_URL?>')">
                     <?php
                     $migas="<span style='color:#ffffff'>STUBIA HOME";
                     echo ($migas);

@@ -68,7 +68,7 @@ if(isset($_POST["table-content"])){
 	$drawing = new \PhpOffice\PhpSpreadsheet\Worksheet\Drawing();
 	$drawing->setName('Logo');
 	$drawing->setDescription('Logo');
-	$drawing->setPath($logo your path and image here
+	$drawing->setPath($logo_stubia);
 	$drawing->setCoordinates('A1');
 	$drawing->setWorksheet($spreadsheet->getActiveSheet());
 	
@@ -118,7 +118,7 @@ if(isset($_POST["table-content"])){
 	header("Location: ".php_actual());
 }else{
 	require_once($dir_raiz."includes/encabezado.php");
-    lanzar_aviso("No se ha podido completar la exportación.");
+    lanzar_aviso("No se ha podido completar la exportaciï¿½n.");
 	require_once($dir_raiz."includes/cabecera.php");
 }
 

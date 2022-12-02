@@ -11,7 +11,10 @@ $id_aula = $_REQUEST['aula'];
 $sql_connect = conectar_bd();
 
 //Recupero todos los datos del aula:
-$sql = "SELECT ma.*,mta.tipo as 'tipo_aula' FROM master_aulas ma INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id where ma.id=".$id_aula; // Consulta SQL
+$sql = "SELECT ma.*,mta.tipo as 'tipo_aula', mb.* FROM master_aulas ma "
+        ." INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id"
+        ." INNER JOIN master_bloques mb ON ma.id_bloque=mb.id"
+        . " WHERE ma.id=".$id_aula; // Consulta SQL
 writeLog($sql);
 $consulta = db_query($sql, $sql_connect);
 if (!$consulta) {
@@ -32,24 +35,17 @@ if ($aula["divisiones_aula"]>1) {
 
 ?>
 <div class="row">
-<table class="table table-bordered">
+<table class="table">
     <?php if ($aula["tipo_aula"]=="Teoría" || $aula["tipo_aula"]=="Biblioteca"){ ?>
     <thead>
-        <tr>
-            <?php
-            if ($aula["lado_puerta"]=="Izquierda") {
-                for ($col=1; $col<=$columnas-1; $col++) {
-                    echo ("<th class='table-active'></th>");
-                }
-            } ?>
-            <th colspan="<?=$aula['tipo_aula']=='Teoría'?4:$columnas+2?>" class='table-active text-center'>Mesa del <?=$aula['tipo_aula']=='Teoría'?'profesorado':'bibliotecario/a'?></th>
-
+        <tr>            
+            <th colspan="<?=$columnas+2?>" class="table-active text-<?=$aula["tipo_aula"]=="Biblioteca"?'center':($aula["lado_puerta"]=="Izquierda"?'end':'start')?>" style="border:0px; color:<?=$aula["color"]?>">MESA DEL <?=$aula['tipo_aula']=='Teoría'?'PROFESORADO':'BIBLIOTECARIO/A'?></th>
         </tr>
     </thead>
     <?php } //fin de pintar la fila de la mesa del profesor/vigilancia ?>
     <tbody>
         <tr>
-            <td colspan="<?=$columnas+2?>" class='table-active'>&nbsp;</td>
+            <td colspan="<?=$columnas+2?>" class="table-active" style="border:0px">&nbsp;</td>
         </tr>
 <?php
 $numpuesto=0;
@@ -59,7 +55,7 @@ $numpuesto=0;
             <?php
             if ($aula['tipo_aula']!='Laboratorio') {
             ?>
-            <td class='table-active'>&nbsp;</td> <!--columna pasillo izquierdo-->
+            <td class='table-active' style="border:0px">&nbsp;</td> <!--columna pasillo izquierdo-->
             <?php } ?>
         <?php
             for( $col=1; $col<=$columnas; $col++) {
@@ -102,7 +98,7 @@ $numpuesto=0;
                 <td align="center" class='table-<?php
                     switch ($estado) {
                         case -1:
-                            echo "active'>";
+                            echo "active' style='border:0px'>";
                             break;
                         case 1:
                             echo "danger'>";
@@ -126,18 +122,18 @@ $numpuesto=0;
                 </td>
                 <?php
             }?>
-            <td class="table-active strong"><?=($aula['tipo_aula']=='Laboratorio' && $fil==(intval($aula["filas"]/2)+1))?'Mesa profe':'&nbsp;'?></td> <!--columna pasillo derecho-->
+            <td class="table-active strong" style="border:0px; color:<?=$aula["color"]?>"><?=($aula['tipo_aula']=='Laboratorio' && $fil==(intval($aula["filas"]/2)+1))?'Mesa profe':'&nbsp;'?></td> <!--columna pasillo derecho-->
             <?php
             if ($aula['tipo_aula']=='Laboratorio' && $fil<$aula["filas"]){
-                echo ("<tr><td colspan='".($columnas+1)."' class='table-active'></td></tr>");
+                echo ("<tr><td colspan='".($columnas+1)."' class='table-active' style='border:0px'>&nbsp;</td></tr>");
             }
             if ($aula['tipo_aula']=='Biblioteca' && (($fil % 2) == 0) && $fil<$aula["filas"]){
-                echo ("<tr><td colspan='".($columnas+2)."' class='table-active'>&nbsp;</td></tr>");
+                echo ("<tr><td colspan='".($columnas+2)."' class='table-active style='border:0px''>&nbsp;</td></tr>");
             }
         }?>
         </tr>         
         <tr>            
-            <td colspan="<?=$columnas+2?>" class='table-active'>&nbsp;</td>
+            <td colspan="<?=$columnas+2?>" class="table-active" style="border:0px">&nbsp;</td>
         </tr>
     </tbody>
 </table>

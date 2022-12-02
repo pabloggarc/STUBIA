@@ -1,7 +1,44 @@
 <?php
-require_once "config.php";
-session_start();  
- 
+$dir_raiz = "";
+
+require_once($dir_raiz."includes/session_app.php");
+require_once($dir_raiz."includes/config.php");
+require_once($dir_raiz."includes/funciones.php");
+require_once($dir_raiz."includes/encabezado.php");
+
+
+//Si venimos del botón reservar, reservamos:
+if(isset($_POST['reservar']) && !empty($_POST['puesto']) && !empty($_POST['fecha'])){
+    $puesto=$_POST['puesto'];
+    $fecha=$_POST['fecha'];
+    $sql_connect = conectar_bd();
+
+    $sql = "INSERT INTO reservas VALUES (id_usuario, id_franja_horaria, fecha, id_puesto, au_fec_alta, au_usu_alta, au_proc_alta) "
+         . "VALUES (".$_SESSION["stubia_userid"].", 12, HOUR(".$fecha."), '".$fecha."', ".$puesto.", SYSDATE(), ".$_SESSION["stubia_userid"].", '".$php_actual."');";
+    writeLog($sql);
+    $insertar = db_query($sql, $sql_connect);
+    if (!$insertar) {
+        exit ("Se ha producido un error al recuperar las encuestas de base de datos (getRelacionesCalculadas).");
+    } 
+    //$consulta->free_result();
+    desconectar_bd($sql_connect);
+    
+    //Insert datetime into the database
+    /*$name = $db->real_escape_string($_POST['event_name']);
+    $datetime = $db->real_escape_string($_POST['event_datetime']);
+    $insert = $db->query("INSERT INTO events (name,datetime) VALUES ('".$name."', '".$datetime."')");*/
+    
+    //Insert status
+    if($insertar){
+        echo 'Event data inserted successfully. Event ID: '.$sql_connect->insert_id;
+    }else{
+        echo 'Failed to insert event data.';
+    }
+}
+
+
+
+/*
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $time_res = $_POST["times"];
@@ -27,78 +64,73 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "<script>alert('Reserva realizada con éxito.');</script>"; 
     }
 
-}
+}*/
+
+require_once($dir_raiz."includes/cabecera.php");
 ?>
+
+<script type="text/javascript">
+
+<link href="<?=$dir_raiz?>css/datetimepicker.css" rel="stylesheet">
+<script src="<?=$dir_raiz?>js/bootstrap-datetimepicker.js"></script>
+
+$(document).ready(function() {  
  
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>STUBIA - Registro</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <style>
-        @font-face {
-            font-family: din_regular;
-            src: url(fuentes/DINPro-Medium.otf);
-        }
+    var timeout = setInterval(refrescaAula, 10000);    
+    function refrescaAula () {
+        
+            var dataString = 'aula=3';
+            $.ajax ({
+                url: 'getpuestos.php',
+                data: dataString,
+                cache: false,
+                success: function(r) {
+                    $("#display").html(r);
+                }
+            });
+    }
+    
+    $(function () {
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes();
+        var dateTime = date+' '+time;
+        $("#form_datetime").datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            startDate: dateTime
+        });
+    });
+});
 
-        body{ 
-            font: 14px din_regular; 
-        }
 
-        .wrapper{ 
-            width: 360px; padding: 20px; 
-        }
 
-    </style>
-</head>
-<body class="m-0 vh-100 row justify-content-center align-items-center">
-    <?php
-        $zones = mysqli_query($link, "SELECT id, aula FROM master_aulas WHERE tipo != 1 AND tipo != 2"); 
-        $times = mysqli_query($link, "SELECT id, time_format(hora, '%H:%i') FROM (SELECT id, TIME(substring_index(franja, '-', 1)) AS hora FROM (SELECT id, franja FROM stubia.master_franjas_horarias) AS t) AS t2 where hora>=now()"); 
-    ?>
-    <div class="wrapper col-auto p-5 opacity-50">
-        <img src="img/stubia-logo.png" height=270px>
-    </div>
-    <div class="wrapper col-auto p-5">
-        <h2>Reserva un puesto</h2>
-        <br>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group">
-                <label>Zona</label>
-                <select name="zones" class="form-control">
-                    <?php
-                        while($zones_values = mysqli_fetch_array($zones)){
-                            echo '<option value="'.$zones_values["id"].'">'.$zones_values["aula"].'</option>'; 
-                        }
-                    ?>
-                </select>
-            </div>
-            <br>   
-            <div class="form-group">
-                <label>Puesto</label>
-                <input type="text" name="place" class="form-control">
-            </div>
+<script type="text/javascript">
+
+</script>
+
+</script>
+
+<div class="container ">
+    <form class="row" action="" method="post">                
+        <div>
             <br>
-            <div class="form-group">
-                <label>Franja horaria</label>
-                <select name="times" class="form-control">
-                    <?php
-                        while($times_values = mysqli_fetch_array($times)){
-                            echo '<option value="'.$times_values["id"].'">'.$times_values["franja"].'</option>'; 
-                        }
-                    ?>
-                </select>
-            </div>
-            <br>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Solicitar reserva">
-                <input type="reset" class="btn btn-secondary ml-2" value="Borrar">
-            </div>
-            <br>
-        </form>
-    </div>    
-</body>
-</html>
+            El estado de los puestos de la biblioteca es la siguiente:
+            <br> 
+        </div>
+        <div class="" id="display">
+        <!-- Records will be displayed here -->
+        </div>
+    </form>    
+</div>
+
+<form method="post" action="">
+    Puesto: <input type="text" name="puesto" class="form-control">
+    Fecha y Hora: <input size="16" type="text" name="fecha" class="form-control" id="form_datetime" readonly>
+    <input type="submit" name="btn_reservar" id="btn_reservar" class="btn button btn-success" value="Reservar" />
+</form>
+
+<?php
+require_once($dir_raiz."includes/pie.php");
+?>
