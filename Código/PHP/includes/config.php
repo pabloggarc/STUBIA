@@ -23,7 +23,6 @@ define('BBDD_HOST',	_ENTORNO_ === "PRODUCCION"	? ''    : (_ENTORNO_ === "TEST" ?
 define('BBDD_USER',	_ENTORNO_ === "PRODUCCION"	? ''    : (_ENTORNO_ === "TEST" ? ''        : 'root'));
 define('BBDD_PWD',	_ENTORNO_ === "PRODUCCION"	? ''    : (_ENTORNO_ === "TEST" ? ''        : ''));
 define('BBDD_SQUEMA', 'STUBIA');
-// *************************************************
 
 // ***************** MAIL *********************************
 define('MAIL_HELO',         _ENTORNO_ === "PRODUCCION"	? ''        : (_ENTORNO_ === "TEST" ? '':   'localhost'));
@@ -36,5 +35,12 @@ define('_USER_ADMIN', 1);
 define('_USER_ALUMNO', 2);
 define('_USER_PROFESOR', 3);
 define('_USER_CONSERJE', 4);
+
+// ************** COLORES BLOQUES DE LA UAH***************************
+define('_BLUE', '#0d6efd');
+define('_RED', '#dc3545');
+define('_GREEN', '#198754');
+define('_YELLOW', '#ffc107');
+define('_CYAN', '#0dcaf0'); //este color para cuando seleccionas un puesto en la biblioteca
 
 ?>
