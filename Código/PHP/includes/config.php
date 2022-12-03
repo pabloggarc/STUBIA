@@ -28,7 +28,8 @@ define('BBDD_SQUEMA', 'STUBIA');
 define('MAIL_HELO',         _ENTORNO_ === "PRODUCCION"	? ''        : (_ENTORNO_ === "TEST" ? '':   'localhost'));
 define('MAIL_HOST',         _ENTORNO_ === "PRODUCCION"	? ''        : (_ENTORNO_ === "TEST" ? '':   'smtp.gmail.com'));
 define('MAIL_ADMIN_FROM',   _ENTORNO_ === "PRODUCCION"	? ''        : (_ENTORNO_ === "TEST" ? '':   'ubicua.uah.2022@gmail.com'));
-define('MAIL_ADMIN_ADRESS', _ENTORNO_ === "PRODUCCION"	? ''        : (_ENTORNO_ === "TEST" ? '':   'guillermo.gonzalezm@esu.uah.es'));
+define('MAIL_ADMIN_PASSWORD', _ENTORNO_ === "PRODUCCION"? ''        : (_ENTORNO_ === "TEST" ? '':   'wcrdoafrquztizrx'));
+define('MAIL_ADMIN_ADRESS', _ENTORNO_ === "PRODUCCION"	? ''        : (_ENTORNO_ === "TEST" ? '':   'guillermo.gonzalezm@edu.uah.es'));
 
 // ************** PERFILES ***************************
 define('_USER_ADMIN', 1);
@@ -36,7 +37,7 @@ define('_USER_ALUMNO', 2);
 define('_USER_PROFESOR', 3);
 define('_USER_CONSERJE', 4);
 
-// ************** COLORES BLOQUES DE LA UAH***************************
+// ************** COLORES BLOQUES DE LA UAH ***************************
 define('_BLUE', '#0d6efd');
 define('_RED', '#dc3545');
 define('_GREEN', '#198754');

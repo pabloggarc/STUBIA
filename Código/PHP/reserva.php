@@ -1,3 +1,4 @@
+
 <?php
 $dir_raiz = "";
 
@@ -6,131 +7,181 @@ require_once($dir_raiz."includes/config.php");
 require_once($dir_raiz."includes/funciones.php");
 require_once($dir_raiz."includes/encabezado.php");
 
+$horas_habilitadas = getFranjasHorarias();
+$resultado="";
+
+$sql_connect = conectar_bd();
 
 //Si venimos del botón reservar, reservamos:
-if(isset($_POST['reservar']) && !empty($_POST['puesto']) && !empty($_POST['fecha'])){
-    $puesto=$_POST['puesto'];
-    $fecha=$_POST['fecha'];
-    $sql_connect = conectar_bd();
+if(isset($_POST['btn_reservar']) && !empty($_POST['hid_puesto']) && !empty($_POST['hid_fecha'])){    
+    $puesto=$_POST['hid_puesto'];
+    $fecha=$_POST['hid_fecha'];
+    $localizador=getLocalizador();
+    writeLog("Puesto: ".$puesto.", fecha: ".$fecha.".");
 
-    $sql = "INSERT INTO reservas VALUES (id_usuario, id_franja_horaria, fecha, id_puesto, au_fec_alta, au_usu_alta, au_proc_alta) "
-         . "VALUES (".$_SESSION["stubia_userid"].", 12, HOUR(".$fecha."), '".$fecha."', ".$puesto.", SYSDATE(), ".$_SESSION["stubia_userid"].", '".$php_actual."');";
+    $sql = "INSERT INTO reservas (id_usuario, id_franja_horaria, fecha, id_puesto, localizador, au_usu_alta, au_proc_alta) "
+         . "VALUES (".$_SESSION["stubia_userid"].", HOUR('".$fecha."'), '".$fecha."', ".$puesto.", '".$localizador."', ".$_SESSION["stubia_userid"].", '".php_actual()."');";
     writeLog($sql);
     $insertar = db_query($sql, $sql_connect);
-    if (!$insertar) {
-        exit ("Se ha producido un error al recuperar las encuestas de base de datos (getRelacionesCalculadas).");
-    } 
-    //$consulta->free_result();
-    desconectar_bd($sql_connect);
     
-    //Insert datetime into the database
-    /*$name = $db->real_escape_string($_POST['event_name']);
-    $datetime = $db->real_escape_string($_POST['event_datetime']);
-    $insert = $db->query("INSERT INTO events (name,datetime) VALUES ('".$name."', '".$datetime."')");*/
-    
-    //Insert status
+    //$consulta->free_result();    
+        
     if($insertar){
-        echo 'Event data inserted successfully. Event ID: '.$sql_connect->insert_id;
-    }else{
-        echo 'Failed to insert event data.';
+        $sql = "SELECT nombre, email FROM master_usuarios WHERE id=".$_SESSION["stubia_userid"].";";
+        writeLog($sql);
+        $consulta = db_query($sql, $sql_connect);
+        if ($consulta) {
+            $fila = $consulta->fetch_array();
+            $asunto= "Reserva biblioteca UAH";
+            $mensaje= "<html style='background-color: #fff; color: #000;font-family:arial,verdana,calibri;font-size:12px;'><body>";
+            $mensaje.= "Buenos d&iacute;as, ".$fila['nombre']."<br><br>";
+            $mensaje.= "Te informamos que el proceso de reserva de tu puesto de estudio ha finalizado con &eacute;xito. Los datos de tu reserva son los siguientes:<br>";
+            $mensaje.= "<ul><li>Fecha y hora: ".date_format(date_create($fecha),'d/m/Y H:i')." (1 hora de duraci&oacute;n).</li>";        
+            $mensaje.= "<li>Puesto: ".$puesto."</li>"; 
+            $mensaje.= "<li>Localizador: ".$localizador."</li></ul><br>"; 
+            $mensaje.= "Si finalmente no fueras a ocupar el puesto, te rogamos que anules tu reserva lo antes posible.<br><br>";
+            $mensaje.= "Atentamente,<br><br>";
+            $mensaje.= "<img src='http://"._APP_URL."/img/stubia-logo2.png' height='80'>";
+            $mensaje.= "</body></html>";                        
+            if (enviar_mail($fila["email"], $asunto, $mensaje)){
+                $resultado="Tu reserva ha sido realizada con éxito, en breve recibiras un correo con el localizador de la reserva.";
+                $color_res="green";
+            }else{
+                $resultado="Tu reserva ha sido realizada con éxito, pero hubo un problema al enviarte el correo con el localizador de la reserva.<br>"
+                            ."Tu localizador de reserva es el ".$localizador;
+                $color_res="yellow";
+            }
+        } else {
+            $resultado="Tu reserva ha sido realizada con éxito, pero no se puedo encontrar tu dirección de correo en el sistema.<br>"
+                            ."Tu localizador de reserva es el ".$localizador;
+            $color_res="yellow";
+        }
+    } else {
+        $resultado="Tu reserva no ha podido ser realizada, por favor inténtalo de nuevo. Disculpa la molestia";
+        $color_res="red";
     }
+
 }
 
-
-
-/*
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-    $time_res = $_POST["times"];
-    $place_res = $_POST["place"]; 
-    $zone_res = $_POST["zones"]; 
- 
-    $previous_res = mysqli_query($link, "SELECT id FROM reservas where id_franja_horaria = ".$time_res." AND id_puesto = ".$place_res." AND fecha = curdate()"); 
-    $n_res = 0; 
-
-    while(mysqli_fetch_array($previous_res)){
-        $n_res++; 
-    }
-
-    if($n_res){
-        echo "<script>alert('Error en la reserva. Puesto ocupado en esta franja horaria.');</script>";
-    }
-    else{
-        $user_res = $_SESSION["stubia_useridperfil"]; 
-
-        mysqli_query($link, "INSERT INTO reservas (id_usuario, id_franja_horaria, fecha, id_puesto, au_fec_alta, au_usu_alta, au_proc_alta, au_lock, activo)
-        VALUES (".$user_res.", ".$time_res.", curdate(),".$place_res.", now(), ".$user_res.", 'Web', 0, 1)"); 
-
-        echo "<script>alert('Reserva realizada con éxito.');</script>"; 
-    }
-
-}*/
+desconectar_bd($sql_connect);
 
 require_once($dir_raiz."includes/cabecera.php");
+
 ?>
 
 <script type="text/javascript">
 
-<link href="<?=$dir_raiz?>css/datetimepicker.css" rel="stylesheet">
-<script src="<?=$dir_raiz?>js/bootstrap-datetimepicker.js"></script>
-
 $(document).ready(function() {  
- 
-    var timeout = setInterval(refrescaAula, 10000);    
-    function refrescaAula () {
-        
-            var dataString = 'aula=3';
-            $.ajax ({
-                url: 'getpuestos.php',
-                data: dataString,
-                cache: false,
-                success: function(r) {
-                    $("#display").html(r);
-                }
-            });
-    }
     
-    $(function () {
-        var today = new Date();
-        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-        var time = today.getHours() + ":" + today.getMinutes();
-        var dateTime = date+' '+time;
-        $("#form_datetime").datetimepicker({
-            format: 'yyyy-mm-dd hh:ii',
-            autoclose: true,
-            todayBtn: true,
-            startDate: dateTime
-        });
-    });
+    document.getElementById("display").style.display="none";
+    document.getElementById("capa_sel_puestos").style.display="none";
+    document.getElementById("capa_reservar").style.display="none";
+    document.getElementById("input_fecha").value="";
+   
+    //Para hacer que la capa que informa del resultado de la reserva desaparaezca a ls pocos segundos:
+    setTimeout(function() {
+		// Declaramos la capa mediante una clase para ocultarlo
+        $(".mensaje").fadeOut(2000);
+    },5000);
+
 });
 
-
-
-<script type="text/javascript">
-
 </script>
 
-</script>
+<div class="container">
+    
+    <div class="mensaje row <?=$resultado!=''?'oculto':''?>" id="mensaje" name="mensaje">
+        <div class="col-md-6 center-block">
+            <span style="@font-face {
+		                    font-family: din_regular;
+		                    src: url(fuentes/DINPro-Medium.otf);
+	                    }font-weight:bold; color:<?=$color_res?>"><?=$resultado?></span>
+        </div>
+    </div>
 
-<div class="container ">
-    <form class="row" action="" method="post">                
-        <div>
-            <br>
-            El estado de los puestos de la biblioteca es la siguiente:
-            <br> 
+    <script type="text/javascript">
+
+        $(function () {
+            /*
+            var ahora = new Date();
+            var fecha = ahora.getFullYear()+'-'+(ahora.getMonth()+1)+'-'+ahora.getDate();
+            var hora = ahora.getHours() + ":" + ahora.getMinutes();
+            var dateTime = fecha+' '+hora;
+            */
+            $('#sel_fecha').datetimepicker({                    
+                format: 'YYYY-MM-DD hh:00',  //ponemos el 00 para que no salgan los minutos
+                enabledHours: [<?=$horas_habilitadas?>] //cargamos dinámicamente la lista de horas activas en BD: 8, 9, 10, 11, 12, 13, etc                
+            }).on('dp.change', function(d){
+                document.getElementById("display").style.display="block";
+                document.getElementById("capa_sel_puestos").style.display="block";
+                document.forms["frm_reservar"].hid_fecha.value = d.date.format(d.date._f);            
+                var dataString = {aula: '3', fecha:d.date.format(d.date._f)};
+                $.ajax ({
+                    url: 'getpuestos.php',
+                    data: dataString,
+                    cache: false,
+                    success: function(r) {
+                        $("#display").html(r);
+                    }
+                });
+
+                var dataString2 = {aula: '3', fecha:d.date.format(d.date._f)};
+                $.ajax ({
+                    url: 'getPuestosLibres.php',    //en este php es donde pongo el evento change del select para que se muestre el botón Reservar
+                    data: dataString2,
+                    cache: false,
+                    success: function(r) {
+                        $("#capa_sel_puestos").html(r);
+                    }
+                });                
+
+            });            
+        });
+
+    </script>    
+
+    <label id="input_dia"></label>
+    <label id="input_hora"></label>  
+
+    <div class="row">
+        
+        <div class='col-sm-3'>                        
+            Selecciona fecha y hora para consultar la disponibilidad de los puestos:
+            <div class='input-group date' id='sel_fecha'>
+                <input type='text' class="form-control" id="input_fecha" value=""/>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+            <br>                       
         </div>
-        <div class="" id="display">
-        <!-- Records will be displayed here -->
+
+        <div class='col-sm-3'>
+            <!-- Capa vacia para separar capas que tienen contenido -->
+        </div>        
+
+        <div class='col-sm-3' id='capa_sel_puestos'>
+            <!-- el contenido lo carga getPuestosLibres.php -->
         </div>
-    </form>    
+
+        <div class='form-group col-sm-3' id='capa_reservar'>
+            <br><br>                        
+            <form method='post' action='' id='frm_reservar'>    
+                <input  type='submit' name='btn_reservar' id='btn_reservar' class='btn button btn-warning' value='Reservar' 
+                        onclick="return confirm('¿Confirmas que desea RESERVAR el puesto de estudio?')"/>
+                <input  type='hidden' name='hid_fecha' id='hid_fecha'>
+                <input  type='hidden' name='hid_puesto' id='hid_puesto'>                
+            </form>
+        </div>
+
+        <div class="row" id="display">
+            <!-- el contenido lo carga getPuestos.php -->
+        </div>               
+        
+    </div>
+    
 </div>
 
-<form method="post" action="">
-    Puesto: <input type="text" name="puesto" class="form-control">
-    Fecha y Hora: <input size="16" type="text" name="fecha" class="form-control" id="form_datetime" readonly>
-    <input type="submit" name="btn_reservar" id="btn_reservar" class="btn button btn-success" value="Reservar" />
-</form>
-
 <?php
-require_once($dir_raiz."includes/pie.php");
+    require_once($dir_raiz."includes/pie.php");
 ?>

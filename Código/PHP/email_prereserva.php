@@ -29,8 +29,8 @@ try {
     //Envio del correo
     $mail->CharSet = 'UTF-8'; 
     $mail->setFrom("ubicua.uah.2022@gmail.com", "STUBIA"); 
-    $mail->AddAddress("pablo.ggarcia@edu.uah.es"); 
-    $mail->addBCC("ubicua.uah.2022@gmail.com");
+    $mail->AddAddress("guillermo.gonzalezm@edu.uah.es"); 
+    $mail->addBCC("guille.willy.1975@gmail.com");
     $mail->isHTML(true);
     $mail->Subject = "Confirmación de reserva en STUBIA";
     $mail->Body = "Has solicitado una reserva en el servicio STUBIA. Por favor, confírmala!";

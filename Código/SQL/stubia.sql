@@ -1,0 +1,592 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.5.5-10.4.25-MariaDB
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema stubia
+--
+
+CREATE DATABASE IF NOT EXISTS stubia;
+USE stubia;
+
+--
+-- Definition of table `accesos_usuarios`
+--
+
+DROP TABLE IF EXISTS `accesos_usuarios`;
+CREATE TABLE `accesos_usuarios` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `perfil_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `login_date` datetime NOT NULL,
+  `au_fec_alta` datetime NOT NULL DEFAULT '2022-10-08 00:00:00',
+  `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
+  `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
+  `au_fec_modif` datetime DEFAULT NULL,
+  `au_usu_modif` varchar(50) DEFAULT NULL,
+  `au_proc_modif` varchar(50) DEFAULT NULL,
+  `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
+  `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COMMENT='Tabla para guardar los accesos de los usuarios a la app';
+
+--
+-- Dumping data for table `accesos_usuarios`
+--
+
+/*!40000 ALTER TABLE `accesos_usuarios` DISABLE KEYS */;
+INSERT INTO `accesos_usuarios` (`id`,`user_id`,`perfil_id`,`login_date`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,7,1,'2022-11-15 20:20:19','2022-11-15 20:20:19','100000','index.php',NULL,NULL,NULL,0,1),
+ (2,7,1,'2022-11-15 20:20:40','2022-11-15 20:20:40','100000','index.php',NULL,NULL,NULL,0,1),
+ (3,7,1,'2022-11-15 20:23:03','2022-11-15 20:23:03','100000','index.php',NULL,NULL,NULL,0,1),
+ (4,7,1,'2022-11-15 20:24:07','2022-11-15 20:24:07','100000','index.php',NULL,NULL,NULL,0,1),
+ (5,7,1,'2022-11-15 20:25:11','2022-11-15 20:25:11','100000','index.php',NULL,NULL,NULL,0,1),
+ (6,7,1,'2022-11-15 20:25:12','2022-11-15 20:25:12','100000','index.php',NULL,NULL,NULL,0,1),
+ (7,7,1,'2022-11-15 20:25:12','2022-11-15 20:25:12','100000','index.php',NULL,NULL,NULL,0,1),
+ (8,7,1,'2022-11-15 20:29:20','2022-11-15 20:29:20','100000','login.php',NULL,NULL,NULL,0,1),
+ (9,7,1,'2022-11-15 20:29:20','2022-11-15 20:29:20','100000','index.php',NULL,NULL,NULL,0,1),
+ (10,7,1,'2022-11-15 20:39:37','2022-11-15 20:39:37','100000','login.php',NULL,NULL,NULL,0,1),
+ (11,7,1,'2022-11-15 20:39:37','2022-11-15 20:39:37','100000','index.php',NULL,NULL,NULL,0,1),
+ (12,7,1,'2022-11-15 20:41:58','2022-11-15 20:41:58','100000','login.php',NULL,NULL,NULL,0,1),
+ (13,7,1,'2022-11-15 20:41:58','2022-11-15 20:41:58','100000','index.php',NULL,NULL,NULL,0,1),
+ (14,7,1,'2022-11-17 18:35:12','2022-11-17 18:35:12','100000','login.php',NULL,NULL,NULL,0,1),
+ (15,7,1,'2022-11-17 18:35:12','2022-11-17 18:35:12','100000','index.php',NULL,NULL,NULL,0,1),
+ (16,7,1,'2022-11-17 21:39:44','2022-11-17 21:39:44','100000','index.php',NULL,NULL,NULL,0,1),
+ (17,7,1,'2022-11-17 21:41:14','2022-11-17 21:41:14','100000','index.php',NULL,NULL,NULL,0,1),
+ (18,7,1,'2022-11-25 22:48:13','2022-11-25 22:48:13','100000','login.php',NULL,NULL,NULL,0,1),
+ (19,7,1,'2022-11-25 22:48:13','2022-11-25 22:48:13','100000','index.php',NULL,NULL,NULL,0,1),
+ (20,7,1,'2022-11-26 10:00:43','2022-11-26 10:00:43','100000','login.php',NULL,NULL,NULL,0,1),
+ (21,7,1,'2022-11-26 19:14:46','2022-11-26 19:14:46','100000','login.php',NULL,NULL,NULL,0,1),
+ (22,9,1,'2022-11-26 19:25:26','2022-11-26 19:25:26','100000','login.php',NULL,NULL,NULL,0,1),
+ (23,10,1,'2022-11-26 19:26:34','2022-11-26 19:26:34','100000','login.php',NULL,NULL,NULL,0,1),
+ (24,7,1,'2022-11-27 02:22:41','2022-11-27 02:22:41','100000','login.php',NULL,NULL,NULL,0,1),
+ (25,7,1,'2022-11-27 16:17:48','2022-11-27 16:17:48','100000','login.php',NULL,NULL,NULL,0,1),
+ (26,7,1,'2022-12-02 16:45:37','2022-12-02 16:45:37','100000','login.php',NULL,NULL,NULL,0,1);
+/*!40000 ALTER TABLE `accesos_usuarios` ENABLE KEYS */;
+
+
+--
+-- Definition of table `estados`
+--
+
+DROP TABLE IF EXISTS `estados`;
+CREATE TABLE `estados` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `aula` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `puesto` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `estado` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `au_fec_alta` datetime NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3814 DEFAULT CHARSET=utf8 COMMENT='Tabla para guardar los estados de los puestos';
+
+--
+-- Dumping data for table `estados`
+--
+
+/*!40000 ALTER TABLE `estados` DISABLE KEYS */;
+INSERT INTO `estados` (`id`,`aula`,`puesto`,`estado`,`au_fec_alta`) VALUES 
+ (1,1,1,1,'2022-11-11 12:00:00'),
+ (3805,1,1,1,'2022-11-26 19:11:08'),
+ (3806,2,1,1,'2022-11-26 19:11:10'),
+ (3807,1,1,1,'2022-11-26 19:11:12'),
+ (3808,2,2,2,'2022-11-26 19:14:56'),
+ (3809,1,2,1,'2022-11-26 19:15:02'),
+ (3810,1,1,1,'2022-11-26 19:15:04'),
+ (3811,1,48,2,'2022-11-26 02:00:00'),
+ (3812,3,55,2,'2022-11-26 02:00:00'),
+ (3813,3,7,1,'2022-12-03 01:41:00');
+/*!40000 ALTER TABLE `estados` ENABLE KEYS */;
+
+
+--
+-- Definition of table `master_aulas`
+--
+
+DROP TABLE IF EXISTS `master_aulas`;
+CREATE TABLE `master_aulas` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `filas` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `aula` varchar(50) NOT NULL,
+  `tipo` tinyint(1) unsigned NOT NULL,
+  `aforo` int(4) unsigned NOT NULL DEFAULT 0,
+  `id_tipo_puestos` tinyint(3) unsigned NOT NULL DEFAULT 1,
+  `lado_puerta` varchar(25) NOT NULL DEFAULT 'Izquierda',
+  `id_bloque` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `planta` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `divisiones_aula` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  `au_fec_alta` datetime NOT NULL DEFAULT current_timestamp(),
+  `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
+  `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
+  `au_fec_modif` datetime DEFAULT NULL,
+  `au_usu_modif` varchar(50) DEFAULT NULL,
+  `au_proc_modif` varchar(50) DEFAULT NULL,
+  `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
+  `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `master_aulas`
+--
+
+/*!40000 ALTER TABLE `master_aulas` DISABLE KEYS */;
+INSERT INTO `master_aulas` (`id`,`filas`,`aula`,`tipo`,`aforo`,`id_tipo_puestos`,`lado_puerta`,`id_bloque`,`planta`,`divisiones_aula`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,8,'SA6',1,80,1,'Derecha',4,1,2,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (2,3,'NL11',2,30,2,'Derecha',2,2,1,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (3,10,'Biblioteca',3,100,2,'Derecha',4,2,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (4,2,'Mesa estudio 1',4,6,2,'Izquierda',2,2,1,'2022-11-06 14:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (5,2,'Mesa estudio 2',4,6,2,'Izquierda',3,1,1,'2022-10-08 00:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (6,10,'NA4',1,100,1,'Izquierda',2,1,2,'2022-11-27 13:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (7,10,'EA2',1,100,1,'Derecha',1,1,2,'2022-11-28 02:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
+/*!40000 ALTER TABLE `master_aulas` ENABLE KEYS */;
+
+
+--
+-- Definition of table `master_bloques`
+--
+
+DROP TABLE IF EXISTS `master_bloques`;
+CREATE TABLE `master_bloques` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) NOT NULL,
+  `color` varchar(20) NOT NULL,
+  `au_fec_alta` datetime NOT NULL DEFAULT '2022-10-08 00:00:00',
+  `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
+  `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
+  `au_fec_modif` datetime DEFAULT NULL,
+  `au_usu_modif` varchar(50) DEFAULT NULL,
+  `au_proc_modif` varchar(50) DEFAULT NULL,
+  `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
+  `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `master_bloques`
+--
+
+/*!40000 ALTER TABLE `master_bloques` DISABLE KEYS */;
+INSERT INTO `master_bloques` (`id`,`nombre`,`color`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,'Este','#198754;','2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (2,'Norte','#0d6efd;','2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (3,'Oeste','#dc3545;','2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (4,'Sur','#ffc107;','2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
+/*!40000 ALTER TABLE `master_bloques` ENABLE KEYS */;
+
+
+--
+-- Definition of table `master_estados`
+--
+
+DROP TABLE IF EXISTS `master_estados`;
+CREATE TABLE `master_estados` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `estado` varchar(50) NOT NULL,
+  `au_fec_alta` datetime NOT NULL DEFAULT '2022-10-14 00:00:00',
+  `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
+  `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
+  `au_fec_modif` datetime DEFAULT NULL,
+  `au_usu_modif` varchar(50) DEFAULT NULL,
+  `au_proc_modif` varchar(50) DEFAULT NULL,
+  `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
+  `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `master_estados`
+--
+
+/*!40000 ALTER TABLE `master_estados` DISABLE KEYS */;
+INSERT INTO `master_estados` (`id`,`estado`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,'Ocupado','2022-10-14 16:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (2,'Libre','2022-10-14 16:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (3,'Reservado','2022-11-18 17:00:00','2','A mano',NULL,NULL,NULL,0,1);
+/*!40000 ALTER TABLE `master_estados` ENABLE KEYS */;
+
+
+--
+-- Definition of table `master_franjas_horarias`
+--
+
+DROP TABLE IF EXISTS `master_franjas_horarias`;
+CREATE TABLE `master_franjas_horarias` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `inicio` tinyint(3) unsigned NOT NULL,
+  `fin` tinyint(3) unsigned NOT NULL,
+  `au_fec_alta` datetime NOT NULL DEFAULT '2022-11-06 00:00:00',
+  `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
+  `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
+  `au_fec_modif` datetime DEFAULT NULL,
+  `au_usu_modif` varchar(50) DEFAULT NULL,
+  `au_proc_modif` varchar(50) DEFAULT NULL,
+  `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
+  `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `master_franjas_horarias`
+--
+
+/*!40000 ALTER TABLE `master_franjas_horarias` DISABLE KEYS */;
+INSERT INTO `master_franjas_horarias` (`id`,`inicio`,`fin`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,1,2,'2022-11-06 00:00:00','2','A mano',NULL,NULL,NULL,0,0),
+ (2,2,3,'2022-11-06 00:00:00','2','A mano',NULL,NULL,NULL,0,0),
+ (3,3,4,'2022-11-06 00:00:00','2','A mano',NULL,NULL,NULL,0,0),
+ (4,4,5,'2022-11-15 21:00:00','2','A mano',NULL,NULL,NULL,0,0),
+ (5,5,6,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,0),
+ (6,6,7,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,0),
+ (7,7,8,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,0),
+ (8,8,9,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (9,9,10,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (10,10,11,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (11,11,12,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (12,12,13,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (13,13,14,'2022-11-17 19:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (14,14,15,'2022-12-02 18:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (15,15,16,'2022-12-02 18:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (16,16,17,'2022-12-02 18:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (17,17,18,'2022-12-02 18:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (18,18,19,'2022-11-06 00:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (19,19,20,'2022-12-02 18:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (20,20,21,'2022-12-02 18:00:00','2','A mano',NULL,NULL,NULL,0,1),
+ (21,21,22,'2022-12-02 18:00:00','2','A mano',NULL,NULL,NULL,0,0);
+/*!40000 ALTER TABLE `master_franjas_horarias` ENABLE KEYS */;
+
+
+--
+-- Definition of table `master_perfil`
+--
+
+DROP TABLE IF EXISTS `master_perfil`;
+CREATE TABLE `master_perfil` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `perfil` varchar(50) NOT NULL,
+  `au_fec_alta` datetime NOT NULL DEFAULT '2022-11-11 13:00:00',
+  `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
+  `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
+  `au_fec_modif` datetime DEFAULT NULL,
+  `au_usu_modif` varchar(50) DEFAULT NULL,
+  `au_proc_modif` varchar(50) DEFAULT NULL,
+  `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
+  `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `master_perfil`
+--
+
+/*!40000 ALTER TABLE `master_perfil` DISABLE KEYS */;
+INSERT INTO `master_perfil` (`id`,`perfil`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,'Admin','2022-11-12 13:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (2,'Alumno','2022-11-12 13:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (3,'Profesor','2022-11-12 13:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (4,'Conserjería','2022-11-12 13:00:00','7','A mano',NULL,NULL,NULL,0,1);
+/*!40000 ALTER TABLE `master_perfil` ENABLE KEYS */;
+
+
+--
+-- Definition of table `master_puestos`
+--
+
+DROP TABLE IF EXISTS `master_puestos`;
+CREATE TABLE `master_puestos` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `puesto` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `id_aula` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `ìd_tipo` tinyint(3) unsigned NOT NULL DEFAULT 1,
+  `fila` tinyint(3) unsigned NOT NULL DEFAULT 1,
+  `columna` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `au_fec_alta` datetime NOT NULL DEFAULT current_timestamp(),
+  `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
+  `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
+  `au_fec_modif` datetime DEFAULT NULL,
+  `au_usu_modif` varchar(50) DEFAULT NULL,
+  `au_proc_modif` varchar(50) DEFAULT NULL,
+  `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
+  `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `master_puestos`
+--
+
+/*!40000 ALTER TABLE `master_puestos` DISABLE KEYS */;
+INSERT INTO `master_puestos` (`id`,`puesto`,`id_aula`,`ìd_tipo`,`fila`,`columna`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,1,2,2,1,1,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (2,2,2,2,1,2,'2022-10-09 10:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (3,3,2,2,1,3,'2022-10-09 10:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (4,4,2,2,1,4,'2022-10-09 10:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (5,1,3,2,1,1,'2022-11-06 14:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (6,2,3,1,1,1,'2022-11-06 14:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (7,7,3,1,1,1,'2022-11-06 14:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (8,1,1,1,1,1,'2022-11-27 09:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (9,48,1,1,0,0,'2022-11-27 09:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (10,8,3,1,1,1,'2022-12-03 15:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (11,11,3,1,2,1,'2022-12-03 15:07:45','7','A mano',NULL,NULL,NULL,0,1);
+/*!40000 ALTER TABLE `master_puestos` ENABLE KEYS */;
+
+
+--
+-- Definition of table `master_tipo_aula`
+--
+
+DROP TABLE IF EXISTS `master_tipo_aula`;
+CREATE TABLE `master_tipo_aula` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `tipo` varchar(50) NOT NULL,
+  `au_fec_alta` datetime NOT NULL DEFAULT '2022-11-13 00:00:00',
+  `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
+  `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
+  `au_fec_modif` datetime DEFAULT NULL,
+  `au_usu_modif` varchar(50) DEFAULT NULL,
+  `au_proc_modif` varchar(50) DEFAULT NULL,
+  `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
+  `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `master_tipo_aula`
+--
+
+/*!40000 ALTER TABLE `master_tipo_aula` DISABLE KEYS */;
+INSERT INTO `master_tipo_aula` (`id`,`tipo`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,'Teoría','2022-11-13 18:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (2,'Laboratorio','2022-11-13 18:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (3,'Biblioteca','2022-11-13 18:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (4,'Mesa común','2022-11-13 18:00:00','7','A mano',NULL,NULL,NULL,0,1);
+/*!40000 ALTER TABLE `master_tipo_aula` ENABLE KEYS */;
+
+
+--
+-- Definition of table `master_tipo_puesto`
+--
+
+DROP TABLE IF EXISTS `master_tipo_puesto`;
+CREATE TABLE `master_tipo_puesto` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) NOT NULL,
+  `au_fec_alta` datetime NOT NULL DEFAULT '2022-10-08 00:00:00',
+  `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
+  `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
+  `au_fec_modif` datetime DEFAULT NULL,
+  `au_usu_modif` varchar(50) DEFAULT NULL,
+  `au_proc_modif` varchar(50) DEFAULT NULL,
+  `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
+  `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `master_tipo_puesto`
+--
+
+/*!40000 ALTER TABLE `master_tipo_puesto` DISABLE KEYS */;
+INSERT INTO `master_tipo_puesto` (`id`,`nombre`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,'plegable madera','2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1),
+ (2,'silla madera','2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,1);
+/*!40000 ALTER TABLE `master_tipo_puesto` ENABLE KEYS */;
+
+
+--
+-- Definition of table `master_usuarios`
+--
+
+DROP TABLE IF EXISTS `master_usuarios`;
+CREATE TABLE `master_usuarios` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_perfil` tinyint(1) NOT NULL DEFAULT 2,
+  `nombre` varchar(50) NOT NULL,
+  `apellidos` varchar(50) NOT NULL,
+  `dni` varchar(9) DEFAULT NULL,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(60) DEFAULT NULL,
+  `username_ldap` varchar(45) DEFAULT NULL,
+  `email` varchar(70) DEFAULT NULL,
+  `direccion` int(10) unsigned NOT NULL DEFAULT 0,
+  `au_fec_alta` datetime NOT NULL DEFAULT current_timestamp(),
+  `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
+  `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
+  `au_fec_modif` datetime DEFAULT NULL,
+  `au_usu_modif` varchar(50) DEFAULT NULL,
+  `au_proc_modif` varchar(50) DEFAULT NULL,
+  `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
+  `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `master_usuarios`
+--
+
+/*!40000 ALTER TABLE `master_usuarios` DISABLE KEYS */;
+INSERT INTO `master_usuarios` (`id`,`id_perfil`,`nombre`,`apellidos`,`dni`,`username`,`password`,`username_ldap`,`email`,`direccion`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,1,'Guillermo','González Martínez','03114191Z','guillermo.gonzalezm','guillerrrrrrr','guillermo.gonzalezm','guillermo.gonzalezm@edu.uah.es',0,'2022-10-09 10:00:00','BBDD','A mano',NULL,NULL,NULL,0,0),
+ (6,1,'Pablo','García García',NULL,'pablo.ggarcia','$2y$10$qu2g1WqEN45PMw/iX6BGPuh5UZa4/Q0NScGCqGraXsDgZdD0hSNke',NULL,'pablo.ggarcia@edu.uah.es',0,'2022-11-11 20:16:47','BBDD','Web',NULL,NULL,NULL,0,1),
+ (7,1,'Guillermo','González Martínez',NULL,'guille','$2y$10$CTWpSbVvLa.P9c8/RAWVg.mqAczwwvT1oIKfmzwZ57CuVJz5HimEW',NULL,'guillermo.gonzalezm@edu.uah.es',0,'2022-11-12 12:42:29','BBDD','Web',NULL,NULL,NULL,0,1),
+ (8,3,'Periko','de los palotes',NULL,'Periko','$2y$10$QFz/BvcK7dKUTSHDydcIuOs0jadi025NDOPAPm2AfuzXJtskVgFxC',NULL,'guille.willy.1975@gmail.com',0,'2022-11-12 13:12:51','BBDD','Web',NULL,NULL,NULL,0,1),
+ (9,2,'Nicolás','González Cámara',NULL,'nico','$2y$10$VG5Q34b4L81suoM7opLIfep9n8H6gy2ZMvFUL13c6L4M5c5gCORy6',NULL,'guillermo.gonzalezm@edu.uah.es',0,'2022-11-26 19:25:12','BBDD','Web',NULL,NULL,NULL,0,1),
+ (10,2,'Chus','Cámara',NULL,'chus','$2y$10$0tBtkOrTQpamCRdtsWdnSO3/v6OW4ArWL3VOCp0ftd5WVqv/DX7cy',NULL,'guillermo.gonzalezm@edu.uah.es',0,'2022-11-26 19:26:19','BBDD','Web',NULL,NULL,NULL,0,1);
+/*!40000 ALTER TABLE `master_usuarios` ENABLE KEYS */;
+
+
+--
+-- Definition of table `productos`
+--
+
+DROP TABLE IF EXISTS `productos`;
+CREATE TABLE `productos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo` varchar(100) NOT NULL,
+  `producto` varchar(255) NOT NULL,
+  `unidades_vendidas` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `productos`
+--
+
+/*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` (`id`,`codigo`,`producto`,`unidades_vendidas`) VALUES 
+ (1,'BD','Pantalla LED 32',6),
+ (2,'BB','Mouse USB',16),
+ (3,'VB','Disco duro 1TB ',14),
+ (4,'WS','Teclado USD',8),
+ (5,'TN','Monitor LG 21',6),
+ (6,'12000','Lector 3nStar',20);
+/*!40000 ALTER TABLE `productos` ENABLE KEYS */;
+
+
+--
+-- Definition of table `reservas`
+--
+
+DROP TABLE IF EXISTS `reservas`;
+CREATE TABLE `reservas` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_usuario` int(10) unsigned NOT NULL DEFAULT 0,
+  `id_franja_horaria` int(10) unsigned NOT NULL DEFAULT 0,
+  `fecha` datetime NOT NULL DEFAULT current_timestamp(),
+  `id_puesto` int(10) unsigned NOT NULL DEFAULT 0,
+  `localizador` varchar(6) NOT NULL DEFAULT '',
+  `au_fec_alta` datetime NOT NULL DEFAULT current_timestamp(),
+  `au_usu_alta` varchar(50) NOT NULL DEFAULT 'BBDD',
+  `au_proc_alta` varchar(50) NOT NULL DEFAULT 'A mano',
+  `au_fec_modif` datetime DEFAULT NULL,
+  `au_usu_modif` varchar(50) DEFAULT NULL,
+  `au_proc_modif` varchar(50) DEFAULT NULL,
+  `au_lock` int(10) unsigned NOT NULL DEFAULT 0,
+  `activo` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`),
+  KEY `id_usuario` (`id_usuario`),
+  KEY `id_franja_horaria` (`id_franja_horaria`),
+  CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `master_usuarios` (`id`),
+  CONSTRAINT `reservas_ibfk_2` FOREIGN KEY (`id_franja_horaria`) REFERENCES `master_franjas_horarias` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `reservas`
+--
+
+/*!40000 ALTER TABLE `reservas` DISABLE KEYS */;
+INSERT INTO `reservas` (`id`,`id_usuario`,`id_franja_horaria`,`fecha`,`id_puesto`,`localizador`,`au_fec_alta`,`au_usu_alta`,`au_proc_alta`,`au_fec_modif`,`au_usu_modif`,`au_proc_modif`,`au_lock`,`activo`) VALUES 
+ (1,7,9,'2022-11-27 10:00:00',5,'','2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (2,7,8,'2022-11-27 10:00:00',6,'','2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (3,7,16,'2022-11-27 10:00:00',7,'','2022-11-12 16:00:00','7','A mano',NULL,NULL,NULL,0,1),
+ (4,7,12,'2022-12-03 20:00:00',7,'','2022-12-02 19:54:48','7','reservas.php',NULL,NULL,NULL,0,1),
+ (6,7,1,'2022-12-03 01:00:00',11,'','2022-12-03 20:23:54','7','reserva.php',NULL,NULL,NULL,0,1),
+ (7,7,1,'2022-12-03 01:00:00',11,'AQT4BU','2022-12-03 21:38:37','7','reserva.php',NULL,NULL,NULL,0,1),
+ (8,7,12,'2022-12-03 12:00:00',10,'PXVJ2Z','2022-12-03 21:41:10','7','reserva.php',NULL,NULL,NULL,0,1),
+ (9,7,12,'2022-12-03 12:00:00',11,'H9XNLB','2022-12-03 22:09:35','7','reserva.php',NULL,NULL,NULL,0,1),
+ (10,7,12,'2022-12-03 12:00:00',5,'JUCWRX','2022-12-03 22:12:31','7','reserva.php',NULL,NULL,NULL,0,1),
+ (11,7,12,'2022-12-03 12:00:00',6,'N791BC','2022-12-03 22:19:59','7','reserva.php',NULL,NULL,NULL,0,1),
+ (12,7,9,'2022-12-03 09:00:00',7,'HMZNPT','2022-12-03 22:22:53','7','reserva.php',NULL,NULL,NULL,0,1),
+ (13,7,11,'2022-12-03 11:00:00',10,'QBRE8U','2022-12-03 22:25:34','7','reserva.php',NULL,NULL,NULL,0,1),
+ (14,7,9,'2022-12-03 09:00:00',10,'JBKME6','2022-12-03 22:27:35','7','reserva.php',NULL,NULL,NULL,0,1),
+ (15,7,9,'2022-12-03 09:00:00',6,'9J6YXH','2022-12-03 22:36:08','7','reserva.php',NULL,NULL,NULL,0,1),
+ (16,7,9,'2022-12-03 09:00:00',10,'HPJ34L','2022-12-03 22:37:03','7','reserva.php',NULL,NULL,NULL,0,1),
+ (17,7,9,'2022-12-03 09:00:00',11,'MD716W','2022-12-03 22:37:32','7','reserva.php',NULL,NULL,NULL,0,1),
+ (18,7,9,'2022-12-04 09:00:00',7,'RZWE94','2022-12-03 22:40:40','7','reserva.php',NULL,NULL,NULL,0,1),
+ (19,7,9,'2022-12-04 09:00:00',7,'CLPGHA','2022-12-03 22:42:32','7','reserva.php',NULL,NULL,NULL,0,1),
+ (20,7,8,'2022-12-19 08:00:00',10,'WBRFI4','2022-12-03 22:42:57','7','reserva.php',NULL,NULL,NULL,0,1),
+ (21,7,9,'2022-12-03 09:00:00',5,'3YT1X2','2022-12-03 22:48:04','7','reserva.php',NULL,NULL,NULL,0,1),
+ (22,7,8,'2022-12-05 08:00:00',6,'ODVSKI','2022-12-03 22:48:43','7','reserva.php',NULL,NULL,NULL,0,1),
+ (23,7,8,'2022-12-07 08:00:00',6,'T73V4X','2022-12-03 22:50:59','7','reserva.php',NULL,NULL,NULL,0,1),
+ (24,7,8,'2022-12-09 08:00:00',6,'RUBZJ6','2022-12-03 22:54:43','7','reserva.php',NULL,NULL,NULL,0,1),
+ (25,7,8,'2022-12-08 08:00:00',6,'VFBJKY','2022-12-03 22:57:59','7','reserva.php',NULL,NULL,NULL,0,1),
+ (26,7,8,'2022-12-23 08:00:00',5,'WZ4982','2022-12-03 23:01:24','7','reserva.php',NULL,NULL,NULL,0,1),
+ (27,7,8,'2022-12-23 08:00:00',5,'2I9ZU0','2022-12-03 23:04:45','7','reserva.php',NULL,NULL,NULL,0,1),
+ (28,7,8,'2022-12-23 08:00:00',5,'XK6AN3','2022-12-03 23:07:26','7','reserva.php',NULL,NULL,NULL,0,1),
+ (29,7,8,'2022-12-23 08:00:00',5,'4IS6VT','2022-12-03 23:10:21','7','reserva.php',NULL,NULL,NULL,0,1),
+ (30,7,8,'2022-12-23 08:00:00',5,'GE4N1K','2022-12-03 23:22:47','7','reserva.php',NULL,NULL,NULL,0,1),
+ (31,7,8,'2022-12-23 08:00:00',5,'C1YB6Q','2022-12-03 23:24:51','7','reserva.php',NULL,NULL,NULL,0,1),
+ (32,7,8,'2022-12-23 08:00:00',5,'W9NYTA','2022-12-03 23:25:15','7','reserva.php',NULL,NULL,NULL,0,1),
+ (33,7,8,'2022-12-23 08:00:00',5,'ZVBGS4','2022-12-03 23:26:11','7','reserva.php',NULL,NULL,NULL,0,1),
+ (34,7,8,'2022-12-23 08:00:00',5,'2FQ6YS','2022-12-03 23:26:43','7','reserva.php',NULL,NULL,NULL,0,1),
+ (35,7,12,'2022-12-05 12:00:00',6,'AFBVUO','2022-12-03 23:35:25','7','reserva.php',NULL,NULL,NULL,0,1),
+ (36,7,8,'2022-12-09 08:00:00',10,'0NGK7F','2022-12-03 23:38:35','7','reserva.php',NULL,NULL,NULL,0,1);
+/*!40000 ALTER TABLE `reservas` ENABLE KEYS */;
+
+
+--
+-- Definition of table `venta`
+--
+
+DROP TABLE IF EXISTS `venta`;
+CREATE TABLE `venta` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date_at` date DEFAULT NULL,
+  `val` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `venta`
+--
+
+/*!40000 ALTER TABLE `venta` DISABLE KEYS */;
+INSERT INTO `venta` (`id`,`date_at`,`val`) VALUES 
+ (1,'2019-01-01',100),
+ (2,'2019-01-02',80),
+ (3,'2019-01-03',205),
+ (4,'2019-01-04',323),
+ (5,'2019-01-05',110),
+ (6,'2019-01-06',40),
+ (7,'2019-01-07',80),
+ (8,'2019-01-08',220),
+ (9,'2019-01-09',95),
+ (10,'2019-01-10',120),
+ (11,'2019-01-11',249),
+ (12,'2019-01-12',157),
+ (13,'2019-01-13',199),
+ (14,'2019-01-14',30),
+ (15,'2019-01-15',290);
+/*!40000 ALTER TABLE `venta` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
