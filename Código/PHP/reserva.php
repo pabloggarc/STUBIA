@@ -91,7 +91,7 @@ $(document).ready(function() {
 <div class="container">
     
     <div class="mensaje row <?=$resultado!=''?'oculto':''?>" id="mensaje" name="mensaje">
-        <div class="col-md-8 center-block">
+        <div class="col-md-6 center-block">
             <span style="@font-face {
 		                    font-family: din_regular;
 		                    src: url(fuentes/DINPro-Medium.otf);
