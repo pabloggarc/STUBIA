@@ -74,39 +74,42 @@ function enviar_mail($to, $asunto, $mensaje, $dir_adjunto = '', $adjunto = '', $
     if ($to == '') {
         writeLog("No se ha podido enviar el correo ya que no se ha especificado dirección a quien enviar.");
         return false;
-    } elseif ($asunto='') {
+    } elseif ($asunto=='') {
         writeLog("No se ha podido enviar el correo ya que no se ha especificado el asunto del mensaje.");
         return false;
-    } elseif ($mensaje='') {
+    } elseif ($mensaje=='') {
         writeLog("No se ha podido enviar el correo ya que no se ha especificado el cuerpo del mensaje.");
         return false;
     } else {
         //Instancia de PHPMailer
         $mail = new PHPMailer(true);
+        writeLog('mensaje:' .$mensaje);
 
         //Inicializamos los atributos del PHPMailer con nuestros datos
-        $mail->SMTPDebug=SMTP::DEBUG_CONNECTION;
+        //$mail->SMTPDebug=SMTP::DEBUG_CONNECTION;
+        $mail->SMTPDebug=SMTP::DEBUG_OFF;
         $mail->SetLanguage('es');
         $mail->IsSMTP();
-        $mail->Host = "smtp.gmail.com"; 
+        $mail->isHTML(true);
+        $mail->Helo = MAIL_HELO;
+        $mail->Host = MAIL_HOST;
+        //$mail->Host = "smtp.gmail.com"; 
         $mail->SMTPAuth = true;
-        $mail->Username ='ubicua.uah.2022@gmail.com'; 
-        $mail->Password = 'wcrdoafrquztizrx'; 
+        $mail->Username = MAIL_ADMIN_FROM; 
+        $mail->Password = MAIL_ADMIN_PASSWORD; 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;  /*Tambien 465*/
+
         $mail->CharSet = 'UTF-8';
-        $mail->Body = utf8_decode($mensaje);
-        $mail->Subject = utf8_decode($asunto); 
-        $mail->setFrom("", "STUBIA"); 
+        $asunto_decode = utf8_decode($asunto); //"=?UTF-8?B?".base64_encode($asunto)."=?="; 
+        $mail->Subject = $asunto_decode; 
+        $mensaje_decode = utf8_decode($mensaje); //"=?UTF-8?B?".base64_encode($mensaje)."=?=";
+        $mail->Body = $mensaje_decode;
+        //$mail->Body = utf8_decode("Holaaaaaa");
+        $mail->setFrom(MAIL_ADMIN_FROM, _APP_NAME);
         //$mail->addBCC("ubicua.uah.2022@gmail.com");
-        $mail->isHTML(true);
-        //$mail->Subject = "Confirmación de reserva en STUBIA";
-        $mail->Body = "Has solicitado una reserva en el servicio STUBIA. Por favor, confírmala!";
-        
-        $mail->Helo = MAIL_HELO;
         
         
-        $mail->Host = MAIL_HOST;
         
         //$mail->IsHTML(true);
         if ($strAdjuntos !== "") {
@@ -114,7 +117,7 @@ function enviar_mail($to, $asunto, $mensaje, $dir_adjunto = '', $adjunto = '', $
         }
 
         //comprobamos si es múltiple
-        $arr_to = explode(';', $to);
+        $arr_to = explode(';', "pablo.ggarcia@edu.uah.es");
 
         if (count($arr_to) > 0) {
             for ($cont = 0; $cont < count($arr_to); $cont++) {
@@ -327,9 +330,53 @@ function getEstadoPuesto($idAula, $idPuesto, $fecha=NULL, $hora=NULL) {
     return ($devolver);
 }
 
+function getFranjasHorarias () {
+    $sql_connect = conectar_bd();
 
+    $sql = "SELECT inicio FROM master_franjas_horarias WHERE activo=1";
+    writeLog($sql);
+    $consulta = db_query($sql, $sql_connect);
+    if (!$consulta) {
+        exit ("Se ha producido un error al recuperar las encuestas de base de datos (getFranjasHorarias).");
+    } else {
+        while ($fila = $consulta->fetch_array()) {
+            $horas[] = $fila["inicio"];        
+        }        
+    }
 
+    $consulta->free_result();
+    desconectar_bd($sql_connect);
 
+    return(implode(",",$horas));    
+
+}
+
+function getPuestosLibres ($aula, $accion, $fecha=NULL, $hora=NULL) {
+    $sql_connect = conectar_bd();
+
+    $sql = "SELECT * FROM master_franjas_horarias WHERE activo=1";
+    writeLog($sql);
+    $consulta = db_query($sql, $sql_connect);
+    if (!$consulta) {
+        exit ("Se ha producido un error al recuperar las encuestas de base de datos (getPuestosLibres).");
+    } else {
+        while ($fila = $consulta->fetch_array()) {
+            $horas[] = $fila["inicio"];        
+        }        
+    }
+
+    $consulta->free_result();
+    desconectar_bd($sql_connect);
+
+    return(implode(",",$horas));    
+
+}
+
+function getLocalizador(){
+    $permitted_chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // Output: 54esmdr0qf
+    return substr(str_shuffle($permitted_chars), 0, 6);
+}
 
 ?>
 

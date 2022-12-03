@@ -43,13 +43,13 @@
                         {echo $migas."&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Consulta del estado de un aula";
                     }
                     else {
-                            if (    strpos($miPagina,"reservas.php")!=false ) {
-                                echo "&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Consultar Reservas";}
+                            if (    strpos($miPagina,"reserva.php")!=false ) {
+                                echo "&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Reservas";}
                             else {	
-                                    if (strpos($miPagina,"reservar.php")!=false) {echo "&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Hacer una Reserva";}
+                                    /*(if (strpos($miPagina,"reservar.php")!=false) {echo "&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Hacer una Reserva";}
                                     else {
                                         
-                                    }
+                                    }*/
                             }
                     }
                     $migas.="</span>";

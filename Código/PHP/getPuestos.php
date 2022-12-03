@@ -7,6 +7,9 @@ require_once($dir_raiz."includes/config.php");
 require_once($dir_raiz."includes/funciones.php");
 
 $id_aula = $_REQUEST['aula'];
+$fecha= $_REQUEST['fecha'];
+
+//echo ($fecha);
  
 $sql_connect = conectar_bd();
 
@@ -61,7 +64,8 @@ $numpuesto=0;
             for( $col=1; $col<=$columnas; $col++) {
                 $estado=0;
                 if ($col!=$pasillo) {
-                    $numpuesto++;                    
+                    $numpuesto++;
+
                     $sql = "SELECT * FROM estados WHERE aula=".$id_aula." AND puesto=".$numpuesto
                         . " AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE())"
                         . " AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())";
@@ -74,13 +78,19 @@ $numpuesto=0;
                         $estado=$fila["estado"];
                     }
                     $consulta->free_result();
-                    if ($id_aula==3){
+                    if ($id_aula==3){                        
                         $sql = "SELECT r.id FROM reservas r "
                             . "INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 "
-                            . "INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id "
-                            . "WHERE p.id_aula=3 AND p.puesto=".$numpuesto." AND r.activo=1 "
-                            . "AND YEAR(fecha)=YEAR(SYSDATE()) AND MONTH(fecha)=MONTH(SYSDATE()) AND DAY(fecha)=DAY(SYSDATE()) "
-                            . "AND f.inicio=HOUR(SYSDATE())";
+                            . "INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id ";
+                        if ($fecha=='') {
+                            $sql.= "WHERE p.id_aula=3 AND p.puesto=".$numpuesto." AND r.activo=1 "
+                                . "AND YEAR(r.fecha)=YEAR(SYSDATE()) AND MONTH(r.fecha)=MONTH(SYSDATE()) AND DAY(r.fecha)=DAY(SYSDATE()) "
+                                . "AND f.inicio=HOUR(SYSDATE())";
+                        } else {
+                            $sql.= "WHERE p.id_aula=3 AND p.puesto=".$numpuesto." AND r.activo=1 "
+                                . "AND YEAR(r.fecha)=YEAR('".$fecha."') AND MONTH(r.fecha)=MONTH('".$fecha."') AND DAY(r.fecha)=DAY('".$fecha."') "
+                                . "AND f.inicio=HOUR('".$fecha."')";
+                        }
                         writeLog($sql);
                         $consulta = db_query($sql, $sql_connect);
                         if (!$consulta) {
@@ -139,3 +149,7 @@ $numpuesto=0;
 </table>
 
  </div>
+
+ <?php
+    desconectar_bd($sql_connect);
+?>

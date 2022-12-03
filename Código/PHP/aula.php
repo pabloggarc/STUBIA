@@ -23,16 +23,15 @@ require_once($dir_raiz."includes/cabecera.php");
 
 ?>
 
-
 <script type="text/javascript">
 $(document).ready(function() {  
-
  
  // code to get all records from table via select box
     $("#combo_aulas").change(function() {    
         var id = $(this).find(":selected").val();
         if (id>0){
-            var dataString = 'aula='+ id;
+            //var dataString = 'aula='+ id;
+            var dataString = {aula: id, fecha:''};
             $.ajax ({
                 url: 'getpuestos.php',
                 data: dataString,
@@ -48,7 +47,8 @@ $(document).ready(function() {
     function refrescaAula () {
         var id = $("#combo_aulas").find(":selected").val();
         if (id>0){
-            var dataString = 'aula='+ id;
+            //var dataString = 'aula='+ id;
+            var dataString = {aula: id, fecha:''};
             $.ajax ({
                 url: 'getpuestos.php',
                 data: dataString,
@@ -86,7 +86,7 @@ $(document).ready(function() {
             <br> 
         </div>
         <div class="" id="display">
-        <!-- Records will be displayed here -->
+        <!-- Records will be displayed here -->        
         </div>
     </form>    
 </div>
