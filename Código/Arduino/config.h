@@ -1,5 +1,5 @@
 //Tareas
-#define portMAX_delay (TickType_t)0xffffffffUL
+#define portMAX_delay (TickType_t) ~0UL
 #define WAIT_SENSOR_CORE 1000
 #define WAIT_SERVER_CORE 10000
 

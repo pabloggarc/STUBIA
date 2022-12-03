@@ -25,12 +25,10 @@ int size_movibles = sizeof(puestos_movibles)/sizeof(puesto_movible);
 //Funciones
 void setup_wifi(){
   WiFi.begin(WIFI_NAME, WIFI_PASSWORD);
-
-  while (WiFi.status() != WL_CONNECTED) {
+  while(WiFi.status() != WL_CONNECTED){
     delay(1000);
     Serial.println("Contectandose a la red");
   }
-
   Serial.println("Conectado con éxito a la red"); 
 }
 
@@ -60,7 +58,7 @@ long lectura_ultrasonidos(int triggerPin, int echoPin){
   
   digitalWrite(triggerPin, LOW);
   
-  return (pulseIn(echoPin, HIGH) * 0.01723);
+  return (pulseIn(echoPin, HIGH) * CALIBRACION_ULTRA);
 }
 
 void loop2(void* param){
@@ -71,15 +69,14 @@ void loop2(void* param){
       HTTPClient http; 
 
       if(xSemaphoreTake(mutex, portMAX_delay) == pdTRUE){
+        String url=String(HTTP); 
         if(puestos_fijos[i].sem->estados->estado_led_rojo && !puestos_fijos[i].sem->estados->estado_led_verde){
-          String url=String(HTTP); 
           url+=SERVER_IP+String(WS)+String("aula=")+String(puestos_fijos[i].aula)+
           String("&puesto=")+String(puestos_fijos[i].puesto)+String("&estado=1"); 
 
           http.begin(url); 
         }
         else if(!puestos_fijos[i].sem->estados->estado_led_rojo && puestos_fijos[i].sem->estados->estado_led_verde){
-          String url=String(HTTP); 
           url+=SERVER_IP+String(WS)+String("aula=")+String(puestos_fijos[i].aula)+
           String("&puesto=")+String(puestos_fijos[i].puesto)+String("&estado=2"); 
 
@@ -106,15 +103,14 @@ void loop2(void* param){
       HTTPClient http; 
 
       if(xSemaphoreTake(mutex, portMAX_delay) == pdTRUE){
+        String url=String(HTTP); 
         if(puestos_movibles[i].sem->estados->estado_led_rojo && !puestos_movibles[i].sem->estados->estado_led_verde){
-          String url=String(HTTP); 
           url+=SERVER_IP+String(WS)+String("aula=")+String(puestos_movibles[i].laboratorio)+
           String("&puesto=")+String(puestos_movibles[i].puesto)+String("&estado=1"); 
 
           http.begin(url); 
         }
         else if(!puestos_movibles[i].sem->estados->estado_led_rojo && puestos_movibles[i].sem->estados->estado_led_verde){
-          String url=String(HTTP); 
           url+=SERVER_IP+String(WS)+String("aula=")+String(puestos_movibles[i].laboratorio)+
           String("&puesto=")+String(puestos_movibles[i].puesto)+String("&estado=2"); 
 
@@ -142,6 +138,7 @@ void loop2(void* param){
 void setup() {
   //Iniciamos terminal
   Serial.begin(115200);
+
   //Iniciamos mutex
   while(!mutex){
     mutex = xSemaphoreCreateMutex(); 
@@ -154,27 +151,24 @@ void setup() {
   setup_pines(puestos_fijos, puestos_movibles); 
 
   //Iniciamos tarea secundaria
-  xTaskCreate(loop2, "loop2", configMINIMAL_STACK_SIZE * 20, NULL, 1, NULL); 
+  xTaskCreate(loop2, "loop2", configMINIMAL_STACK_SIZE * 5, NULL, 1, &comunicar_servidor); 
 }
 
 void loop() { 
   //Leemos y actualizamos estados de los sensores tipo aula fija
   for(int i = 0; i<size_fijos; i++){
     bool inclinado = digitalRead(puestos_fijos[i].pin_sensor);
-    if(!inclinado){
-      if(xSemaphoreTake(mutex, portMAX_delay) == pdTRUE){
+    if(xSemaphoreTake(mutex, portMAX_delay) == pdTRUE){
+      if(!inclinado){
         puestos_fijos[i].sem->estados->estado_led_verde = LOW; 
         puestos_fijos[i].sem->estados->estado_led_rojo = HIGH; 
       }
-      xSemaphoreGive(mutex); 
-    }
-    else{
-      if(xSemaphoreTake(mutex, portMAX_delay) == pdTRUE){
+      else{
         puestos_fijos[i].sem->estados->estado_led_verde = HIGH; 
         puestos_fijos[i].sem->estados->estado_led_rojo = LOW; 
       }
-      xSemaphoreGive(mutex); 
     }
+    xSemaphoreGive(mutex); 
     digitalWrite(puestos_fijos[i].sem->led_rojo, puestos_fijos[i].sem->estados->estado_led_rojo); 
     digitalWrite(puestos_fijos[i].sem->led_verde, puestos_fijos[i].sem->estados->estado_led_verde); 
   }
@@ -182,20 +176,17 @@ void loop() {
   //Leemos y actualizamos estados de los sensores tipo laboratorio
   for(int i = 0; i<size_movibles; i++){
     int dist = lectura_ultrasonidos(puestos_movibles[i].pin_trigger, puestos_movibles[i].pin_echo); 
-    if(dist > 35){
-      if(xSemaphoreTake(mutex, portMAX_delay) == pdTRUE){
+    if(xSemaphoreTake(mutex, portMAX_delay) == pdTRUE){
+      if(dist > CALIBRACION_DIST){
         puestos_movibles[i].sem->estados->estado_led_verde = HIGH; 
         puestos_movibles[i].sem->estados->estado_led_rojo = LOW; 
       }
-      xSemaphoreGive(mutex); 
-    }
-    else if(dist <= 35){
-      if(xSemaphoreTake(mutex, portMAX_delay) == pdTRUE){
+      else if(dist <= CALIBRACION_DIST){
         puestos_movibles[i].sem->estados->estado_led_verde = LOW; 
         puestos_movibles[i].sem->estados->estado_led_rojo = HIGH; 
       }
-      xSemaphoreGive(mutex); 
     }
+    xSemaphoreGive(mutex); 
     digitalWrite(puestos_movibles[i].sem->led_rojo, puestos_movibles[i].sem->estados->estado_led_rojo); 
     digitalWrite(puestos_movibles[i].sem->led_verde, puestos_movibles[i].sem->estados->estado_led_verde); 
   }
