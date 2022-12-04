@@ -31,7 +31,7 @@ $consulta->free_result();
 ?>
 
 <div class="form-group">
-    <label for="combo_puestos">Selecccione el puesto de estudio que desea reservar:</label>
+    Seleccciona el puesto de estudio que quieres reservar:
     <select name="combo_puestos" id="combo_puestos" class="form-control-lg">
         <option value=0>Seleccione puesto libre:</option>"
         <?php

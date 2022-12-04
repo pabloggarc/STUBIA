@@ -1,7 +1,9 @@
 <?php
 
-setlocale(LC_ALL,'es_ES.utf8'); 
+setlocale(LC_ALL,'es_ES.utf8');
+
 setlocale(LC_CTYPE, 'es');
+setlocale(LC_TIME, 'es_ES','es_ES.UTF-8');
 
 date_default_timezone_set('Europe/Madrid');
 
@@ -17,6 +19,7 @@ define('_APP_NAME', 'STUBIA');
 define('_ENTORNO_', strpos($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'],"www.uah.es")===false ? (strpos($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'],"preproduccion")===false?'LOCAL':'TEST'):'PRODUCCION');
 define('_APP_URL', _ENTORNO_ === "PRODUCCION" ? "" : (_ENTORNO_ === "TEST" ? "" : "localhost/proyectos/stubia"));
 define('_URL_WEB_UAH', 'https://www.uah.es/');
+define('MAX_RESERVAS_DIA', 4);
 
 // ********************** BBDD *********************
 define('BBDD_HOST',	_ENTORNO_ === "PRODUCCION"	? ''    : (_ENTORNO_ === "TEST" ? ''        : 'localhost'));

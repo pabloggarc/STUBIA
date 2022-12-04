@@ -15,8 +15,8 @@ $sql_connect = conectar_bd();
 
 //Recupero todos los datos del aula:
 $sql = "SELECT ma.*,mta.tipo as 'tipo_aula', mb.* FROM master_aulas ma "
-        ." INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id"
-        ." INNER JOIN master_bloques mb ON ma.id_bloque=mb.id"
+        ." INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id AND mta.activo=1 "
+        ." INNER JOIN master_bloques mb ON ma.id_bloque=mb.id AND mb.activo=1 "
         . " WHERE ma.id=".$id_aula; // Consulta SQL
 writeLog($sql);
 $consulta = db_query($sql, $sql_connect);
@@ -37,8 +37,8 @@ if ($aula["divisiones_aula"]>1) {
 }
 
 ?>
-<div class="row">
-<table class="table">
+<div class="col-md">
+<table class="table" name="tabla_puestos" id="tabla_puestos" style="border='0' cellspacing='0' cellpadding='0'">
     <?php if ($aula["tipo_aula"]=="Teoría" || $aula["tipo_aula"]=="Biblioteca"){ ?>
     <thead>
         <tr>            
@@ -51,7 +51,7 @@ if ($aula["divisiones_aula"]>1) {
             <td colspan="<?=$columnas+2?>" class="table-active" style="border:0px">&nbsp;</td>
         </tr>
 <?php
-$numpuesto=0;
+        $numpuesto=0;
         for( $fil=1; $fil<=$aula["filas"]; $fil++) {
         ?>
         <tr>
@@ -81,7 +81,7 @@ $numpuesto=0;
                     if ($id_aula==3){                        
                         $sql = "SELECT r.id FROM reservas r "
                             . "INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 "
-                            . "INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id ";
+                            . "INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 ";
                         if ($fecha=='') {
                             $sql.= "WHERE p.id_aula=3 AND p.puesto=".$numpuesto." AND r.activo=1 "
                                 . "AND YEAR(r.fecha)=YEAR(SYSDATE()) AND MONTH(r.fecha)=MONTH(SYSDATE()) AND DAY(r.fecha)=DAY(SYSDATE()) "

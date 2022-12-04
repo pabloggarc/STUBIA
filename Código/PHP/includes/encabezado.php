@@ -27,3 +27,7 @@ $idperfil = intval($_SESSION["stubia_useridperfil"]);
 	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+
+	<style>
+        @import url('https://fonts.cdnfonts.com/css/din-regular');
+	</style>

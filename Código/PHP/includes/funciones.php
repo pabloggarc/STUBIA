@@ -117,7 +117,7 @@ function enviar_mail($to, $asunto, $mensaje, $dir_adjunto = '', $adjunto = '', $
         }
 
         //comprobamos si es múltiple
-        $arr_to = explode(';', "pablo.ggarcia@edu.uah.es");
+        $arr_to = explode(';', $to);
 
         if (count($arr_to) > 0) {
             for ($cont = 0; $cont < count($arr_to); $cont++) {

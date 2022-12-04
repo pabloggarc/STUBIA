@@ -1,14 +1,13 @@
-html, body{
+html, body {
 	margin:				auto;
 	background-color:	#fff;
-	color:				#154991;
-	@font-face {
-		font-family: din_regular;
-		src: url(../fuentes/DINPro-Medium.otf);
-	}
+	color:				#337ab7; 
+    font-family:        'DIN-Regular';
+    font-size:          1vw;
+	
 	/*font-family:		Arial, Helvetica, sans-serif;	
-	font-size:			14px;*/
-	font: 				14px din_regular; 
+	font-size:			14px;
+	font: 				14px din_regular; */
 	
 }
 a, a:visited {
@@ -18,10 +17,15 @@ a, a:visited {
 p {
 	margin: 0;
 }
+div, span {
+    font-family:        'DIN-Regular'; 
+    font-size:          1vw;
+}
+
 div#contenedor_stubia {
 	margin:				auto;
 	position:			relative;
-	max-width:			60vw;
+	max-width:			80vw;
 	
 	/*max-width: 50%;*/
 	
@@ -50,7 +54,7 @@ div#contenedor_stubia div#capa_cabecera div.login img {
 div#contenedor_stubia div#capa_borde_superior {
 	position:		relative;
 	border-radius:		10px 10px 0 0;
-	background-color:	#154991;
+	background-color:	#337ab7;
 	color:			#fff;
 	padding:		.5em 1em;
 	font-weight:		bold;
@@ -59,7 +63,7 @@ div#contenedor_stubia div#capa_borde_superior a#info_notif {
         float: right;
 	background-color:	#fff;
 	font-size:			.9em;
-	color:				#154991;
+	color:				#337ab7;
 	padding:			.1em .5em;
 	border-radius:		10px;
 }
@@ -67,7 +71,7 @@ div#contenedor_stubia div#capa_borde_superior a#enlace_admin, a#enlace_manual {
         float: right;
 	background-color:	#fff;
 	font-size:			.9em;
-	color:				#154991;
+	color:				#337ab7;
 	padding:			.1em .5em;
 	border-radius:		10px;
         margin-right: 10px;
@@ -126,7 +130,7 @@ div#contenedor_stubia div#capa_cuerpo div#capa_notif div img {
 }
 div#contenedor_stubia div#capa_borde_inferior {
 	border-radius:		0 0 10px 10px;
-	background-color:	#154991;
+	background-color:	#337ab7;
 	color:				#fff;
 	padding:			.5em 1em;
 	/*font-weight:		bold;*/
@@ -259,10 +263,14 @@ div#contenedor_stubia div#capa_copyright {
 .right{float:right}
 
 
-table#log{
-    border-collapse: collapse;
-    text-align: center;
+table#tabla_puestos{
+    border-style: solid; 
+    border-top-width: 2px; 
+    border-right-width: 2px; 
+    border-bottom-width: 2px; 
+    border-left-width: 2px
 }
+
 table#log thead tr th{
     background: #154991;
     color: white;

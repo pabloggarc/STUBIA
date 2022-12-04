@@ -1,3 +1,4 @@
+
 <?php
 
 $dir_raiz = "";
@@ -63,47 +64,58 @@ require_once($dir_raiz."includes/cabecera.php");
     });
 </script>
 -->
-<div class="container">
-    <br>
-    <div class="text-justify"><span style="font:1.25vw din_regular;">Bienvenido a STUBIA, la aplicación en fase de prototipo que pretende epxlicar cómo se podría digitalizar
-     la ocupación de los puestos de estudio de la Universidad de Alcalá situados en aulas, zonas comunes y biblioteca. El objeto de este prototipo es ejemplarizar un posible 
-     despliegue de computación ubícua en esta Universidad.</span></div>
-    <div><img src="img/cu.png" width="25%"></div>
-    <div class="text-center">
-    
-    <?php
-    /*
-    echo getAforoTipoAula(1);
-    echo "<br>";
-    $valor= getEstadoPuesto(1,1,'2022-11-11',12);
-    echo $valor[1];
-    echo "<br>";
-    echo $valor[2];
-    echo "<br>";
-    echo date("H");
-    echo "<br>";
-    */
-    switch ($_SESSION["stubia_useridperfil"]) {
-        case "1":
-            echo ("<br>");
-            echo ("<a class='btn btn-primary' href='aula.php' role='button'>Consultar el  estado de un aula</a><br>");
-            echo ("<br>");
-            echo ("<a class='btn btn-primary' href='' role='button'>Consultar las estadísticas globales</a><br>");
-            echo ("<br>");
-            echo ("<a class='btn btn-primary' href='reserva.php' role='button'>Consultar las reservas de biblioteca</a>");
-            break;
-        case "2";
-            echo ("<a class='btn btn-primary href='' role='button'>Consultar la ocupación de la biblioteca</a><br>");
-            echo ("<a class='btn btn-primary href='' role='button'>hacer una reserva</a>");            
-            break;
-        case "3";
-            break;
-        case "4";
-            break;
-    }
-    ?>
-    </div>
-</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md text-justify">    
+                    <span style="font-family: 'DIN-Regular'; font-size: 1.1vw">Bienvenido a STUBIA, la aplicación en fase de prototipo que pretende epxlicar cómo se podría digitalizar
+                    la ocupación de los puestos de estudio de la Universidad de Alcalá situados en aulas, zonas comunes y biblioteca. El objeto de este prototipo es ejemplarizar un posible 
+                    despliegue de computación ubícua en esta Universidad.</span>
+                </div>                
+            </div>
+            
+            <br>
+
+            <div class="row">
+                <div class="col-md">
+                    <img src="img/arduino.jpg" width="100%">
+                </div>
+            
+                <div class="col-md text-justify-content-center">
+                    <?php
+                    /*
+                    echo getAforoTipoAula(1);
+                    echo "<br>";
+                    $valor= getEstadoPuesto(1,1,'2022-11-11',12);
+                    echo $valor[1];
+                    echo "<br>";
+                    echo $valor[2];
+                    echo "<br>";
+                    echo date("H");
+                    echo "<br>";
+                    */
+                    switch ($_SESSION["stubia_useridperfil"]) {
+                        case "1":
+                            echo ("<br>");
+                            echo ("<a class='btn btn-primary' href='aula.php' role='button'>Consultar el  estado de un aula</a><br>");
+                            echo ("<br>");
+                            echo ("<a class='btn btn-primary' href='' role='button'>Consultar las estadísticas globales</a><br>");
+                            echo ("<br>");
+                            echo ("<a class='btn btn-primary' href='reserva.php' role='button'>Consultar las reservas de biblioteca</a>");
+                            break;
+                        case "2";
+                            echo ("<a class='btn btn-primary href='' role='button'>Consultar la ocupación de la biblioteca</a><br>");
+                            echo ("<a class='btn btn-primary href='' role='button'>hacer una reserva</a>");            
+                            break;
+                        case "3";
+                            break;
+                        case "4";
+                            break;
+                    }
+                    ?>
+                </div>
+            </div>
+            <br>
+        </div>
 <?php
 require_once($dir_raiz."includes/pie.php");
 ?>
