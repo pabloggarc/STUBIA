@@ -91,7 +91,7 @@ $(document).ready(function() {
 <div class="container">
     
     <div class="mensaje row <?=$resultado!=''?'oculto':''?>" id="mensaje" name="mensaje">
-        <div class="col-md-6 center-block">
+        <div class="col-md-8 center-block">
             <span style="@font-face {
 		                    font-family: din_regular;
 		                    src: url(fuentes/DINPro-Medium.otf);
@@ -124,7 +124,7 @@ $(document).ready(function() {
                         $("#display").html(r);
                     }
                 });
-
+                
                 var dataString2 = {aula: '3', fecha:d.date.format(d.date._f)};
                 $.ajax ({
                     url: 'getPuestosLibres.php',    //en este php es donde pongo el evento change del select para que se muestre el botón Reservar
