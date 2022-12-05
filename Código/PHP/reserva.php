@@ -267,10 +267,6 @@ $(document).ready(function() {
             </form>
         </div>
         
-        <?php
-        //if (count($reservas)>0) {echo ("</div>");}
-        ?>
-        
     </div>
 
     <div class="row" id="display">

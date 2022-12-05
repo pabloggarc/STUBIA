@@ -5,8 +5,8 @@
         <div id="contenedor_stubia">
             <div id="capa_cabecera">
                 <img src="<?= $dir_raiz ?>img/stubia-logo2.png" alt="Logo del proyecto" height="100vh"/>
-                <span class="my-5" style="font-weight:bold; font-size:40px; color:#003da7">STUBIA</span>
-                <span class="my-5" style="font-weight:bold; font-size:16px; color:#003da7">Prototipo de Computación Ubícua 2022</span>
+                <span class="my-5" style="font-weight:bold; font-size:40px; color:#337ab7">STUBIA</span>
+                <span class="my-5" style="font-weight:bold; font-size:16px; color:#337ab7">Prototipo de Computación Ubicua 2022</span>
             
                 <?php
                                         
@@ -53,10 +53,7 @@
                                 if (    strpos($miPagina,"reserva.php")!=false ) {
                                     echo "&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Reservas";}
                                 else {	
-                                        /*(if (strpos($miPagina,"reservar.php")!=false) {echo "&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Hacer una Reserva";}
-                                        else {
-                                            
-                                        }*/
+                                      
                                 }
                         }
                         $migas.="</span>";

@@ -30,9 +30,9 @@ $consulta->free_result();
 
 ?>
 
-<div class="form-group">
+
     Seleccciona el puesto de estudio que quieres reservar:
-    <select name="combo_puestos" id="combo_puestos" class="form-control-lg">
+    <select name="combo_puestos" id="combo_puestos" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
         <option value=0>Seleccione puesto libre:</option>"
         <?php
             foreach ($puestos as $puesto) {                 
@@ -40,7 +40,7 @@ $consulta->free_result();
             } 
         ?>
     </select>              
-</div>
+
 
 <script>
     $("#combo_puestos").change(function() {            

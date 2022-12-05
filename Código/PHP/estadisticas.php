@@ -68,8 +68,8 @@ $(document).ready(function() {
     <form class="row" action="" method="post">
         <div class="form-group col-lg-3">
             <br>
-            Selecccione el aula a consultar:
-            <select name="combo_aulas" id="combo_aulas" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <label for="combo_aulas">Selecccione el aula a consultar:</label>
+            <select name="combo_aulas" id="combo_aulas" class="form-control-lg">
                 <option value=0>Seleccione aula:</option>";
                 <?php
                     while ($aulas = $consulta->fetch_array()) {

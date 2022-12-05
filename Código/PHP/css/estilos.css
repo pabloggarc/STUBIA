@@ -17,7 +17,7 @@ a, a:visited {
 p {
 	margin: 0;
 }
-div, span {
+div, span, select, input, form, option {
     font-family:        'DIN-Regular'; 
     font-size:          1vw;
 }
@@ -25,7 +25,7 @@ div, span {
 div#contenedor_stubia {
 	margin:				auto;
 	position:			relative;
-	max-width:			80vw;
+	max-width:			66vw;
 	
 	/*max-width: 50%;*/
 	

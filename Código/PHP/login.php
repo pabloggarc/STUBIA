@@ -117,23 +117,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta name="description" content="PL2 de la asignatura Computación Ubícua para el GII de la UAH curso 2022-23">
     <meta name="author" content="Guillermo González, Pablo García, Robert Petrisor, Carlos García">    
     <title><?=_APP_NAME?></title>
-    
-
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+      
     <!-- Bootstrap 5: -->    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <style>
-        @font-face {
-            font-family: din_regular;
-            src: url(fuentes/DINPro-Medium.otf);
-        }
-
-        body{ 
-            font: 14px din_regular; 
-        }
-
+        
         .wrapper{
             width: 360px; padding: 20px;
         }
