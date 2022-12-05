@@ -50,16 +50,16 @@ require_once($dir_raiz."includes/cabecera.php");
     var ctx1 = document.getElementById("grafico1");
     var data1 = {
             labels: [ 
-            <?php foreach($data1 as $d):?>
+            <?/*php foreach($data1 as $d):?>
                 "<?php echo $d->date_at?>", 
-            <?php endforeach; ?>
+            <?php endforeach; */?>
             ],
             datasets: [{
                 label: '$ Ocupación de aulas',
                 data: [
-            <?php foreach($data1 as $d):?>
+            <?/*php foreach($data1 as $d):?>
                 <?php echo $d->val;?>, 
-            <?php endforeach; ?>
+            <?php endforeach; */?>
                 ],
                 backgroundColor: "#3898db",
                 borderColor: "#9b59b6",
@@ -87,7 +87,7 @@ require_once($dir_raiz."includes/cabecera.php");
             <br>
 
             <div class="row" name="video" id="video">
-                <video width="720px" height="480px" autoplay muted controls>
+                <video width="720px" height="480px" autoplay muted>
                     <source src="img/stubia.mp4" type="video/mp4">                
                     Your browser does not support the video tag.
                 </video> 
