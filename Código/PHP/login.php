@@ -114,7 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PL2 de la asignatura Computación Ubícua para el GII de la UAH curso 2022-23">
+    <meta name="description" content="PL2 de la asignatura Computación Ubicua para el GII de la UAH curso 2022-23">
     <meta name="author" content="Guillermo González, Pablo García, Robert Petrisor, Carlos García">    
     <title><?=_APP_NAME?></title>
       
