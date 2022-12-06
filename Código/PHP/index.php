@@ -18,8 +18,8 @@ require_once($dir_raiz."includes/cabecera.php");
         <?php
         if ($_SESSION["stubia_mostrarVideo"]) {
             echo ("document.getElementById('video').style.display='block';
-                    document.getElementById('intro').style.display='none';
-                    document.getElementById('opciones').style.display='none';");
+                    /*document.getElementById('intro').style.display='none';
+                    document.getElementById('opciones').style.display='none';*/");
             $_SESSION["stubia_mostrarVideo"]=false;
         } else {
             echo ("document.getElementById('video').style.display='none';
