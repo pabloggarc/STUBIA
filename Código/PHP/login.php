@@ -85,7 +85,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $_SESSION["stubia_userperfil"] = $perfil;
             $_SESSION["stubia_username"] = $username;
             $_SESSION["stubia_nombre"] =$nombre;
-            $_SESSION["stubia_apellidos"] =$apellidos;            
+            $_SESSION["stubia_apellidos"] =$apellidos;  
+            $_SESSION["stubia_mostrarVideo"] = true;
             writeLog("Login correcto de usuario ". $username." (id ".$id.")");
             registrar_acceso_app($id, $id_perfil);
             header("location: index.php");
@@ -114,7 +115,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PL2 de la asignatura Computación Ubicua para el GII de la UAH curso 2022-23">
+    <meta name="description" content="PL2 de la asignatura Computación Ubícua para el GII de la UAH curso 2022-23">
     <meta name="author" content="Guillermo González, Pablo García, Robert Petrisor, Carlos García">    
     <title><?=_APP_NAME?></title>
       
@@ -160,7 +161,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-primary" value="Iniciar sesión">
             </div>
             <br>
-            <p>¿No tienes cuenta aún? <a href="register.php">¡Regístrate ya!</a></p>
+            <p>¿No tienes cuenta aún? <a href="registrar.php">¡Regístrate ya!</a></p>
         </form>
     </div>
 </body>
