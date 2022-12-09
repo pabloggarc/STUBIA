@@ -1,9 +1,9 @@
 //WiFi
-#define WIFI_NAME "MOVISTAR_0B2D"
-#define WIFI_PASSWORD "748619B68AA322496EE3"
+#define WIFI_NAME "iPhone de Pablo"
+#define WIFI_PASSWORD "pablo_gg"
 
 //Servidor
-#define SERVER_IP "192.168.1.48"
+#define SERVER_IP "172.20.10.3"
 
 //Servicios web
 #define HTTP "http://"

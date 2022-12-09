@@ -53,9 +53,9 @@ require_once($dir_raiz."includes/cabecera.php");
             <div class="row" name="intro" id="intro">
                 <div class="col-md text-justify">
                     <br>    
-                    Bienvenido a STUBIA, la aplicación en fase de prototipo que pretende epxlicar cómo se podría digitalizar
+                    Bienvenido a STUBIA, la aplicación en fase de prototipo que pretende explicar cómo se podría digitalizar
                     la ocupación de los puestos de estudio de la Universidad de Alcalá situados en aulas, zonas comunes y biblioteca. El objeto de este prototipo es ejemplarizar un posible 
-                    despliegue de computación ubícua en esta Universidad.
+                    despliegue de computación ubicua en esta Universidad.
                 </div>                
             </div>
             

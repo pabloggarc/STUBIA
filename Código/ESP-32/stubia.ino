@@ -76,7 +76,7 @@ void loop2(void* param){
 
           http.begin(url); 
         }
-        else if(!puestos_fijos[i].sem->estados->estado_led_rojo && puestos_fijos[i].sem->estados->estado_led_verde){
+        else/* if(!puestos_fijos[i].sem->estados->estado_led_rojo && puestos_fijos[i].sem->estados->estado_led_verde)*/{
           url+=SERVER_IP+String(WS)+String("aula=")+String(puestos_fijos[i].aula)+
           String("&puesto=")+String(puestos_fijos[i].puesto)+String("&estado=2"); 
 
@@ -110,7 +110,7 @@ void loop2(void* param){
 
           http.begin(url); 
         }
-        else if(!puestos_movibles[i].sem->estados->estado_led_rojo && puestos_movibles[i].sem->estados->estado_led_verde){
+        else/* if(!puestos_movibles[i].sem->estados->estado_led_rojo && puestos_movibles[i].sem->estados->estado_led_verde)*/{
           url+=SERVER_IP+String(WS)+String("aula=")+String(puestos_movibles[i].laboratorio)+
           String("&puesto=")+String(puestos_movibles[i].puesto)+String("&estado=2"); 
 
@@ -159,7 +159,7 @@ void loop() {
   for(int i = 0; i<size_fijos; i++){
     bool inclinado = digitalRead(puestos_fijos[i].pin_sensor);
     if(xSemaphoreTake(mutex, portMAX_delay) == pdTRUE){
-      if(!inclinado){
+      if(inclinado){
         puestos_fijos[i].sem->estados->estado_led_verde = LOW; 
         puestos_fijos[i].sem->estados->estado_led_rojo = HIGH; 
       }
@@ -181,7 +181,7 @@ void loop() {
         puestos_movibles[i].sem->estados->estado_led_verde = HIGH; 
         puestos_movibles[i].sem->estados->estado_led_rojo = LOW; 
       }
-      else if(dist <= CALIBRACION_DIST){
+      else/* if(dist <= CALIBRACION_DIST)*/{
         puestos_movibles[i].sem->estados->estado_led_verde = LOW; 
         puestos_movibles[i].sem->estados->estado_led_rojo = HIGH; 
       }
