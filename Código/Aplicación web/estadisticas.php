@@ -7,18 +7,6 @@ require_once($dir_raiz."includes/config.php");
 require_once($dir_raiz."includes/funciones.php");
 require_once($dir_raiz."includes/encabezado.php");
 
-$sql_connect = conectar_bd();
-$sql = "select * from master_aulas"; // Consulta SQL
-writeLog($sql);
-$consulta = db_query($sql, $sql_connect);
-if (!$consulta) {
-    exit ("Se ha producido un error al recuperar las encuestas de base de datos (getRelacionesCalculadas).");
-} //else {
-            
-//}
-//$consulta->free_result();
-desconectar_bd($sql_connect);
-
 require_once($dir_raiz."includes/cabecera.php");
 
 ?>
@@ -27,13 +15,13 @@ require_once($dir_raiz."includes/cabecera.php");
 $(document).ready(function() {  
  
  // code to get all records from table via select box
-    $("#combo_aulas").change(function() {    
+    $("#combo_grafica").change(function() {    
         var id = $(this).find(":selected").val();
         if (id>0){
             //var dataString = 'aula='+ id;
             var dataString = {aula: id, fecha:''};
             $.ajax ({
-                url: 'getpuestos.php',
+                url: 'getGrafica.php',
                 data: dataString,
                 cache: false,
                 success: function(r) {
@@ -43,52 +31,45 @@ $(document).ready(function() {
         }
     })
 
-    var timeout = setInterval(refrescaAula, 10000);    
-    function refrescaAula () {
-        var id = $("#combo_aulas").find(":selected").val();
+    var timeout = setInterval(refrescaGrafica, 10000);
+    function refrescaGrafica () {
+        var id = $(this).find(":selected").val();
         if (id>0){
             //var dataString = 'aula='+ id;
             var dataString = {aula: id, fecha:''};
             $.ajax ({
-                url: 'getpuestos.php',
+                url: 'getGrafica.php',
                 data: dataString,
                 cache: false,
                 success: function(r) {
                     $("#display").html(r);
-                }
+                } 
             });
         }
     }
-    // code to get all records from table via select box
 });
 
 </script>
     
-<div class="container ">
-    <form class="row" action="" method="post">
+<div class="container">
+    <div class="row">
         <div class="form-group col-lg-3">
             <br>
-            <label for="combo_aulas">Selecccione el aula a consultar:</label>
-            <select name="combo_aulas" id="combo_aulas" class="form-control-lg">
-                <option value=0>Seleccione aula:</option>";
-                <?php
-                    while ($aulas = $consulta->fetch_array()) {
-                        $aula[]=$aulas;            
-                        echo "<option value=".$aulas["id"].">".$aulas["aula"]."</option>";
-                    } 
-                ?>
+            <label for="combo_grafica">Selecccione la gráfica a consultar:</label>
+            <select name="combo_grafica" id="combo_grafica" class="form-select" aria-label="Default select example">
+                <option value=0>Seleccione gráfica:</option>";
+                <option value=1>Gráfica 1</option>";
+                <option value=2>Gráfica 2</option>";
             </select>
         </div>
         <br>        
         <div>
-            <br>
-            El estado de los puestos es el siguiente:
             <br> 
         </div>
         <div class="" id="display">
         <!-- Records will be displayed here -->        
         </div>
-    </form>    
+    </div>    
 </div>
 
 <?php

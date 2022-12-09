@@ -11,7 +11,7 @@ $idperfil = intval($_SESSION["stubia_useridperfil"]);
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 	<meta charset="utf-8" />
     <meta name="author" content="UAH" />        
-    <link rel="shortcut icon" type="image/x-icon" href="<?= $dir_raiz ?>https://www.uah.es/favicon.ico" />    
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.uah.es/favicon.ico" />    
 	<link rel="stylesheet" type="text/css" href="<?= $dir_raiz ?>css/estilos.css?v=<?= time(); ?>" />
 	<script src="<?= $dir_raiz ?>js/comunes.js?v=<?= time(); ?>"></script>
 

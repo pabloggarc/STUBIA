@@ -1,0 +1,8 @@
+2022-12-09 21:06:53(0.29378300 1670616413) - SELECT inicio FROM master_franjas_horarias WHERE activo=1
+---
+2022-12-09 21:06:53(0.30164300 1670616413) - SELECT r.id, r.fecha, f.inicio, p.puesto FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id and f.activo =1 WHERE p.id_aula=3 AND r.id_usuario=7 AND r.activo=1 AND YEAR(r.fecha)>=YEAR(SYSDATE()) AND MONTH(r.fecha)>=MONTH(SYSDATE()) AND DAY(r.fecha)>=DAY(SYSDATE()) ORDER BY r.fecha, f.inicio
+---
+2022-12-09 21:07:02(0.38306600 1670616422) - SELECT id, puesto FROM master_puestos m WHERE id_aula=3 AND id NOT IN (SELECT p.id from master_puestos p INNER JOIN reservas r ON p.id=r.id_puesto  AND YEAR(r.fecha)=YEAR('2022-12-09 09:00') AND MONTH(r.fecha)=MONTH('2022-12-09 09:00') AND DAY(r.fecha)=DAY('2022-12-09 09:00') AND r.id_franja_horaria=HOUR('2022-12-09 09:00'))
+---
+2022-12-09 21:07:02(0.39586200 1670616422) - 100
+---

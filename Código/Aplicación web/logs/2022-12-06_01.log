@@ -1,0 +1,48 @@
+2022-12-06 01:34:19(0.50350800 1670286859) - select * from master_aulas
+---
+2022-12-06 01:34:23(0.78381000 1670286863) - SELECT ma.*,mta.tipo as 'tipo_aula', mb.* FROM master_aulas ma  INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id AND mta.activo=1  INNER JOIN master_bloques mb ON ma.id_bloque=mb.id AND mb.activo=1  WHERE ma.id=4
+---
+2022-12-06 01:34:23(0.78747100 1670286863) - SELECT * FROM estados WHERE aula=4 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:23(0.79103200 1670286863) - SELECT * FROM estados WHERE aula=4 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:23(0.79660600 1670286863) - SELECT * FROM estados WHERE aula=4 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:23(0.80053900 1670286863) - SELECT * FROM estados WHERE aula=4 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:23(0.80427700 1670286863) - SELECT * FROM estados WHERE aula=4 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:23(0.80800600 1670286863) - SELECT * FROM estados WHERE aula=4 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:29(0.70750300 1670286869) - SELECT ma.*,mta.tipo as 'tipo_aula', mb.* FROM master_aulas ma  INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id AND mta.activo=1  INNER JOIN master_bloques mb ON ma.id_bloque=mb.id AND mb.activo=1  WHERE ma.id=4
+---
+2022-12-06 01:34:29(0.71206500 1670286869) - SELECT * FROM estados WHERE aula=4 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:29(0.71626100 1670286869) - SELECT * FROM estados WHERE aula=4 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:29(0.72047200 1670286869) - SELECT * FROM estados WHERE aula=4 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:29(0.72518300 1670286869) - SELECT * FROM estados WHERE aula=4 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:29(0.72958900 1670286869) - SELECT * FROM estados WHERE aula=4 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:29(0.73402800 1670286869) - SELECT * FROM estados WHERE aula=4 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:39(0.71265000 1670286879) - SELECT ma.*,mta.tipo as 'tipo_aula', mb.* FROM master_aulas ma  INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id AND mta.activo=1  INNER JOIN master_bloques mb ON ma.id_bloque=mb.id AND mb.activo=1  WHERE ma.id=4
+---
+2022-12-06 01:34:39(0.71758500 1670286879) - SELECT * FROM estados WHERE aula=4 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:39(0.72213200 1670286879) - SELECT * FROM estados WHERE aula=4 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:39(0.72689700 1670286879) - SELECT * FROM estados WHERE aula=4 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:39(0.73082200 1670286879) - SELECT * FROM estados WHERE aula=4 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:39(0.73417300 1670286879) - SELECT * FROM estados WHERE aula=4 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:39(0.73765100 1670286879) - SELECT * FROM estados WHERE aula=4 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 01:34:51(0.00780100 1670286891) - SELECT inicio FROM master_franjas_horarias WHERE activo=1
+---
+2022-12-06 01:34:51(0.01262200 1670286891) - SELECT r.id, r.fecha, f.inicio, p.puesto FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id and f.activo =1 WHERE p.id_aula=3 AND r.id_usuario=7 AND r.activo=1 AND YEAR(r.fecha)>=YEAR(SYSDATE()) AND MONTH(r.fecha)>=MONTH(SYSDATE()) AND DAY(r.fecha)>=DAY(SYSDATE()) ORDER BY r.fecha, f.inicio
+---

@@ -85,7 +85,7 @@ $(document).ready(function() {
             El estado de los puestos es el siguiente:
             <br> 
         </div>
-        <div class="" id="display">
+        <div style="width:66vw" class="centrado" id="display">
         <!-- Records will be displayed here -->        
         </div>
     </form>    

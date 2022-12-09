@@ -18,7 +18,7 @@ $sql = "SELECT ma.*,mta.tipo as 'tipo_aula', mb.* FROM master_aulas ma "
         ." INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id AND mta.activo=1 "
         ." INNER JOIN master_bloques mb ON ma.id_bloque=mb.id AND mb.activo=1 "
         . " WHERE ma.id=".$id_aula; // Consulta SQL
-writeLog($sql);
+//writeLog($sql);
 $consulta = db_query($sql, $sql_connect);
 if (!$consulta) {
     exit ("Se ha producido un error al recuperar las encuestas de base de datos (getPuestos1).");
@@ -69,7 +69,7 @@ if ($aula["divisiones_aula"]>1) {
                     $sql = "SELECT * FROM estados WHERE aula=".$id_aula." AND puesto=".$numpuesto
                         . " AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE())"
                         . " AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())";
-                    writeLog($sql);
+                    //writeLog($sql);
                     $consulta = db_query($sql, $sql_connect);
                     if (!$consulta) {
                         exit ("Se ha producido un error al recuperar las encuestas de base de datos (getPuestos3).");
@@ -91,7 +91,7 @@ if ($aula["divisiones_aula"]>1) {
                                 . "AND YEAR(r.fecha)=YEAR('".$fecha."') AND MONTH(r.fecha)=MONTH('".$fecha."') AND DAY(r.fecha)=DAY('".$fecha."') "
                                 . "AND f.inicio=HOUR('".$fecha."')";
                         }
-                        writeLog($sql);
+                        //writeLog($sql);
                         $consulta = db_query($sql, $sql_connect);
                         if (!$consulta) {
                             exit("No se ha podido acceder a la base de datos (getPuestos4).");
@@ -108,27 +108,28 @@ if ($aula["divisiones_aula"]>1) {
                 <td align="center" class='table-<?php
                     switch ($estado) {
                         case -1:
-                            echo "active' style='border:0px'>";
+                            echo "active' style='border:0px'> <div data-tip='estado desconocido'>";
                             break;
                         case 1:
-                            echo "danger'>";
+                            echo "danger'> <div data-tip='Puesto ocupado'>";
                             break;
                         case 2:
-                            echo "success'>";
+                            echo "success'> <div data-tip='Puesto libre'>";
                             break;
                         case 3:
-                            echo "warning'>";
+                            echo "warning'> <div data-tip='Puesto reservado'>";
                             break;
                         case 4:
-                            echo "warning'>";
+                            echo "warning'> <div data-tip='estado desconocido'>";
                             break;
                         default:                                
-                            echo "default'>";
-                    }
+                            echo "default'> <div data-tip='estado desconocido'>";
+                    }                
                 if ($col!=$pasillo) {
-                    echo $numpuesto; //echo $estado;
+                    echo $numpuesto;
                 } else echo "&nbsp";                
                 ?>
+                </div>
                 </td>
                 <?php
             }?>

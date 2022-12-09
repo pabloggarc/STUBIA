@@ -1,0 +1,64 @@
+2022-12-09 19:07:14(0.86665800 1670609234) - SELECT mu.id, mu.id_perfil, mp.perfil, mu.nombre, mu.apellidos, mu.username, mu.password FROM master_usuarios mu INNER JOIN master_perfil mp ON mu.id_perfil=mp.id AND mp.activo=1 WHERE mu.username = ? and mu.activo=1
+---
+2022-12-09 19:07:14(0.95038200 1670609234) - Login correcto de usuario guille (id 7)
+---
+2022-12-09 19:07:14(0.95497500 1670609234) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (7, 1, SYSDATE(), SYSDATE(), 100000, 'login.php');
+---
+2022-12-09 19:07:27(0.36925200 1670609247) - select * from master_aulas
+---
+2022-12-09 19:15:03(0.19873900 1670609703) - select * from master_aulas
+---
+2022-12-09 19:15:33(0.53746200 1670609733) - select * from master_aulas
+---
+2022-12-09 19:15:55(0.24021300 1670609755) - select * from master_aulas
+---
+2022-12-09 19:16:10(0.58562900 1670609770) - select * from master_aulas
+---
+2022-12-09 19:16:21(0.46413200 1670609781) - select * from master_aulas
+---
+2022-12-09 19:16:44(0.37483100 1670609804) - select * from master_aulas
+---
+2022-12-09 19:18:11(0.35649900 1670609891) - select * from master_aulas
+---
+2022-12-09 19:18:42(0.36293900 1670609922) - select * from master_aulas
+---
+2022-12-09 19:18:54(0.18853600 1670609934) - select * from master_aulas
+---
+2022-12-09 19:19:06(0.10933000 1670609946) - select * from master_aulas
+---
+2022-12-09 19:26:34(0.65447800 1670610394) - select * from master_aulas
+---
+2022-12-09 19:27:32(0.39860400 1670610452) - select * from master_aulas
+---
+2022-12-09 19:28:15(0.06953300 1670610495) - select * from master_aulas
+---
+2022-12-09 19:30:16(0.78686600 1670610616) - select * from master_aulas
+---
+2022-12-09 19:30:24(0.62434000 1670610624) - select * from master_aulas
+---
+2022-12-09 19:30:56(0.05128100 1670610656) - select * from master_aulas
+---
+2022-12-09 19:31:21(0.74492500 1670610681) - select * from master_aulas
+---
+2022-12-09 19:31:28(0.60001900 1670610688) - select * from master_aulas
+---
+2022-12-09 19:32:08(0.91266300 1670610728) - select * from master_aulas
+---
+2022-12-09 19:32:18(0.30495000 1670610738) - select * from master_aulas
+---
+2022-12-09 19:32:25(0.12241500 1670610745) - select * from master_aulas
+---
+2022-12-09 19:32:39(0.22550600 1670610759) - select * from master_aulas
+---
+2022-12-09 19:33:13(0.74256300 1670610793) - select * from master_aulas
+---
+2022-12-09 19:33:43(0.19165600 1670610823) - select * from master_aulas
+---
+2022-12-09 19:33:59(0.67654400 1670610839) - select * from master_aulas
+---
+2022-12-09 19:52:28(0.83947700 1670611948) - select * from master_aulas
+---
+2022-12-09 19:52:30(0.96273600 1670611950) - select * from master_aulas
+---
+2022-12-09 19:56:42(0.21437700 1670612202) - select * from master_aulas
+---

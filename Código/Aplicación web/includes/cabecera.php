@@ -4,9 +4,9 @@
     <div class="col-md-12">
         <div id="contenedor_stubia">
             <div id="capa_cabecera">
-                <img src="<?= $dir_raiz ?>img/stubia-logo2.png" alt="Logo del proyecto" height="100vh"/>
-                <span class="my-5" style="font-weight:bold; font-size:40px; color:#337ab7">STUBIA</span>
-                <span class="my-5" style="font-weight:bold; font-size:16px; color:#337ab7">Prototipo de Computación Ubicua 2022</span>
+                <img src="<?= $dir_raiz ?>img/stubia-logo2.png" alt="Logo del proyecto" height="80vw"/>
+                <span class="my-5" style="font-weight:bold; font-size:3em; color:#337ab7">STUBIA</span>
+                <span class="my-5" style="font-weight:bold; font-size:1em; color:#337ab7">Prototipo de Computación Ubicua 2022</span>
             
                 <?php                                        
                     /* Nuestras variables de sesión son las siguientes:
@@ -28,7 +28,7 @@
                     <a href="<?= $dir_raiz ?>includes/session_end.php"><img src="<?= $dir_raiz ?>img/desconectar.svg" alt="Desconectar" type="image/svg+xml" height="25"/></a>
                     <?= $_SESSION["stubia_nombre"]." ".$_SESSION["stubia_apellidos"]." (<span style='font-weight: bold'>".$_SESSION["stubia_userperfil"]."</span>)" ?>
                     
-                    <img src="<?= $dir_raiz ?>img/UAH-logo.png" alt="UAH" height="75" />
+                    <img src="<?= $dir_raiz ?>img/UAH-logo.png" alt="UAH" height="75vw" />
                     <?php } else {}
                     ?>
                 </div>

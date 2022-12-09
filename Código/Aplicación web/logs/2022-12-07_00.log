@@ -1,0 +1,20 @@
+2022-12-07 00:19:56(0.99488100 1670368796) - SELECT mu.id, mu.id_perfil, mp.perfil, mu.nombre, mu.apellidos, mu.username, mu.password FROM master_usuarios mu INNER JOIN master_perfil mp ON mu.id_perfil=mp.id AND mp.activo=1 WHERE mu.username = ? and mu.activo=1
+---
+2022-12-07 00:19:57(0.07785600 1670368797) - Login correcto de usuario guille (id 7)
+---
+2022-12-07 00:19:57(0.08340600 1670368797) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (7, 1, SYSDATE(), SYSDATE(), 100000, 'login.php');
+---
+2022-12-07 00:20:54(0.31076400 1670368854) - select * from master_aulas
+---
+2022-12-07 00:20:57(0.23383400 1670368857) - SELECT inicio FROM master_franjas_horarias WHERE activo=1
+---
+2022-12-07 00:20:57(0.24036900 1670368857) - SELECT r.id, r.fecha, f.inicio, p.puesto FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id and f.activo =1 WHERE p.id_aula=3 AND r.id_usuario=7 AND r.activo=1 AND YEAR(r.fecha)>=YEAR(SYSDATE()) AND MONTH(r.fecha)>=MONTH(SYSDATE()) AND DAY(r.fecha)>=DAY(SYSDATE()) ORDER BY r.fecha, f.inicio
+---
+2022-12-07 00:22:42(0.13505800 1670368962) - SELECT mu.id, mu.id_perfil, mp.perfil, mu.nombre, mu.apellidos, mu.username, mu.password FROM master_usuarios mu INNER JOIN master_perfil mp ON mu.id_perfil=mp.id AND mp.activo=1 WHERE mu.username = ? and mu.activo=1
+---
+2022-12-07 00:22:42(0.24005600 1670368962) - Login correcto de usuario guille (id 7)
+---
+2022-12-07 00:22:42(0.26830800 1670368962) - INSERT INTO accesos_usuarios(user_id, perfil_id, login_date, au_fec_alta, au_usu_alta, au_proc_alta) VALUES (7, 1, SYSDATE(), SYSDATE(), 100000, 'login.php');
+---
+2022-12-07 00:26:59(0.40815500 1670369219) - select * from master_aulas
+---

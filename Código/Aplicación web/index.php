@@ -14,17 +14,16 @@ require_once($dir_raiz."includes/cabecera.php");
 
 <script type="text/javascript">
     $(document).ready(function() {  
-        
         <?php
         if ($_SESSION["stubia_mostrarVideo"]) {
             echo ("document.getElementById('video').style.display='block';
-                    /*document.getElementById('intro').style.display='none';
-                    document.getElementById('opciones').style.display='none';*/");
+                /*document.getElementById('intro').style.display='none';
+                document.getElementById('opciones').style.display='none';*/");
             $_SESSION["stubia_mostrarVideo"]=false;
         } else {
             echo ("document.getElementById('video').style.display='none';
-                    $('#opciones').fadeIn(2000);
-                    $('#intro').fadeIn(2000);");
+                $('#opciones').fadeIn(2000);
+                $('#intro').fadeIn(2000);");
         }
         ?>
     });
@@ -39,7 +38,6 @@ require_once($dir_raiz."includes/cabecera.php");
         $("#intro").fadeIn(4000);
     },26000);
 </script>
-
 
         <div class="container">
             
@@ -96,7 +94,6 @@ require_once($dir_raiz."includes/cabecera.php");
             </div>
             -->
             
-
             <div class="row" name="opciones" id="opciones">
 
                 <div class="col-md">
@@ -113,7 +110,7 @@ require_once($dir_raiz."includes/cabecera.php");
                             <br>
                             <input type="button" class="btn btn-info" value="Consultar el estado de un aula" onclick="location.href = 'aula.php'"><br>
                             <br>
-                            <input type="button" class="btn btn-info" value="Consultar estadísticas globales" onclick="location.href = 'aula.php'"><br>
+                            <input type="button" class="btn btn-info" value="Consultar estadísticas globales" onclick="location.href = 'estadisticas.php'"><br>
                             <br>
                             <input type="button" class="btn btn-info" value="Consultar/hacer reservas de biblioteca" onclick="location.href = 'reserva.php'"><br>
                     <?php   break;

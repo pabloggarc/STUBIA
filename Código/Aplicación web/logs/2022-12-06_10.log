@@ -1,0 +1,406 @@
+2022-12-06 10:56:53(0.97433700 1670320613) - SELECT id, puesto FROM master_puestos m WHERE id_aula=3 AND id NOT IN (SELECT p.id from master_puestos p INNER JOIN reservas r ON p.id=r.id_puesto  AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND r.id_franja_horaria=HOUR('2022-12-22 08:00'))
+---
+2022-12-06 10:56:53(0.97814800 1670320613) - 100
+---
+2022-12-06 10:56:54(0.01089200 1670320614) - SELECT ma.*,mta.tipo as 'tipo_aula', mb.* FROM master_aulas ma  INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id AND mta.activo=1  INNER JOIN master_bloques mb ON ma.id_bloque=mb.id AND mb.activo=1  WHERE ma.id=3
+---
+2022-12-06 10:56:54(0.01525900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=1 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.01991600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=1 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.02440900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=2 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.02894700 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=2 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.03469000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=3 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.04050100 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=3 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.04513800 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=4 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.04969700 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=4 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.05456200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=5 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.05953300 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=5 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.06466800 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=6 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.06934000 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=6 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.07360700 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=7 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.07796600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=7 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.08259400 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=8 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.08674600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=8 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.09117800 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=9 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.09548700 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=9 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.10008900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=10 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.10437800 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=10 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.10902900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=11 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.11346600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=11 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.11818500 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=12 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.12274900 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=12 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.12777300 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=13 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.13283600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=13 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.13765400 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=14 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.14251300 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=14 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.14771600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=15 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.15243000 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=15 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.15732900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=16 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.16237500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=16 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.16751000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=17 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.17237100 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=17 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.17769000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=18 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.18272100 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=18 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.18868200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=19 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.19504100 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=19 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.20063300 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=20 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.20555900 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=20 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.21084400 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=21 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.21599200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=21 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.22104600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=22 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.22690200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=22 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.23252800 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=23 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.23763700 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=23 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.24310400 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=24 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.24852200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=24 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.25377500 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=25 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.25953100 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=25 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.26495200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=26 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.26997000 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=26 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.27707700 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=27 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.28260000 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=27 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.28828900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=28 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.29365600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=28 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.29912600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=29 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.30503700 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=29 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.31086200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=30 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.31627700 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=30 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.32223200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=31 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.32801400 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=31 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.33376000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=32 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.33927900 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=32 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.34524900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=33 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.35129900 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=33 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.35719700 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=34 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.36398500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=34 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.37104100 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=35 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.37679500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=35 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.38284200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=36 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.38830600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=36 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.39455700 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=37 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.40016600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=37 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.40573900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=38 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.41168500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=38 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.41809900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=39 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.42395100 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=39 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.43010100 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=40 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.43582500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=40 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.44188000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=41 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.44822200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=41 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.45443000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=42 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.46105700 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=42 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.46571600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=43 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.46988600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=43 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.47459100 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=44 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.47851500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=44 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.48445100 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=45 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.48914100 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=45 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.49482100 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=46 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.49949300 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=46 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.50443300 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=47 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.50968200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=47 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.51522200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=48 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.51996100 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=48 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.52563200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=49 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.53227200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=49 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.53766100 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=50 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.54471700 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=50 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.55057900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=51 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.55574400 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=51 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.56104800 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=52 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.56802000 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=52 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.57180800 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=53 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.57521800 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=53 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.57804600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=54 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.58100500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=54 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.58441800 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=55 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.58866500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=55 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.59321800 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=56 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.59839600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=56 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.60396000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=57 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.60910900 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=57 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.61415900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=58 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.61872600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=58 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.62390300 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=59 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.62958000 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=59 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.63524600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=60 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.64008900 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=60 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.64529600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=61 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.64947200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=61 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.65277900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=62 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.65815700 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=62 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.66325100 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=63 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.66897800 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=63 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.67546900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=64 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.68150600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=64 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.68737000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=65 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.69273500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=65 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.69811900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=66 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.70353600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=66 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.70906500 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=67 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.71384400 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=67 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.71990700 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=68 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.72618800 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=68 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.73246000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=69 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.73787400 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=69 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.74296100 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=70 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.74757600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=70 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.75367700 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=71 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.75890400 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=71 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.76362600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=72 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.76896500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=72 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.77518000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=73 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.78080200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=73 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.78661600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=74 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.79921500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=74 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.80572400 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=75 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.81124300 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=75 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.81685000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=76 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.82237000 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=76 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.82805900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=77 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.83279700 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=77 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.83825000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=78 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.84310300 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=78 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.84692200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=79 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.85073600 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=79 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.85501500 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=80 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.85885300 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=80 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.86218100 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=81 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.86655400 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=81 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.87202200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=82 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.87758400 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=82 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.88270500 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=83 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.88830000 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=83 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.89389200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=84 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.89846200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=84 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.90393800 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=85 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.90861800 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=85 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.91395400 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=86 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.91869200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=86 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.92493200 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=87 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.93074000 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=87 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.93561600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=88 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.94016200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=88 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.94500800 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=89 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.95003200 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=89 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.95516600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=90 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.96161400 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=90 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.96765900 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=91 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.97432300 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=91 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.98154000 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=92 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.98664300 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=92 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:54(0.99253600 1670320614) - SELECT * FROM estados WHERE aula=3 AND puesto=93 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:54(0.99836500 1670320614) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=93 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:55(0.00458800 1670320615) - SELECT * FROM estados WHERE aula=3 AND puesto=94 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:55(0.01007200 1670320615) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=94 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:55(0.01611000 1670320615) - SELECT * FROM estados WHERE aula=3 AND puesto=95 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:55(0.02124700 1670320615) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=95 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:55(0.02638100 1670320615) - SELECT * FROM estados WHERE aula=3 AND puesto=96 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:55(0.03165000 1670320615) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=96 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:55(0.03722400 1670320615) - SELECT * FROM estados WHERE aula=3 AND puesto=97 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:55(0.04272400 1670320615) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=97 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:55(0.04793800 1670320615) - SELECT * FROM estados WHERE aula=3 AND puesto=98 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:55(0.05210300 1670320615) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=98 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:55(0.05789700 1670320615) - SELECT * FROM estados WHERE aula=3 AND puesto=99 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:55(0.06336200 1670320615) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=99 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
+2022-12-06 10:56:55(0.06962700 1670320615) - SELECT * FROM estados WHERE aula=3 AND puesto=100 AND YEAR(au_fec_alta)=YEAR(SYSDATE()) AND MONTH(au_fec_alta)=MONTH(SYSDATE()) AND DAY(au_fec_alta)=DAY(SYSDATE()) AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND MINUTE(au_fec_alta)=MINUTE(SYSDATE())
+---
+2022-12-06 10:56:55(0.07449900 1670320615) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 WHERE p.id_aula=3 AND p.puesto=100 AND r.activo=1 AND YEAR(r.fecha)=YEAR('2022-12-22 08:00') AND MONTH(r.fecha)=MONTH('2022-12-22 08:00') AND DAY(r.fecha)=DAY('2022-12-22 08:00') AND f.inicio=HOUR('2022-12-22 08:00')
+---
