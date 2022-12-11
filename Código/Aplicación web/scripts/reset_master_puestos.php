@@ -29,9 +29,12 @@ if (!$consulta) {
 } else {    
     while ($aula = $consulta->fetch_array()) {
         echo($aula['aula']."<br><br>");
+        if ($aula["tipo"]==1) {$tipo_puesto=1;}
+        elseif ($aula["tipo"]>1 && $aula["tipo"]<4) {$tipo_puesto=2;}
+        else {$tipo_puesto=3;}
         for ($i=1;$i<=$aula["aforo"];$i++) {
             $sql = "INSERT master_puestos (id_aula, puesto, id_tipo, au_usu_alta, au_proc_alta) "
-                    . "VALUES (".$aula["id"]." , ".$i." , ".$aula["tipo"]." , ".$_SESSION["stubia_userid"]." , '".php_actual()."');";            
+                    . "VALUES (".$aula["id"]." , ".$i." , ".$tipo_puesto." , ".$_SESSION["stubia_userid"]." , '".php_actual()."');";            
             echo($sql."<br>");
             if (!$debug) {                
                 writeLog($sql);            

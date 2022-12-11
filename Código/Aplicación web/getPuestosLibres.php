@@ -31,15 +31,15 @@ $consulta->free_result();
 ?>
 
 
-    Seleccciona el puesto de estudio que quieres reservar:
-    <select name="combo_puestos" id="combo_puestos" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-        <option value=0>Seleccione puesto libre:</option>"
-        <?php
-            foreach ($puestos as $puesto) {                 
-                echo "<option value=".$puesto["id"].">".$puesto["puesto"]."</option>";
-            } 
-        ?>
-    </select>              
+Seleccciona el puesto de estudio que quieres reservar:
+<select name="combo_puestos" id="combo_puestos" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+    <option value=0>Seleccione puesto libre:</option>"
+    <?php
+        foreach ($puestos as $puesto) {                 
+            echo "<option value=".$puesto["id"].">".$puesto["puesto"]."</option>";
+        } 
+    ?>
+</select>              
 
 
 <script>

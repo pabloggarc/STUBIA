@@ -13,7 +13,7 @@ if(isset($_GET["aula"]) && isset($_GET["puesto"]) && isset($_GET["estado"])){
 
     //Primero guardamos el estado que nos llega del sensor:
     $sql_connect = conectar_bd();
-    $sql = "INSERT INTO estados (aula, puesto, estado, au_fec_alta) VALUES (".$aula.",".$puesto.",".$estado.",SYSDATE())";
+    $sql = "INSERT INTO estados (aula, puesto, estado, au_proc) VALUES (".$aula.",".$puesto.",".$estado.",'".php_actual()."')";
     writeLog($sql);
     $insercion = db_query($sql, $sql_connect);
     if (!$insercion) {
@@ -26,7 +26,7 @@ if(isset($_GET["aula"]) && isset($_GET["puesto"]) && isset($_GET["estado"])){
     . "INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id "
     . "WHERE p.id_aula=3 AND p.puesto=".$puesto." AND r.activo=1 "
     . "AND YEAR(fecha)=YEAR(SYSDATE()) AND MONTH(fecha)=MONTH(SYSDATE()) AND DAY(fecha)=DAY(SYSDATE()) "
-    . "AND f.inicio=HOUR(SYSDATE())";
+    . "AND f.inicio=HOUR(SYSDATE()) ";
 
     writeLog($sql);
     $consultar = db_query($sql, $sql_connect);

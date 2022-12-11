@@ -48,13 +48,13 @@
                         if (strpos($miPagina,"aula.php")!=false)
                             {echo "&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Consulta del estado de un aula";
                         }
-                        else {
-                                if (    strpos($miPagina,"reserva.php")!=false ) {
-                                    echo "&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Reservas";}
-                                else {	
-                                      
-                                }
-                        }
+                        elseif (strpos($miPagina,"reserva.php")!=false ) {
+                            echo "&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Reservas";}
+                        elseif (strpos($miPagina,"estadisticas.php")!=false ) {
+                            echo "&nbsp;&nbsp;&nbsp;🡆&nbsp;&nbsp;&nbsp;Estadísticas en tiempo real";}
+                        else {	}                                      
+                               
+                        
                         $migas.="</span>";
                         ?>
                 </a>

@@ -47,4 +47,7 @@ define('_GREEN', '#198754');
 define('_YELLOW', '#ffc107');
 define('_CYAN', '#0dcaf0'); //este color para cuando seleccionas un puesto en la biblioteca
 
+// ************** TIEMPOS DE REFRESCO ***************************
+define('_TIEMPO_REFRESCO', 10000);
+
 ?>

@@ -117,6 +117,7 @@ $sql = "SELECT r.id, r.fecha, f.inicio, p.puesto FROM reservas r "
         . "INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id and f.activo =1 "    
         . "WHERE p.id_aula=3 AND r.id_usuario=".$_SESSION["stubia_userid"]." AND r.activo=1 "
         . "AND YEAR(r.fecha)>=YEAR(SYSDATE()) AND MONTH(r.fecha)>=MONTH(SYSDATE()) AND DAY(r.fecha)>=DAY(SYSDATE()) "
+        . "AND f.inicio>=HOUR(SYSDATE()) "
         . "ORDER BY r.fecha, f.inicio";
 
 writeLog($sql);
@@ -150,21 +151,18 @@ $(document).ready(function() {
     //Para hacer que la capa que informa del resultado de la reserva desaparaezca a ls pocos segundos:
     setTimeout(function() {
 		// Declaramos la capa mediante una clase para ocultarlo
-        $(".mensaje").fadeOut(2000);        
+        $(".mensaje").fadeOut(3000);        
     },5000);
 
 });
 
 </script>
 
-<div class="container">
+<div class="container" style="width:66vw">
     
     <div class="mensaje row <?=$resultado!=''?'oculto':''?>" id="mensaje" name="mensaje">
         <div class="col-md-8 center-block">
-            <span style="@font-face {
-                    font-family: din_regular;
-                    src: url(fuentes/DINPro-Medium.otf);
-                }font-weight:bold; color:<?=$color_res?>"><?=$resultado?>
+            <span style="color:<?=$color_res?>"><?=$resultado?>
             </span>
         </div>
     </div>
@@ -172,15 +170,21 @@ $(document).ready(function() {
     <script type="text/javascript">
 
         $(function () {
-            /*
+            
             var ahora = new Date();
             var fecha = ahora.getFullYear()+'-'+(ahora.getMonth()+1)+'-'+ahora.getDate();
             var hora = ahora.getHours() + ":" + ahora.getMinutes();
             var dateTime = fecha+' '+hora;
-            */
+            
             $('#sel_fecha').datetimepicker({                    
                 format: 'YYYY-MM-DD HH:00',  //ponemos el 00 para que no salgan los minutos
                 //language: 'es',
+                /*disabledDates: [
+                    moment("09/12/2022"),
+                    new Date(2022, 12 - 1, 21),
+                    "11/22/2022 00:53"
+                ],*/
+                minDate: dateTime,
                 enabledHours: [<?=$horas_habilitadas?>] //cargamos dinámicamente la lista de horas activas en BD: 8, 9, 10, 11, 12, 13, etc                
             }).on('dp.change', function(d){
                 document.getElementById("display").style.display="block";
@@ -261,7 +265,7 @@ $(document).ready(function() {
             <br><br>                        
             <form method='post' action='' id='frm_reservar'>    
                 <input  type='submit' name='btn_reservar' id='btn_reservar' class='btn button btn-warning' value='Reservar' 
-                        onclick="return confirm('¿Confirmas que desea RESERVAR el puesto de estudio?')"/>
+                        onclick="return confirm('¿Confirmas que deseas RESERVAR el puesto de estudio?')"/>
                 <input  type='hidden' name='hid_fecha' id='hid_fecha'>
                 <input  type='hidden' name='hid_puesto' id='hid_puesto'>                
             </form>

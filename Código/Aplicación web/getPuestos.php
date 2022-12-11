@@ -17,7 +17,7 @@ $sql_connect = conectar_bd();
 $sql = "SELECT ma.*,mta.tipo as 'tipo_aula', mb.* FROM master_aulas ma "
         ." INNER JOIN master_tipo_aula mta ON ma.tipo=mta.id AND mta.activo=1 "
         ." INNER JOIN master_bloques mb ON ma.id_bloque=mb.id AND mb.activo=1 "
-        . " WHERE ma.id=".$id_aula; // Consulta SQL
+        ." WHERE ma.id=".$id_aula; // Consulta SQL
 //writeLog($sql);
 $consulta = db_query($sql, $sql_connect);
 if (!$consulta) {
@@ -38,6 +38,8 @@ if ($aula["divisiones_aula"]>1) {
 
 ?>
 <div class="col-md">
+<label>El estado de los puestos es el siguiente:</label>
+<br>
 <table class="table" name="tabla_puestos" id="tabla_puestos" style="border='0' cellspacing='0' cellpadding='0'">
     <?php if ($aula["tipo_aula"]=="Teoría" || $aula["tipo_aula"]=="Biblioteca"){ ?>
     <thead>
@@ -52,6 +54,7 @@ if ($aula["divisiones_aula"]>1) {
         </tr>
 <?php
         $numpuesto=0;
+        writeLog("Pinto el estado de los puestos del aula ".$aula["aula"]);
         for( $fil=1; $fil<=$aula["filas"]; $fil++) {
         ?>
         <tr>
@@ -79,9 +82,10 @@ if ($aula["divisiones_aula"]>1) {
                     }
                     $consulta->free_result();
                     if ($id_aula==3){                        
-                        $sql = "SELECT r.id FROM reservas r "
+                        $sql = "SELECT r.id, u.nombre, u.apellidos FROM reservas r "
                             . "INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 "
-                            . "INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 ";
+                            . "INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id AND f.activo=1 "
+                            . "INNER JOIN master_usuarios u ON r.id_usuario=u.id AND u.activo=1 ";
                         if ($fecha=='') {
                             $sql.= "WHERE p.id_aula=3 AND p.puesto=".$numpuesto." AND r.activo=1 "
                                 . "AND YEAR(r.fecha)=YEAR(SYSDATE()) AND MONTH(r.fecha)=MONTH(SYSDATE()) AND DAY(r.fecha)=DAY(SYSDATE()) "
@@ -96,10 +100,17 @@ if ($aula["divisiones_aula"]>1) {
                         if (!$consulta) {
                             exit("No se ha podido acceder a la base de datos (getPuestos4).");
                         } elseif($consulta->num_rows>0){
-                            //$fila = $consulta->fetch_array();
+                            $reserva = $consulta->fetch_array();
                             if ($estado>0) {$estado+=2;}
-                            else {$estado=4;}
-                            //echo "El puesto ".$numpuesto." está reservado: ".$estado."<br>";
+                            else {
+                                //El puesto está reservado pero no hay registro de su estado en ese minuto:
+                                $estado=5;
+                            }
+                            
+                            $usuario="";
+                            if ($_SESSION["stubia_userperfil"]!=="Alumno" && $_SESSION["stubia_userperfil"]!=="Profesor") {
+                                $usuario= " por ".$reserva["nombre"]." ".$reserva["apellidos"];
+                            }
                         }
                     }
                 }else {$estado=-1;}
@@ -111,19 +122,34 @@ if ($aula["divisiones_aula"]>1) {
                             echo "active' style='border:0px'> <div data-tip='estado desconocido'>";
                             break;
                         case 1:
-                            echo "danger'> <div data-tip='Puesto ocupado'>";
+                            if ($fecha=='') {
+                                echo "danger'> <div data-tip='ocupado'>";
+                            } else {
+                                echo "default'> <div data-tip='ocupado'>";
+                            }
                             break;
                         case 2:
-                            echo "success'> <div data-tip='Puesto libre'>";
+                            if ($fecha=='') {
+                                echo "success'> <div data-tip='libre'>";
+                            } else {
+                                echo "default'> <div data-tip='libre'>";
+                            }                            
                             break;
                         case 3:
-                            echo "warning'> <div data-tip='Puesto reservado'>";
+                            echo "warning'> <div data-tip='reservado (y ocupado)" .$usuario."'>";
                             break;
                         case 4:
-                            echo "warning'> <div data-tip='estado desconocido'>";
+                            echo "warning'> <div data-tip='reservado (sin ocupar)".$usuario."'>";
                             break;
-                        default:                                
-                            echo "default'> <div data-tip='estado desconocido'>";
+                        case 5:
+                            echo "warning'> <div data-tip='reservado".$usuario."'>";
+                            break;
+                        default:
+                            if ($fecha=='') {                                                                
+                                echo "default'> <div data-tip='estado desconocido'>";
+                            } else {
+                                echo "default'>";
+                            }
                     }                
                 if ($col!=$pasillo) {
                     echo $numpuesto;
@@ -149,7 +175,7 @@ if ($aula["divisiones_aula"]>1) {
     </tbody>
 </table>
 
- </div>
+</div>
 
  <?php
     desconectar_bd($sql_connect);

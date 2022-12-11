@@ -43,7 +43,7 @@ $(document).ready(function() {
         }
     })
 
-    var timeout = setInterval(refrescaAula, 10000);    
+    var timeout = setInterval(refrescaAula, <?=_TIEMPO_REFRESCO?>);    
     function refrescaAula () {
         var id = $("#combo_aulas").find(":selected").val();
         if (id>0){
@@ -64,7 +64,7 @@ $(document).ready(function() {
 
 </script>
     
-<div class="container ">
+<div class="container" style="width:66vw">
     <form class="row" action="" method="post">
         <div class="form-group col-lg-3">
             <br>
@@ -80,12 +80,7 @@ $(document).ready(function() {
             </select>
         </div>
         <br>        
-        <div>
-            <br>
-            El estado de los puestos es el siguiente:
-            <br> 
-        </div>
-        <div style="width:66vw" class="centrado" id="display">
+        <div class="centrado" id="display">
         <!-- Records will be displayed here -->        
         </div>
     </form>    

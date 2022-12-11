@@ -39,7 +39,7 @@ require_once($dir_raiz."includes/cabecera.php");
     },26000);
 </script>
 
-        <div class="container">
+        <div class="container" style="width:66vw">
             
             <br>
 
@@ -55,7 +55,7 @@ require_once($dir_raiz."includes/cabecera.php");
                     <br>    
                     Bienvenido a STUBIA, la aplicación en fase de prototipo que pretende explicar cómo se podría digitalizar
                     la ocupación de los puestos de estudio de la Universidad de Alcalá situados en aulas, zonas comunes y biblioteca. El objeto de este prototipo es ejemplarizar un posible 
-                    despliegue de computación ubicua en esta Universidad.
+                    despliegue de computación ubicua en esta universidad.
                 </div>                
             </div>
             
@@ -101,29 +101,41 @@ require_once($dir_raiz."includes/cabecera.php");
                 </div>
             
                 <div class="col-md text-justify-content-center">
+                    Tu perfil te permite hacer las siguientes opciones:<br>
                     <?php
-                    
                     switch ($_SESSION["stubia_useridperfil"]) {
                         case "1":
                     ?> 
-                            Tu perfil te permite hacer las siguientes opciones:<br>
                             <br>
-                            <input type="button" class="btn btn-info" value="Consultar el estado de un aula" onclick="location.href = 'aula.php'"><br>
+                            <input type="button" class="btn btn-info" value="Consultar el estado de un aulas y/o puestos de estudio" onclick="location.href = 'aula.php'"><br>
                             <br>
                             <input type="button" class="btn btn-info" value="Consultar estadísticas globales" onclick="location.href = 'estadisticas.php'"><br>
                             <br>
-                            <input type="button" class="btn btn-info" value="Consultar/hacer reservas de biblioteca" onclick="location.href = 'reserva.php'"><br>
-                    <?php   break;
+                            <input type="button" class="btn btn-info" value="Consultar y hacer reservas en la biblioteca" onclick="location.href = 'reserva.php'"><br>
+                            <br>
+                            <input type="button" class="btn btn-info" value="Generar accesos aleaorios para la hora actual" onclick="location.href = 'scripts/insertar_estados_aleatorios.php'"><br>
+                            
+                    <?php
+                            break;
                         case "2";
-                    
-                            echo ("<a class='btn btn-primary href='' role='button'>Consultar la ocupación de la biblioteca</a><br>");
-                            echo ("<a class='btn btn-primary href='' role='button'>hacer una reserva</a>");
-
+                    ?>                    
+                            <br>
+                            <input type="button" class="btn btn-info" value="Consultar el estado de las mesas de estudio" onclick="location.href = 'aula.php'"><br>
+                            <br>
+                            <input type="button" class="btn btn-info" value="Consultar y hacer reservas en la biblioteca" onclick="location.href = 'reserva.php'"><br>
+                    <?php
                             break;
                         case "3";
                             break;
                         case "4";
-                            break;
+                    ?>
+                            <br>
+                            <input type="button" class="btn btn-info" value="Consultar el estado de un aulas y/o puestos de estudio" onclick="location.href = 'aula.php'"><br>
+                            <br>
+                            <input type="button" class="btn btn-info" value="Consultar estadísticas globales" onclick="location.href = 'estadisticas.php'"><br>
+                            <br>
+                            <input type="button" class="btn btn-info" value="Consultar reservas en la biblioteca" onclick="location.href = 'reserva.php'"><br>
+                    <?php   break;                     
                     }
                     ?>
                 </div>
