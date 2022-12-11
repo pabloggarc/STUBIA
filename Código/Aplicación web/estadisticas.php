@@ -7,6 +7,10 @@ require_once($dir_raiz."includes/config.php");
 require_once($dir_raiz."includes/funciones.php");
 require_once($dir_raiz."includes/encabezado.php");
 
+if ($_SESSION["stubia_userperfil"] ==="Alumno" || $_SESSION["stubia_userperfil"] ==="Profesor" ) {
+    exit("No tiene permisos para lanzar este script");
+}
+
 require_once($dir_raiz."includes/cabecera.php");
 
 ?>
@@ -61,7 +65,7 @@ $(document).ready(function() {
     }
 
     document.getElementById("capa_fecha").style.display="none";
-    
+
     $('#sel_fecha').datetimepicker({                    
         format: 'YYYY-MM-DD'  
         //language: 'es',                

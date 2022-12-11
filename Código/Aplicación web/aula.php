@@ -7,6 +7,10 @@ require_once($dir_raiz."includes/config.php");
 require_once($dir_raiz."includes/funciones.php");
 require_once($dir_raiz."includes/encabezado.php");
 
+if ($_SESSION["stubia_userperfil"] == "Alumno") {
+    exit("No tiene permisos para lanzar este script");
+}
+
 $sql_connect = conectar_bd();
 $sql = "select * from master_aulas"; // Consulta SQL
 writeLog($sql);

@@ -5,6 +5,11 @@ $dir_raiz = "";
 require_once($dir_raiz."includes/session_app.php");
 require_once($dir_raiz."includes/config.php");
 require_once($dir_raiz."includes/funciones.php");
+
+if ($_SESSION["stubia_userperfil"] ==="Profesor" ) {
+    exit("No tiene permisos para lanzar este script");
+}
+
 require_once($dir_raiz."includes/encabezado.php");
 
 $horas_habilitadas = getFranjasHorarias();
@@ -52,7 +57,7 @@ if(isset($_POST['btn_reservar']) && !empty($_POST['hid_puesto']) && !empty($_POS
             $color_res="red";
         } else {
             if ($consulta->num_rows>=MAX_RESERVAS_DIA) {
-                $resultado="Lo sentimos, no se pueden reservar más de 4 horas por día en la biblioteca un puesto en la misma fecha y hora (".date_format(date_create($fecha),'d/m/Y H:i').").";
+                $resultado="Lo sentimos, no se pueden reservar más de 4 horas por día en la biblioteca un puesto en la misma fecha y hora (".date_format(date_create($fecha),'d/m/Y H:00').").";
                 $color_res="red";
             } else { // Ahora sí: el alumno cumple para reservar: no tiene reservas hechas en ese mismo día y hora, y está por debajo del cupo máximo dirario. Procedemos:
                 $sql = "INSERT INTO reservas (id_usuario, id_franja_horaria, fecha, id_puesto, localizador, au_usu_alta, au_proc_alta) "

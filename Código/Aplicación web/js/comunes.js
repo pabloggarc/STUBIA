@@ -1,5 +1,5 @@
-const _APP_NAME					= "CMO ADIF";
-const _URL_RAIZ					= "http://cmo.adif/cm_adif/";
+const _APP_NAME					= "STUBIA";
+const _URL_RAIZ					= "http://localhost/proyectos/stubia";
 const _MONTH_NAMES				= new Array("", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
 const _MONTH_DAYS				= new Array(0, 31, 28, 31, 30, 31, 30, 31, 31,30, 31, 30, 31);
 const _CURRENT_YEAR				= new Date().getFullYear();
@@ -170,89 +170,7 @@ function formSubmit(name) {
 	form.submit();
 }
 
-function mostrarCapaEspera(id) {
-	id			= id === undefined ? "capa_espera" : id;
-	var capa	= document.getElementById(id);
-	if (capa) {
-		capa.classList.remove("oculto");
-	} else {
-		var capa						= document.createElement("div");
-		var img							= document.createElement("img");
-		document.body.style.overflow	= "hidden";
-		capa.id							= "capa_espera";
-		capa.style.position				= "absolute";
-		capa.style.top					= "0";
-		capa.style.left					= "0";
-		capa.style.width				= "100vw";
-		capa.style.height				= "100vh";
-		capa.style.backgroundColor		= "rgba(0, 0, 0, 0.7)";
-		capa.style.textAlign			= "center";
-		capa.style.paddingTop			= "38vh";
-		img.src							= _URL_RAIZ + "/img/spinner.gif";
-		img.style.width					= "100px";
-		capa.appendChild(img);
-		document.body.appendChild(capa);
-	}
-}
-function cerrarCapaEspera(id) {
-	id			= id === undefined ? "capa_espera" : id;
-	var capa	= document.getElementById(id);
-	if (capa) {capa.classList.add("oculto");}
-	document.body.style.overflow	= "initial";
-}
 
-function pintarIconoCerrar(id) {
-	id						= id === undefined ? "capa_espera" : id;
-	var icono				= document.createElement("img");
-        icono.id                                = "icono_cerrar";
-	icono.src				= _URL_RAIZ + "img/fancy_close.png";
-	icono.alt				= "cerrar ventana";
-	icono.title				= "cerrar ventana";
-	icono.style.position	= "fixed";
-	icono.style.top			= "0";
-	icono.style.right		= "0";
-	icono.style.cursor		= "pointer";
-	icono.onclick			= function() {parent.cerrarCapaEspera(id);};
-	document.addEventListener('keyup', function(e) {
-		if (e.keyCode === 27 || e.which === 27) {parent.cerrarCapaEspera(id);}
-	}, true);
-	document.body.appendChild(icono);
-}
-
-function lanzaIframe(form, url) {
-	if (!form || !url) {return false;}
-	if (!document.getElementById("capa_cont_detalle")) {
-		var capa					= document.createElement("div");
-		var iframe					= document.createElement("iframe");
-		var contenedor				= document.getElementById("contenedorappcmadif");
-		var altura_contenedor		= contenedor ? Math.max(contenedor.scrollHeight, contenedor.offsetHeight, contenedor.getBoundingClientRect().height, contenedor.clientHeight) : 0;
-		capa.id						= "capa_cont_detalle";
-		capa.style.position			= "absolute";
-		capa.style.top				= "0";
-		capa.style.left				= "0";
-		capa.style.height			= getWholeDocumentHeight() + "px";
-		capa.style.width			= "100%";
-		capa.style.backgroundColor	= "rgba(0, 0, 0, 0.7)";
-		iframe.name					= "ifr_indicador";
-                iframe.id					= "ifr_indicador";
-		iframe.style.top			= "5%";
-		iframe.style.left			= "5%";
-		iframe.style.minWidth		= "800px";
-		iframe.style.width			= "90%";
-		iframe.style.minHeight		= "600px";
-		iframe.style.height			= "90%";
-		iframe.style.border			= "solid 5px #366c00";
-		iframe.style.borderRadius	= "10px";
-		iframe.style.position		= "fixed";
-		form.target					= iframe.name;
-		capa.appendChild(iframe);
-		document.body.appendChild(capa);
-		iframe.focus();
-	}
-	document.getElementById("capa_cont_detalle").classList.remove("oculto");
-	form.action = url;
-	form.submit();
-}
 
 // Accede a la BBDD a través de una url pasándole la sentencia sql por post y devuelve el resultado:
 function doDBaccion(sql, tipo, returnFunction) {

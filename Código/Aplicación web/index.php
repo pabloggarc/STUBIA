@@ -113,7 +113,11 @@ require_once($dir_raiz."includes/cabecera.php");
                             <br>
                             <input type="button" class="btn btn-info" value="Consultar y hacer reservas en la biblioteca" onclick="location.href = 'reserva.php'"><br>
                             <br>
-                            <input type="button" class="btn btn-info" value="Generar accesos aleaorios para la hora actual" onclick="location.href = 'scripts/insertar_estados_aleatorios.php'"><br>
+                            <br>
+                            <br>
+                            <input type="button" class="btn btn-danger" value="Generar accesos aleatorios para la hora actual" onclick="location.href = 'scripts/insertar_estados_aleatorios.php'"><br>
+                            <br>
+                            <input type="button" class="btn btn-danger" value="Generar reservas aleatorias para el día actual" onclick="location.href = 'scripts/insertar_reservas_aleatorias.php'"><br>
                             
                     <?php
                             break;

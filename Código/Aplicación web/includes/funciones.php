@@ -54,7 +54,7 @@ function writeAct($strCadena) {
     $log = @fopen($strNombreLog, 'a');
 
     if ($log) {
-        fputs($log, print_r(date('Y-m-d H:i:s') . " - " . str_replace("SENASA\\", "", $_SERVER['AUTH_USER']) . " - " . $strCadena, true) . "\n");
+        fputs($log, print_r(date('Y-m-d H:i:s') . " - " . str_replace("STUBIA\\", "", $_SERVER['AUTH_USER']) . " - " . $strCadena, true) . "\n");
         fclose($log);
     } else {
         //alternativo
@@ -62,7 +62,7 @@ function writeAct($strCadena) {
         $log_alt = @fopen($strNombreLogAlt, 'a');
 
         if ($log_alt) {
-            fputs($log_alt, print_r(date('Y-m-d H:i:s') . " - " . str_replace("SENASA\\", "", $_SERVER['AUTH_USER']) . " - " . $strCadena, true) . "\n---\n");
+            fputs($log_alt, print_r(date('Y-m-d H:i:s') . " - " . str_replace("STUBIA\\", "", $_SERVER['AUTH_USER']) . " - " . $strCadena, true) . "\n---\n");
             fclose($log_alt);
         }
     }

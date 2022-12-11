@@ -6,17 +6,21 @@ require_once($dir_raiz."../includes/session_app.php");
 require_once($dir_raiz."../includes/config.php");
 require_once($dir_raiz."../includes/funciones.php");
 
+if ($_SESSION["stubia_userperfil"] !=="Admin") {
+    exit("No tiene permisos para lanzar este script");
+}
+
 $debug=false;
 $uno_de_cada=40;
 
 $sql_connect = conectar_bd();
 
 echo "Modo debug=".$debug. "<br><br>";
-echo "Generando aleatoriamente uno de cada " . ($uno_de_cada) . "<br><br><hr>";
+echo "Generando estados aleatoriamente uno de cada " . ($uno_de_cada) . "<br><br><hr>";
 
 
 $sql = "DELETE FROM master_puestos WHERE YEAR(au_fec_alta)=YEAR(SYSDATE()) and MONTH(au_fec_alta)=MONTH(SYSDATE()) and DAY(au_fec_alta)=DAY(SYSDATE()) "
-    . " AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND au_proc_alta NOT LIKE '%ws%';";
+    . " AND HOUR(au_fec_alta)=HOUR(SYSDATE()) AND au_proc_alta LIKE '%script%';";
 echo($sql."<br>");
 echo("<br><hr><br>");
 if (!$debug) {    
