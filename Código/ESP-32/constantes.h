@@ -1,13 +1,13 @@
 //WiFi
-#define WIFI_NAME "iPhone de Pablo"
-#define WIFI_PASSWORD "pablo_gg"
+#define WIFI_NAME "NOMBRE_RED"
+#define WIFI_PASSWORD "PASS_RED"
 
 //Servidor
 #define SERVER_IP "172.20.10.3"
 
 //Servicios web
 #define HTTP "http://"
-#define WS "/stubia/ws/ws_setestadopuesto.php?"
+#define WS "/proyectos/ws/ws_setestadopuesto.php?"
 
 //Puestos teoria
 #define AULA_TEORIA 3

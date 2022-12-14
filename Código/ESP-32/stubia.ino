@@ -76,7 +76,7 @@ void loop2(void* param){
 
           http.begin(url); 
         }
-        else/* if(!puestos_fijos[i].sem->estados->estado_led_rojo && puestos_fijos[i].sem->estados->estado_led_verde)*/{
+        else{
           url+=SERVER_IP+String(WS)+String("aula=")+String(puestos_fijos[i].aula)+
           String("&puesto=")+String(puestos_fijos[i].puesto)+String("&estado=2"); 
 
@@ -181,7 +181,7 @@ void loop() {
         puestos_movibles[i].sem->estados->estado_led_verde = HIGH; 
         puestos_movibles[i].sem->estados->estado_led_rojo = LOW; 
       }
-      else/* if(dist <= CALIBRACION_DIST)*/{
+      else{
         puestos_movibles[i].sem->estados->estado_led_verde = LOW; 
         puestos_movibles[i].sem->estados->estado_led_rojo = HIGH; 
       }
