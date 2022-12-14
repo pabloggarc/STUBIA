@@ -75,7 +75,7 @@ $(document).ready(function() {
                     while ($aulas = $consulta->fetch_array()) {
                         $aula[]=$aulas;
                         //Gestión
-                        if ($_SESSION["stubia_userperfil"] !== "Alumno" || ($_SESSION["stubia_userperfil"] == "Alumno" && $aulas["tipo"]==4 ))  {
+                        if ($_SESSION["stubia_userperfil"] !== "Alumno" || ($_SESSION["stubia_userperfil"] == "Alumno" && $aulas["tipo"]>=3 ))  {
                             echo "<option value=".$aulas["id"].">".$aulas["aula"]."</option>";
                         }                        
                     } 
