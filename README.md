@@ -5,8 +5,8 @@ Es un proyecto para la segunda práctica de laboratorio de la asignatura de Comp
 ### Vídeo demostrativo
 [![Vídeo demostrativo](https://i9.ytimg.com/vi_webp/x8gsrvX6LyI/mqdefault.webp?v=639653c8&sqp=COiG6JwG&rs=AOn4CLAl6JgYmQbYaxJYM8Q6ZJQg3bl_fg)](https://www.youtube.com/watch?v=x8gsrvX6LyI&ab_channel=PabloGarc%C3%ADa)
 ### Hardware necesario
-..* PC compatible con XAMPP
-..* ESP-32 con sensores ultrasonidos y de inclinación
+* PC compatible con XAMPP
+* ESP-32 con sensores ultrasonidos y de inclinación
 ### Puesta en marcha
 1. Instalar XAMPP con PHP y MySQL
 2. Instalar MySQL Tools
@@ -17,3 +17,5 @@ Es un proyecto para la segunda práctica de laboratorio de la asignatura de Comp
 7. Desde XAMPP activar Apache y MySQL
 8. Conectar correctamente el circuito y editar los parámetros de configuración de WiFi y servidor en `ESP-32/constantes.h`
 9. Compilar y cargar en el ESP-32 el archivo `stubia.ino`
+###Documentación
+Puede consultarse anteproyecto y documentación más exhaustiva en la carpeta `/Documentación`
