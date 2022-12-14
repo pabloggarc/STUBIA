@@ -84,8 +84,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $_SESSION["stubia_useridperfil"] = $id_perfil;
             $_SESSION["stubia_userperfil"] = $perfil;
             $_SESSION["stubia_username"] = $username;
-            $_SESSION["stubia_nombre"] =$nombre;
-            $_SESSION["stubia_apellidos"] =$apellidos;  
+            $_SESSION["stubia_nombre"] = $nombre;
+            $_SESSION["stubia_apellidos"] = $apellidos;  
             $_SESSION["stubia_mostrarVideo"] = true;
             writeLog("Login correcto de usuario ". $username." (id ".$id.")");
             registrar_acceso_app($id, $id_perfil);
