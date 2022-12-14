@@ -17,5 +17,6 @@ Es un proyecto para la segunda práctica de laboratorio de la asignatura de Comp
 7. Desde XAMPP activar Apache y MySQL
 8. Conectar correctamente el circuito y editar los parámetros de configuración de WiFi y servidor en `ESP-32/constantes.h`
 9. Compilar y cargar en el ESP-32 el archivo `stubia.ino`
-###Documentación
+
+### Documentación
 Puede consultarse anteproyecto y documentación más exhaustiva en la carpeta `/Documentación`
