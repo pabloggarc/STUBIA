@@ -1,6 +1,0 @@
-2022-12-14 21:06:07(0.21211600 1671048367) - Entro
----
-2022-12-14 21:06:07(0.24119000 1671048367) - INSERT INTO estados (aula, puesto, estado, au_proc_alta) VALUES (3,2,1,'ws_setestadopuesto.php')
----
-2022-12-14 21:06:07(0.29483600 1671048367) - SELECT r.id FROM reservas r INNER JOIN master_puestos p ON r.id_puesto=p.id AND p.activo=1 INNER JOIN master_franjas_horarias f ON r.id_franja_horaria=f.id WHERE p.id_aula=3 AND p.puesto=2 AND r.activo=1 AND YEAR(fecha)=YEAR(SYSDATE()) AND MONTH(fecha)=MONTH(SYSDATE()) AND DAY(fecha)=DAY(SYSDATE()) AND f.inicio=HOUR(SYSDATE()) 
----
