@@ -1,8 +1,8 @@
 <?php
 
-require_once "../includes/config.php";
-require_once "../includes/funciones.php";
-require_once "../includes/funciones_db.php";
+require_once "includes/config.php";
+require_once "includes/funciones.php";
+require_once "includes/funciones_db.php";
 $aula = $puesto = $estado =0;
 
 if(isset($_GET["aula"]) && isset($_GET["puesto"]) && isset($_GET["estado"])){
@@ -13,7 +13,7 @@ if(isset($_GET["aula"]) && isset($_GET["puesto"]) && isset($_GET["estado"])){
 
     //Primero guardamos el estado que nos llega del sensor:
     $sql_connect = conectar_bd();
-    $sql = "INSERT INTO estados (aula, puesto, estado, au_proc) VALUES (".$aula.",".$puesto.",".$estado.",'".php_actual()."')";
+    $sql = "INSERT INTO estados (aula, puesto, estado, au_proc_alta) VALUES (".$aula.",".$puesto.",".$estado.",'".php_actual()."')";
     writeLog($sql);
     $insercion = db_query($sql, $sql_connect);
     if (!$insercion) {
@@ -38,5 +38,7 @@ if(isset($_GET["aula"]) && isset($_GET["puesto"]) && isset($_GET["estado"])){
     else{
         echo "NO"; 
     }
+} else {
+    echo "<h2>WEB SERVICE DE STUBIA<h2>";
 }
 ?>
