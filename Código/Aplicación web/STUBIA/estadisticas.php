@@ -8,7 +8,7 @@ require_once($dir_raiz."includes/funciones.php");
 require_once($dir_raiz."includes/encabezado.php");
 
 if ($_SESSION["stubia_userperfil"] ==="Alumno" || $_SESSION["stubia_userperfil"] ==="Profesor" ) {
-    exit("No tiene permisos para acceder a esta página");
+    exit("No tiene permisos para acceder a esta pagina");
 }
 
 require_once($dir_raiz."includes/cabecera.php");
