@@ -16,7 +16,7 @@ my_ready = function() {	};
 <?php
 require_once($dir_raiz."includes/cabecera.php");
 ?>
-<!--aquí el contenido de la página de STUBIA -->
+<!--aqui el contenido de la pagina de STUBIA -->
 <?php
 require_once($dir_raiz."includes/pie.php");
 ?>

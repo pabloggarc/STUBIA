@@ -84,7 +84,7 @@ $(document).ready(function() {
         </div>
         <br>        
         <div class="centrado" id="display">
-        <!-- aquí cargamos la respuesta de Ajax -->        
+        <!-- aqui cargamos la respuesta de Ajax -->        
         </div>
     </form>    
 </div>
